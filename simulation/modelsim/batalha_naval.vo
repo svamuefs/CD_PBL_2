@@ -1,0 +1,667 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
+
+// DATE "10/01/2023 21:32:18"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module batalha_naval (
+	clk,
+	clk_matriz);
+input 	clk;
+output 	clk_matriz;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \clk~combout ;
+wire \freq_div_1|t_flipflop_0|out~regout ;
+wire \freq_div_1|t_flipflop_1|out~regout ;
+wire \freq_div_1|t_flipflop_2|out~regout ;
+wire \freq_div_1|t_flipflop_3|out~regout ;
+wire \freq_div_1|t_flipflop_4|out~regout ;
+wire \freq_div_1|t_flipflop_5|out~regout ;
+wire \freq_div_1|t_flipflop_6|out~regout ;
+wire \freq_div_1|t_flipflop_7|out~regout ;
+wire \freq_div_1|t_flipflop_8|out~regout ;
+wire \freq_div_1|t_flipflop_9|out~regout ;
+wire \freq_div_1|t_flipflop_10|out~regout ;
+wire \freq_div_1|t_flipflop_11|out~regout ;
+wire \freq_div_1|t_flipflop_12|out~regout ;
+wire \freq_div_1|t_flipflop_13|out~regout ;
+wire \freq_div_1|t_flipflop_14|out~regout ;
+wire \freq_div_1|t_flipflop_15|out~regout ;
+
+
+// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \clk~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clk~combout ),
+	.padio(clk));
+// synopsys translate_off
+defparam \clk~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N7
+maxii_lcell \freq_div_1|t_flipflop_0|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_0|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_0|out~regout ))), \clk~combout , VCC, , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\freq_div_1|t_flipflop_0|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_0|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_0|out .lut_mask = "0f0f";
+defparam \freq_div_1|t_flipflop_0|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_0|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_0|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_0|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_0|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N8
+maxii_lcell \freq_div_1|t_flipflop_1|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_1|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_1|out~regout ))), \freq_div_1|t_flipflop_0|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_0|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_1|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_1|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_1|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_1|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_1|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_1|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_1|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_1|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y2_N4
+maxii_lcell \freq_div_1|t_flipflop_2|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_2|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_2|out~regout ))), \freq_div_1|t_flipflop_1|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_1|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\freq_div_1|t_flipflop_2|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_2|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_2|out .lut_mask = "0f0f";
+defparam \freq_div_1|t_flipflop_2|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_2|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_2|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_2|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_2|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y2_N2
+maxii_lcell \freq_div_1|t_flipflop_3|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_3|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_3|out~regout ))), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_3|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_3|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_3|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_3|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_3|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_3|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_3|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_3|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N9
+maxii_lcell \freq_div_1|t_flipflop_4|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_4|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_4|out~regout ))), \freq_div_1|t_flipflop_3|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_3|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_4|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_4|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_4|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_4|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_4|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_4|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_4|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_4|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N8
+maxii_lcell \freq_div_1|t_flipflop_5|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_5|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_5|out~regout ))), \freq_div_1|t_flipflop_4|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_4|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_5|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_5|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_5|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_5|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_5|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_5|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_5|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_5|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y3_N4
+maxii_lcell \freq_div_1|t_flipflop_6|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_6|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_6|out~regout ))), \freq_div_1|t_flipflop_5|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_5|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\freq_div_1|t_flipflop_6|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_6|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_6|out .lut_mask = "0f0f";
+defparam \freq_div_1|t_flipflop_6|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_6|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_6|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_6|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_6|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y3_N2
+maxii_lcell \freq_div_1|t_flipflop_7|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_7|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_7|out~regout ))), \freq_div_1|t_flipflop_6|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_6|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_7|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_7|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_7|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_7|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_7|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_7|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_7|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_7|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N9
+maxii_lcell \freq_div_1|t_flipflop_8|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_8|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_8|out~regout ))), \freq_div_1|t_flipflop_7|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_7|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_8|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_8|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_8|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_8|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_8|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_8|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_8|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_8|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y3_N8
+maxii_lcell \freq_div_1|t_flipflop_9|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_9|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_9|out~regout ))), \freq_div_1|t_flipflop_8|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_8|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_9|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_9|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_9|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_9|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_9|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_9|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_9|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_9|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y3_N9
+maxii_lcell \freq_div_1|t_flipflop_10|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_10|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_10|out~regout ))), \freq_div_1|t_flipflop_9|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_9|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_10|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_10|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_10|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_10|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_10|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_10|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_10|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_10|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y3_N3
+maxii_lcell \freq_div_1|t_flipflop_11|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_11|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_11|out~regout ))), \freq_div_1|t_flipflop_10|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_10|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_11|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_11|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_11|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_11|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_11|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_11|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_11|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_11|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N4
+maxii_lcell \freq_div_1|t_flipflop_12|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_12|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_12|out~regout ))), \freq_div_1|t_flipflop_11|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_11|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\freq_div_1|t_flipflop_12|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_12|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_12|out .lut_mask = "0f0f";
+defparam \freq_div_1|t_flipflop_12|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_12|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_12|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_12|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_12|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X5_Y2_N2
+maxii_lcell \freq_div_1|t_flipflop_13|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_13|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_13|out~regout ))), \freq_div_1|t_flipflop_12|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_12|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_13|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_13|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_13|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_13|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_13|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_13|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_13|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_13|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N8
+maxii_lcell \freq_div_1|t_flipflop_14|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_14|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_14|out~regout ))), \freq_div_1|t_flipflop_13|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_13|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_14|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_14|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_14|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_14|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_14|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_14|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_14|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_14|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N9
+maxii_lcell \freq_div_1|t_flipflop_15|out (
+// Equation(s):
+// \freq_div_1|t_flipflop_15|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_15|out~regout ))), \freq_div_1|t_flipflop_14|out~regout , VCC, , , , , , )
+
+	.clk(\freq_div_1|t_flipflop_14|out~regout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\freq_div_1|t_flipflop_15|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\freq_div_1|t_flipflop_15|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \freq_div_1|t_flipflop_15|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_15|out .operation_mode = "normal";
+defparam \freq_div_1|t_flipflop_15|out .output_mode = "reg_only";
+defparam \freq_div_1|t_flipflop_15|out .register_cascade_mode = "off";
+defparam \freq_div_1|t_flipflop_15|out .sum_lutc_input = "datac";
+defparam \freq_div_1|t_flipflop_15|out .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \clk_matriz~I (
+	.datain(\freq_div_1|t_flipflop_15|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(clk_matriz));
+// synopsys translate_off
+defparam \clk_matriz~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

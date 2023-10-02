@@ -1,0 +1,24 @@
+module t_flipflop (
+    input t , clk , 
+    output reg q , q2
+);
+
+    wire reg jm , km , qm , qm2 , js , ks;
+
+    always @(negedge clk ) begin
+
+        //master
+        jm <= ~(t & clk & q2);
+        km <= ~(t & clk & q);
+        qm <= ~(jm & qm2);
+        qm2 <= ~(km & qm);
+
+        //slave
+        js <= ~(qm & ~clk);
+        ks <= ~(qm2 & ~clk);
+        q <= ~(js & q2);
+        q2 <= ~(ks & q);
+
+    end
+    
+endmodule

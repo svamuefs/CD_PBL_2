@@ -1,0 +1,13 @@
+module async_counter (
+    input clk , reset ,
+    output [2:0] out 
+);
+    
+    always @(negedge clk ) begin
+        if (! reset)
+        out <= 0;
+        else
+        out++;
+    end
+
+endmodule

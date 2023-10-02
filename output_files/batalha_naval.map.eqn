@@ -1,0 +1,138 @@
+-- Copyright (C) 2023  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+--clk_matriz is clk_matriz
+--operation mode is output
+
+clk_matriz = OUTPUT(C16_out);
+
+
+--C16_out is freq_div:freq_div_1|t_flipflop:t_flipflop_15|out
+--operation mode is normal
+
+C16_out_lut_out = (!C16_out);
+C16_out = DFFEAS(C16_out_lut_out, C15_out, VCC, , , , , , );
+
+
+--C15_out is freq_div:freq_div_1|t_flipflop:t_flipflop_14|out
+--operation mode is normal
+
+C15_out_lut_out = (!C15_out);
+C15_out = DFFEAS(C15_out_lut_out, C14_out, VCC, , , , , , );
+
+
+--C14_out is freq_div:freq_div_1|t_flipflop:t_flipflop_13|out
+--operation mode is normal
+
+C14_out_lut_out = (!C14_out);
+C14_out = DFFEAS(C14_out_lut_out, C13_out, VCC, , , , , , );
+
+
+--C13_out is freq_div:freq_div_1|t_flipflop:t_flipflop_12|out
+--operation mode is normal
+
+C13_out_lut_out = (!C13_out);
+C13_out = DFFEAS(C13_out_lut_out, C12_out, VCC, , , , , , );
+
+
+--C12_out is freq_div:freq_div_1|t_flipflop:t_flipflop_11|out
+--operation mode is normal
+
+C12_out_lut_out = (!C12_out);
+C12_out = DFFEAS(C12_out_lut_out, C11_out, VCC, , , , , , );
+
+
+--C11_out is freq_div:freq_div_1|t_flipflop:t_flipflop_10|out
+--operation mode is normal
+
+C11_out_lut_out = (!C11_out);
+C11_out = DFFEAS(C11_out_lut_out, C10_out, VCC, , , , , , );
+
+
+--C10_out is freq_div:freq_div_1|t_flipflop:t_flipflop_9|out
+--operation mode is normal
+
+C10_out_lut_out = (!C10_out);
+C10_out = DFFEAS(C10_out_lut_out, C9_out, VCC, , , , , , );
+
+
+--C9_out is freq_div:freq_div_1|t_flipflop:t_flipflop_8|out
+--operation mode is normal
+
+C9_out_lut_out = (!C9_out);
+C9_out = DFFEAS(C9_out_lut_out, C8_out, VCC, , , , , , );
+
+
+--C8_out is freq_div:freq_div_1|t_flipflop:t_flipflop_7|out
+--operation mode is normal
+
+C8_out_lut_out = (!C8_out);
+C8_out = DFFEAS(C8_out_lut_out, C7_out, VCC, , , , , , );
+
+
+--C7_out is freq_div:freq_div_1|t_flipflop:t_flipflop_6|out
+--operation mode is normal
+
+C7_out_lut_out = (!C7_out);
+C7_out = DFFEAS(C7_out_lut_out, C6_out, VCC, , , , , , );
+
+
+--C6_out is freq_div:freq_div_1|t_flipflop:t_flipflop_5|out
+--operation mode is normal
+
+C6_out_lut_out = (!C6_out);
+C6_out = DFFEAS(C6_out_lut_out, C5_out, VCC, , , , , , );
+
+
+--C5_out is freq_div:freq_div_1|t_flipflop:t_flipflop_4|out
+--operation mode is normal
+
+C5_out_lut_out = (!C5_out);
+C5_out = DFFEAS(C5_out_lut_out, C4_out, VCC, , , , , , );
+
+
+--C4_out is freq_div:freq_div_1|t_flipflop:t_flipflop_3|out
+--operation mode is normal
+
+C4_out_lut_out = (!C4_out);
+C4_out = DFFEAS(C4_out_lut_out, C3_out, VCC, , , , , , );
+
+
+--C3_out is freq_div:freq_div_1|t_flipflop:t_flipflop_2|out
+--operation mode is normal
+
+C3_out_lut_out = (!C3_out);
+C3_out = DFFEAS(C3_out_lut_out, C2_out, VCC, , , , , , );
+
+
+--C2_out is freq_div:freq_div_1|t_flipflop:t_flipflop_1|out
+--operation mode is normal
+
+C2_out_lut_out = (!C2_out);
+C2_out = DFFEAS(C2_out_lut_out, C1_out, VCC, , , , , , );
+
+
+--C1_out is freq_div:freq_div_1|t_flipflop:t_flipflop_0|out
+--operation mode is normal
+
+C1_out_lut_out = (!C1_out);
+C1_out = DFFEAS(C1_out_lut_out, clk, VCC, , , , , , );
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
