@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Sun Oct  1 21:32:06 2023
+Thu Nov 30 23:44:25 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -11,27 +11,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_15"
- 10. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_14"
- 11. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_13"
- 12. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_12"
- 13. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_11"
- 14. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_10"
- 15. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_9"
- 16. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_8"
- 17. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_7"
- 18. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_6"
- 19. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_5"
- 20. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_4"
- 21. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_3"
- 22. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"
- 23. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"
- 24. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"
- 25. Analysis & Synthesis Equations
- 26. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Messages
 
 
 
@@ -58,15 +38,11 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Oct  1 21:32:06 2023          ;
+; Analysis & Synthesis Status ; Failed - Thu Nov 30 23:44:25 2023              ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 16                                             ;
-; Total pins                  ; 2                                              ;
-; Total virtual pins          ; 0                                              ;
-; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
 
 
@@ -157,289 +133,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/freq_div.v      ;         ;
-; t_fliflop.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_fliflop.v     ;         ;
-; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                    ;
-+---------------------------------------------+--------------------------------------------------+
-; Resource                                    ; Usage                                            ;
-+---------------------------------------------+--------------------------------------------------+
-; Total logic elements                        ; 16                                               ;
-;     -- Combinational with no register       ; 0                                                ;
-;     -- Register only                        ; 0                                                ;
-;     -- Combinational with a register        ; 16                                               ;
-;                                             ;                                                  ;
-; Logic element usage by number of LUT inputs ;                                                  ;
-;     -- 4 input functions                    ; 0                                                ;
-;     -- 3 input functions                    ; 0                                                ;
-;     -- 2 input functions                    ; 0                                                ;
-;     -- 1 input functions                    ; 16                                               ;
-;     -- 0 input functions                    ; 0                                                ;
-;                                             ;                                                  ;
-; Logic elements by mode                      ;                                                  ;
-;     -- normal mode                          ; 16                                               ;
-;     -- arithmetic mode                      ; 0                                                ;
-;     -- qfbk mode                            ; 0                                                ;
-;     -- register cascade mode                ; 0                                                ;
-;     -- synchronous clear/load mode          ; 0                                                ;
-;     -- asynchronous clear/load mode         ; 0                                                ;
-;                                             ;                                                  ;
-; Total registers                             ; 16                                               ;
-; I/O pins                                    ; 2                                                ;
-; Maximum fan-out node                        ; freq_div:freq_div_1|t_flipflop:t_flipflop_15|out ;
-; Maximum fan-out                             ; 2                                                ;
-; Total fan-out                               ; 33                                               ;
-; Average fan-out                             ; 1.83                                             ;
-+---------------------------------------------+--------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Entity Name   ; Library Name ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+---------------+--------------+
-; |batalha_naval                   ; 16 (0)      ; 16           ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                              ; batalha_naval ; work         ;
-;    |freq_div:freq_div_1|         ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1                          ; freq_div      ; work         ;
-;       |t_flipflop:t_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_0  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_10| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_10 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_11| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_11 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_12| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_12 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_13| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_13 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_14| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_14 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_15| ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_15 ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_1  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_2  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_3|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_3  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_4|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_4  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_5|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_5  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_6|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_6  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_7|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_7  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_8|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_8  ; t_flipflop    ; work         ;
-;       |t_flipflop:t_flipflop_9|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_9  ; t_flipflop    ; work         ;
-+----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+---------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 16    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_15"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_14"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_13"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_12"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_11"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_10"                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_9"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_8"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_7"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_6"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_5"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_4"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_3"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"                                                                                                                                           ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------+
-; Analysis & Synthesis Equations ;
-+--------------------------------+
-The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                    ;
++----------------------------------+-----------------+------------------------+-----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path      ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------+---------+
+; t_fliflop.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_fliflop.v        ;         ;
+; register7bit.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/register7bit.v     ;         ;
+; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux8x1.v           ;         ;
+; matriz_displayer.v               ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/matriz_displayer.v ;         ;
+; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/freq_div.v         ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/d_flipflop.v       ;         ;
+; counter3bit.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/counter3bit.v      ;         ;
+; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v    ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------+---------+
 
 
 +-------------------------------+
@@ -448,28 +155,69 @@ The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  1 21:31:53 2023
+    Info: Processing started: Thu Nov 30 23:44:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file freq_div.v
-    Info (12023): Found entity 1: freq_div File: C:/CD/CD_PBL_2/freq_div.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file t_fliflop.v
     Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_2/t_fliflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sr_flipflop.v
+    Info (12023): Found entity 1: sr_flipflop File: C:/CD/CD_PBL_2/sr_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register7bit.v
+    Info (12023): Found entity 1: register7bit File: C:/CD/CD_PBL_2/register7bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux8x1.v
+    Info (12023): Found entity 1: mux8x1 File: C:/CD/CD_PBL_2/mux8x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
+    Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_2/mux4x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file matriz_displayer.v
+    Info (12023): Found entity 1: matriz_displayer File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file jk_flipflop.v
+    Info (12023): Found entity 1: jk_flipflop File: C:/CD/CD_PBL_2/jk_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file freq_div.v
+    Info (12023): Found entity 1: freq_div File: C:/CD/CD_PBL_2/freq_div.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
+    Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2/d_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter3bit.v
+    Info (12023): Found entity 1: counter3bit File: C:/CD/CD_PBL_2/counter3bit.v Line: 1
+Warning (10259): Verilog HDL error at batalha_naval.v(11): constant value overflow File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
+Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(23): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
     Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2/batalha_naval.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2/register7bit.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2/register7bit.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2/register7bit.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2/register7bit.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2/register7bit.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(55): created implicit net for "dff_out_6" File: C:/CD/CD_PBL_2/register7bit.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(64): created implicit net for "dff_out_7" File: C:/CD/CD_PBL_2/register7bit.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(10): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2/mux8x1.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(10): created implicit net for "notSelect0" File: C:/CD/CD_PBL_2/mux4x1.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(11): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2/mux4x1.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at matriz_displayer.v(19): created implicit net for "reset" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at matriz_displayer.v(20): created implicit net for "counterLoop" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(11): created implicit net for "tff_out_1" File: C:/CD/CD_PBL_2/counter3bit.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(19): created implicit net for "tff_out_2" File: C:/CD/CD_PBL_2/counter3bit.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(27): created implicit net for "tff_out_3" File: C:/CD/CD_PBL_2/counter3bit.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(16): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 35
+Warning (10034): Output port "linha_matriz" at batalha_naval.v(3) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 3
+Warning (10034): Output port "coluna_matriz" at batalha_naval.v(4) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 4
+Warning (10034): Output port "mod5counter_teste" at batalha_naval.v(5) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 5
+Warning (10034): Output port "final_clk_teste" at batalha_naval.v(7) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 17
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "freq_div:freq_div_1|t_flipflop:t_flipflop_0" File: C:/CD/CD_PBL_2/freq_div.v Line: 12
-Warning (12241): 16 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Sun Oct  1 21:32:06 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:35
+Info (12128): Elaborating entity "matriz_displayer" for hierarchy "matriz_displayer:matriz_displayer_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 23
+Info (12128): Elaborating entity "counter3bit" for hierarchy "matriz_displayer:matriz_displayer_1|counter3bit:counter3bit_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 22
+Info (12128): Elaborating entity "register7bit" for hierarchy "matriz_displayer:matriz_displayer_1|register7bit:register7bit_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 29
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "matriz_displayer:matriz_displayer_1|register7bit:register7bit_1|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register7bit.v Line: 11
+Info (12128): Elaborating entity "mux8x1" for hierarchy "matriz_displayer:matriz_displayer_1|mux8x1:mux8x1_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 42
+Error (10207): Verilog HDL error at mux8x1.v(31): can't resolve reference to object "DATA_WIDTH" File: C:/CD/CD_PBL_2/mux8x1.v Line: 31
+Error (10252): Verilog HDL Module Instantiation error at mux8x1.v(31): illegal connection to port "<unamed port>" in array of instances - the actual bit length (7) does not equal either the formal port width (1) or the product of the formal port width and the number of instances (1) File: C:/CD/CD_PBL_2/mux8x1.v Line: 31
+Error (12152): Can't elaborate user hierarchy "matriz_displayer:matriz_displayer_1|mux8x1:mux8x1_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 42
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 23 warnings
+    Error: Peak virtual memory: 4695 megabytes
+    Error: Processing ended: Thu Nov 30 23:44:25 2023
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:30
 
 

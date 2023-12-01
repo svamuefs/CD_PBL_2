@@ -1,0 +1,33 @@
+module counter3bit (
+    input clk , reset , 
+    output loopStart ,
+    output [2:0] out
+);
+
+    t_flipflop t_flipflop_0 (
+		.clk (clk) ,
+        .t (1) , 
+        .reset (reset) , 
+        .out (tff_out_1));
+
+    and and1(out[0] , tff_out_1);
+
+    t_flipflop t_flipflop_1 (
+        .clk (tff_out_1) ,
+        .t (1) , 
+        .reset (reset) , 
+        .out (tff_out_2));
+
+    and and2(out[1] , tff_out_2);
+
+    t_flipflop t_flipflop_2 (
+        .clk (tff_out_2) ,
+        .t (1) , 
+        .reset (reset) , 
+        .out (tff_out_3));
+
+    and and3(out[2] , tff_out_3);
+
+    nand loop_nand (loopStart , tff_out_1 , tff_out_2 ,tff_out_3);
+
+endmodule

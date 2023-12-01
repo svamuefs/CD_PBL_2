@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source="C:/CD/CD_PBL_2/Waveform.vwf" --testbench_file="C:/CD/CD_PBL_2/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source="C:/CD/CD_PBL_2/Waveform1.vwf" --testbench_file="C:/CD/CD_PBL_2/simulation/qsim/Waveform1.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Oct  1 21:35:12 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source=C:/CD/CD_PBL_2/Waveform.vwf --testbench_file=C:/CD/CD_PBL_2/simulation/qsim/Waveform.vwf.vt
+    Info: Processing started: Tue Nov 28 22:27:22 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source=C:/CD/CD_PBL_2/Waveform1.vwf --testbench_file=C:/CD/CD_PBL_2/simulation/qsim/Waveform1.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -55,13 +55,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Oct  1 21:35:13 2023
+    Info: Processing started: Tue Nov 28 22:27:23 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/CD/CD_PBL_2/simulation/qsim/ batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file batalha_naval.vo in folder "C:/CD/CD_PBL_2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Sun Oct  1 21:35:14 2023
+    Info: Processing ended: Tue Nov 28 22:27:24 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -89,7 +89,8 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:35:16 on Oct 01,2023
+# Start time: 22:27:26 on Nov 28,2023
+
 # vlog -work work batalha_naval.vo 
 
 # -- Compiling module batalha_naval
@@ -99,13 +100,13 @@ Reading pref.tcl
 # Top level modules:
 # 	batalha_naval
 
-# End time: 21:35:16 on Oct 01,2023, Elapsed time: 0:00:00
+# End time: 22:27:26 on Nov 28,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 21:35:16 on Oct 01,2023
-# vlog -work work Waveform.vwf.vt 
+# Start time: 22:27:26 on Nov 28,2023
+# vlog -work work Waveform1.vwf.vt 
 
 # -- Compiling module batalha_naval_vlg_vec_tst
 
@@ -114,11 +115,11 @@ Reading pref.tcl
 # Top level modules:
 # 	batalha_naval_vlg_vec_tst
 
-# End time: 21:35:16 on Oct 01,2023, Elapsed time: 0:00:00
+# End time: 22:27:26 on Nov 28,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.batalha_naval_vlg_vec_tst 
-# Start time: 21:35:16 on Oct 01,2023
+# Start time: 22:27:26 on Nov 28,2023
 # Loading work.batalha_naval_vlg_vec_tst
 # Loading work.batalha_naval
 # Loading maxii_ver.maxii_io
@@ -128,23 +129,23 @@ Reading pref.tcl
 
 # after#25
 
-# ** Note: $finish    : Waveform.vwf.vt(45)
-#    Time: 100 us  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst
+# ** Note: $finish    : Waveform1.vwf.vt(51)
+#    Time: 10 us  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst
 
-# End time: 21:35:17 on Oct 01,2023, Elapsed time: 0:00:01
+# End time: 22:27:27 on Nov 28,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/CD/CD_PBL_2/Waveform.vwf...
+Reading C:/CD/CD_PBL_2/Waveform1.vwf...
 
 Reading C:/CD/CD_PBL_2/simulation/qsim/batalha_naval.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/CD/CD_PBL_2/simulation/qsim/batalha_naval_20231001213517.sim.vwf
+Writing the resulting VWF to C:/CD/CD_PBL_2/simulation/qsim/batalha_naval_20231128222727.sim.vwf
 
 Finished VCD to VWF conversion.
 

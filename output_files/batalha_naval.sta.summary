@@ -2,159 +2,83 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_14|out'
-Slack : -1.194
-TNS   : -1.194
+Type  : Setup 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : -1.214
+TNS   : -1.214
 
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_12|out'
+Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
+Slack : -1.195
+TNS   : -6.166
+
+Type  : Setup 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
 Slack : 0.466
 TNS   : 0.000
 
 Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_6|out'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_10|out'
 Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_8|out'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.469
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_7|out'
-Slack : 0.808
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_9|out'
-Slack : 0.808
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_13|out'
-Slack : 0.825
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
-Slack : 0.833
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_5|out'
-Slack : 1.170
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_11|out'
-Slack : 1.178
 TNS   : 0.000
 
 Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : 1.299
+Slack : 0.853
 TNS   : 0.000
 
-Type  : Setup 'clk'
-Slack : 1.648
+Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
+Slack : 1.653
 TNS   : 0.000
 
-Type  : Hold 'clk'
-Slack : -1.702
-TNS   : -1.702
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : -1.353
-TNS   : -1.353
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_11|out'
-Slack : -1.232
-TNS   : -1.232
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_5|out'
-Slack : -1.224
-TNS   : -1.224
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
-Slack : -0.887
-TNS   : -0.887
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_13|out'
-Slack : -0.879
-TNS   : -0.879
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_7|out'
-Slack : -0.862
-TNS   : -0.862
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_9|out'
-Slack : -0.862
-TNS   : -0.862
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : -0.523
-TNS   : -0.523
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_10|out'
-Slack : -0.521
-TNS   : -0.521
+Type  : Setup 'cpld_clk'
+Slack : 1.666
+TNS   : 0.000
 
 Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
-Slack : -0.521
-TNS   : -0.521
+Slack : -2.125
+TNS   : -3.690
 
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_8|out'
-Slack : -0.521
-TNS   : -0.521
+Type  : Hold 'cpld_clk'
+Slack : -1.720
+TNS   : -1.720
 
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_12|out'
-Slack : -0.520
-TNS   : -0.520
+Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
+Slack : -1.707
+TNS   : -1.707
+
+Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
+Slack : -0.907
+TNS   : -0.907
 
 Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
 Slack : -0.520
 TNS   : -0.520
 
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_6|out'
+Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
 Slack : -0.520
 TNS   : -0.520
 
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_14|out'
-Slack : 1.640
+Type  : Hold 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : 1.660
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'clk'
+Type  : Minimum Pulse Width 'cpld_clk'
 Slack : -2.289
 TNS   : -2.289
 
+Type  : Minimum Pulse Width 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : 0.234
+TNS   : 0.000
+
 Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_10|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_11|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_12|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_13|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_14|out'
 Slack : 0.234
 TNS   : 0.000
 
@@ -171,26 +95,6 @@ Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_5|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_6|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_7|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_8|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_9|out'
 Slack : 0.234
 TNS   : 0.000
 
