@@ -3,7 +3,7 @@ module t_flipflop (
     output reg out
 );
 
-    always @(posedge clk ) begin
+    always @(negedge clk or negedge reset) begin
 
         if (! reset)
             out <=0;

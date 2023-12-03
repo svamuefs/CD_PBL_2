@@ -1,6 +1,6 @@
-module register7bit (
+module register8bit (
     input in , clk , reset , 
-    output [6:0] out
+    output [7:0] out
 );
     
     d_flipflop d_flipflop_0 (
@@ -10,7 +10,7 @@ module register7bit (
         .out(dff_out_1)
     );
 
-    and and1(out[6] , dff_out_1);
+    and and1(out[0] , dff_out_1);
 
     d_flipflop d_flipflop_1 (
         .d(dff_out_1) ,
@@ -19,7 +19,7 @@ module register7bit (
         .out(dff_out_2)
     );
 
-    and and2(out[5] , dff_out_2);
+    and and2(out[1] , dff_out_2);
 
     d_flipflop d_flipflop_2 (
         .d(dff_out_2) ,
@@ -28,7 +28,7 @@ module register7bit (
         .out(dff_out_3)
     );
 
-    and and3(out[4] , dff_out_3);
+    and and3(out[2] , dff_out_3);
 
     d_flipflop d_flipflop_3 (
         .d(dff_out_3) ,
@@ -46,7 +46,7 @@ module register7bit (
         .out(dff_out_5)
     );
 
-    and and5(out[2] , dff_out_5);
+    and and5(out[4] , dff_out_5);
 
     d_flipflop d_flipflop_5 (
         .d(dff_out_5) ,
@@ -55,7 +55,7 @@ module register7bit (
         .out(dff_out_6)
     );
 
-    and and6(out[1] , dff_out_6);
+    and and6(out[5] , dff_out_6);
 
     d_flipflop d_flipflop_6 (
         .d(dff_out_6) ,
@@ -64,6 +64,15 @@ module register7bit (
         .out(dff_out_7)
     );
 
-    and and7(out[0] , dff_out_7);
+    and and7(out[6] , dff_out_7);
+
+    d_flipflop d_flipflop_7 (
+        .d(dff_out_7) ,
+        .clk(clk) ,
+        .reset(reset) ,
+        .out(dff_out_8)
+    );
+
+    and and8(out[7] , dff_out_8);
 
 endmodule

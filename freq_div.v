@@ -6,7 +6,7 @@ module freq_div (
     wire [14:0] intermediary_clk;
 
     t_flipflop t_flipflop_0 (
-		  .clk (clk) ,
+		.clk (clk) ,
         .t (1) , 
         .reset (1) , 
         .out (intermediary_clk[0]));
@@ -21,21 +21,21 @@ module freq_div (
         .clk (intermediary_clk[1]) ,
         .t (1) , 
         .reset (1) , 
-        .out (intermediary_clk[2]));
+        .out (final_clk));
     
-    t_flipflop t_flipflop_3 (
-        .clk (intermediary_clk[2]) ,
-        .t (1) , 
-        .reset (1) , 
-        .out (intermediary_clk[3])
-    );
+    // t_flipflop t_flipflop_3 (
+    //     .clk (intermediary_clk[2]) ,
+    //     .t (1) , 
+    //     .reset (1) , 
+    //     .out (intermediary_clk[3])
+    // );
 
-    t_flipflop t_flipflop_4 (
-        .clk (intermediary_clk[3]) ,
-        .t (1) , 
-        .reset (1) , 
-        .out (final_clk)
-    );
+    // t_flipflop t_flipflop_4 (
+    //     .clk (intermediary_clk[3]) ,
+    //     .t (1) , 
+    //     .reset (1) , 
+    //     .out (intermediary_clk[4])
+    // );
 
     // t_flipflop t_flipflop_5 (
     //     .clk (intermediary_clk[4]) ,

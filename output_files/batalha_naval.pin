@@ -63,103 +63,103 @@ CHIP  "batalha_naval"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND*                         : 1         :        :                   :         : 2         :                
-GND*                         : 2         :        :                   :         : 1         :                
-GND*                         : 3         :        :                   :         : 1         :                
-cpld_clk                     : 4         : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 5         :        :                   :         : 1         :                
-GND*                         : 6         :        :                   :         : 1         :                
-GND*                         : 7         :        :                   :         : 1         :                
-GND*                         : 8         :        :                   :         : 1         :                
+matriz_colune_activator[2]   : 1         : output : 3.3-V LVTTL       :         : 2         : N              
+teste[8]                     : 2         : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_data[3]        : 3         : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[16]                 : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[30]                 : 5         : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[9]                  : 6         : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[20]                 : 7         : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[25]                 : 8         : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-final_clk_teste              : 12        : output : 3.3-V LVTTL       :         : 1         : N              
+teste[10]                    : 12        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 14        :        :                   :         : 1         :                
-GND*                         : 15        :        :                   :         : 1         :                
-GND*                         : 16        :        :                   :         : 1         :                
-GND*                         : 17        :        :                   :         : 1         :                
-GND*                         : 18        :        :                   :         : 1         :                
-GND*                         : 19        :        :                   :         : 1         :                
-GND*                         : 20        :        :                   :         : 1         :                
-linha_matriz[1]              : 21        : output : 3.3-V LVTTL       :         : 1         : N              
+teste[5]                     : 15        : output : 3.3-V LVTTL       :         : 1         : N              
+display_colune_data[3]       : 16        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[14]                 : 17        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[27]                 : 18        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[11]                 : 19        : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_data[0]        : 20        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[2]                  : 21        : output : 3.3-V LVTTL       :         : 1         : N              
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-GND*                         : 26        :        :                   :         : 1         :                
-linha_matriz[6]              : 27        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 28        :        :                   :         : 1         :                
-GND*                         : 29        :        :                   :         : 1         :                
-GND*                         : 30        :        :                   :         : 1         :                
+mapteste[32]                 : 26        : output : 3.3-V LVTTL       :         : 1         : N              
+display_colune_activator[1]  : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+display_colune_data[5]       : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_data[2]        : 29        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[1]                  : 30        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
-GND*                         : 33        :        :                   :         : 1         :                
-GND*                         : 34        :        :                   :         : 1         :                
+teste[4]                     : 33        : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_activator[4]   : 34        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 35        :        :                   :         : 1         :                
 GND*                         : 36        :        :                   :         : 1         :                
-GND*                         : 37        :        :                   :         : 1         :                
-GND*                         : 38        :        :                   :         : 1         :                
-GND*                         : 39        :        :                   :         : 1         :                
+mapteste[26]                 : 37        : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_activator[1]   : 38        : output : 3.3-V LVTTL       :         : 1         : N              
+matriz_colune_activator[0]   : 39        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 40        :        :                   :         : 1         :                
-GND*                         : 41        :        :                   :         : 1         :                
+display_colune_activator[2]  : 41        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 42        :        :                   :         : 1         :                
-GND*                         : 43        :        :                   :         : 1         :                
+mapteste[13]                 : 43        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 44        :        :                   :         : 1         :                
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-GND*                         : 47        :        :                   :         : 1         :                
-linha_matriz[0]              : 48        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 49        :        :                   :         : 1         :                
-GND*                         : 50        :        :                   :         : 1         :                
-GND*                         : 51        :        :                   :         : 1         :                
-GND*                         : 52        :        :                   :         : 2         :                
-GND*                         : 53        :        :                   :         : 2         :                
-GND*                         : 54        :        :                   :         : 2         :                
-GND*                         : 55        :        :                   :         : 2         :                
-GND*                         : 56        :        :                   :         : 2         :                
-GND*                         : 57        :        :                   :         : 2         :                
-GND*                         : 58        :        :                   :         : 2         :                
+matriz_colune_data[5]        : 47        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[23]                 : 48        : output : 3.3-V LVTTL       :         : 1         : N              
+teste[6]                     : 49        : output : 3.3-V LVTTL       :         : 1         : N              
+counter_teste                : 50        : output : 3.3-V LVTTL       :         : 1         : N              
+mapteste[18]                 : 51        : output : 3.3-V LVTTL       :         : 1         : N              
+teste[9]                     : 52        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[28]                 : 53        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_activator[3]  : 54        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[33]                 : 55        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[12]                 : 56        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[3]                  : 57        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[22]                 : 58        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
-GND*                         : 61        :        :                   :         : 2         :                
-GND*                         : 62        :        :                   :         : 2         :                
+display_colune_data[4]       : 61        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_data[1]       : 62        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
-coluna_matriz[3]             : 64        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[10]                 : 64        : output : 3.3-V LVTTL       :         : 2         : N              
 GNDINT                       : 65        : gnd    :                   :         :           :                
-coluna_matriz[0]             : 66        : output : 3.3-V LVTTL       :         : 2         : N              
-coluna_matriz[1]             : 67        : output : 3.3-V LVTTL       :         : 2         : N              
-coluna_matriz[2]             : 68        : output : 3.3-V LVTTL       :         : 2         : N              
-mod5counter_teste            : 69        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 70        :        :                   :         : 2         :                
-linha_matriz[2]              : 71        : output : 3.3-V LVTTL       :         : 2         : N              
-coluna_matriz[4]             : 72        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 73        :        :                   :         : 2         :                
-GND*                         : 74        :        :                   :         : 2         :                
-GND*                         : 75        :        :                   :         : 2         :                
-GND*                         : 76        :        :                   :         : 2         :                
-GND*                         : 77        :        :                   :         : 2         :                
-linha_matriz[3]              : 78        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[0]                  : 66        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 67        :        :                   :         : 2         :                
+final_clk_teste              : 68        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_data[0]       : 69        : output : 3.3-V LVTTL       :         : 2         : N              
+matriz_colune_activator[3]   : 70        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_activator[0]  : 71        : output : 3.3-V LVTTL       :         : 2         : N              
+teste[0]                     : 72        : output : 3.3-V LVTTL       :         : 2         : N              
+cpld_clk                     : 73        : input  : 3.3-V LVTTL       :         : 2         : N              
+mapteste[4]                  : 74        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_data[6]       : 75        : output : 3.3-V LVTTL       :         : 2         : N              
+matriz_colune_data[1]        : 76        : output : 3.3-V LVTTL       :         : 2         : N              
+teste[7]                     : 77        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[34]                 : 78        : output : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : 79        : gnd    :                   :         :           :                
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
-GND*                         : 81        :        :                   :         : 2         :                
-GND*                         : 82        :        :                   :         : 2         :                
-GND*                         : 83        :        :                   :         : 2         :                
-GND*                         : 84        :        :                   :         : 2         :                
-linha_matriz[5]              : 85        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 86        :        :                   :         : 2         :                
-GND*                         : 87        :        :                   :         : 2         :                
-GND*                         : 88        :        :                   :         : 2         :                
-GND*                         : 89        :        :                   :         : 2         :                
-GND*                         : 90        :        :                   :         : 2         :                
-linha_matriz[4]              : 91        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 92        :        :                   :         : 2         :                
+teste[3]                     : 81        : output : 3.3-V LVTTL       :         : 2         : N              
+teste[2]                     : 82        : output : 3.3-V LVTTL       :         : 2         : N              
+teste[1]                     : 83        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[29]                 : 84        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[31]                 : 85        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[17]                 : 86        : output : 3.3-V LVTTL       :         : 2         : N              
+matriz_colune_data[6]        : 87        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[21]                 : 88        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[24]                 : 89        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[19]                 : 90        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[7]                  : 91        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[6]                  : 92        : output : 3.3-V LVTTL       :         : 2         : N              
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
-GND*                         : 95        :        :                   :         : 2         :                
-GND*                         : 96        :        :                   :         : 2         :                
-GND*                         : 97        :        :                   :         : 2         :                
-GND*                         : 98        :        :                   :         : 2         :                
-GND*                         : 99        :        :                   :         : 2         :                
+mapteste[8]                  : 95        : output : 3.3-V LVTTL       :         : 2         : N              
+display_colune_data[2]       : 96        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[5]                  : 97        : output : 3.3-V LVTTL       :         : 2         : N              
+matriz_colune_data[4]        : 98        : output : 3.3-V LVTTL       :         : 2         : N              
+mapteste[15]                 : 99        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 100       :        :                   :         : 2         :                

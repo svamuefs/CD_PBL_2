@@ -10,11 +10,11 @@ module mux4x1 #(parameter DATA_WIDTH = 1)(
     not not1 (notSelect0 , select[0]);
     not not2 (notSelect1 , select[1]);
 
-    and and1 [DATA_WIDTH-1:0] (and1_w , in_a , notSelect1 , notSelect0);
-    and and2 [DATA_WIDTH-1:0] (and2_w , in_b , notSelect1 , select[0]);
-    and and3 [DATA_WIDTH-1:0] (and3_w , in_c , select[1]  , select[0]);
-    and and4 [DATA_WIDTH-1:0] (and4_w , in_d , select[1]  , notSelect0);
+    and and1 [6:0] (and1_w , in_a , notSelect1 , notSelect0);
+    and and2 [6:0] (and2_w , in_b , notSelect1 , select[0]);
+    and and3 [6:0] (and3_w , in_c , select[1]  , notSelect0);
+    and and4 [6:0] (and4_w , in_d , select[1]  , select[0]);
 
-    or or1 [DATA_WIDTH-1:0] (out , and1_w , and2_w , and3_w , and4_w);
+    or or1 [6:0] (out , and1_w , and2_w , and3_w , and4_w);
 
 endmodule

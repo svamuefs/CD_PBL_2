@@ -1,5 +1,5 @@
 Timing Analyzer report for batalha_naval
-Tue Nov 28 22:26:53 2023
+Sun Dec  3 10:50:09 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -17,30 +17,20 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   9. Removal Summary
  10. Minimum Pulse Width Summary
  11. Setup: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
- 12. Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
- 13. Setup: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
- 14. Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
- 15. Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
- 16. Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
- 17. Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
- 18. Setup: 'cpld_clk'
- 19. Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
- 20. Hold: 'cpld_clk'
- 21. Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
- 22. Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
- 23. Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
- 24. Hold: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
- 25. Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
- 26. Hold: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
- 27. Setup Transfers
- 28. Hold Transfers
- 29. Report TCCS
- 30. Report RSKM
- 31. Unconstrained Paths Summary
- 32. Clock Status Summary
- 33. Unconstrained Output Ports
- 34. Unconstrained Output Ports
- 35. Timing Analyzer Messages
+ 12. Setup: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
+ 13. Setup: 'cpld_clk'
+ 14. Hold: 'cpld_clk'
+ 15. Hold: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
+ 16. Hold: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Output Ports
+ 24. Unconstrained Output Ports
+ 25. Timing Analyzer Messages
 
 
 
@@ -102,22 +92,17 @@ https://fpgasoftware.intel.com/eula.
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out } ;
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out } ;
 ; cpld_clk                                              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { cpld_clk }                                              ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { freq_div:freq_div_1|t_flipflop:t_flipflop_0|out }       ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { freq_div:freq_div_1|t_flipflop:t_flipflop_1|out }       ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { freq_div:freq_div_1|t_flipflop:t_flipflop_2|out }       ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { freq_div:freq_div_1|t_flipflop:t_flipflop_3|out }       ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { freq_div:freq_div_1|t_flipflop:t_flipflop_4|out }       ;
 +-------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Fmax Summary                                                                                ;
-+------------+-----------------+-------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note ;
-+------------+-----------------+-------------------------------------------------------+------+
-; 451.67 MHz ; 451.67 MHz      ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ;      ;
-; 455.58 MHz ; 455.58 MHz      ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ;      ;
-+------------+-----------------+-------------------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                                                    ;
++-------------+-----------------+-------------------------------------------------------+-------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                            ; Note                    ;
++-------------+-----------------+-------------------------------------------------------+-------------------------+
+; 402.9 MHz   ; 402.9 MHz       ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ;                         ;
+; 10000.0 MHz ; 992.06 MHz      ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; limit due to hold check ;
++-------------+-----------------+-------------------------------------------------------+-------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -126,14 +111,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; -1.214 ; -1.214        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; -1.195 ; -6.166        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.466  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; 0.466  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; 0.467  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; 0.853  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; 1.653  ; 0.000         ;
-; cpld_clk                                              ; 1.666  ; 0.000         ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; -1.482 ; -1.482        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -1.102 ; -1.102        ;
+; cpld_clk                                              ; 1.950  ; 0.000         ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -142,14 +122,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; -2.125 ; -3.690        ;
-; cpld_clk                                              ; -1.720 ; -1.720        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; -1.707 ; -1.707        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; -0.907 ; -0.907        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; -0.521 ; -0.521        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -0.520 ; -0.520        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; -0.520 ; -0.520        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1.660  ; 0.000         ;
+; cpld_clk                                              ; -2.004 ; -2.004        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -0.504 ; -0.504        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1.928  ; 0.000         ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -173,11 +148,6 @@ No paths to report.
 ; cpld_clk                                              ; -2.289 ; -2.289        ;
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.234  ; 0.000         ;
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 0.234  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; 0.234  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; 0.234  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; 0.234  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; 0.234  ; 0.000         ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 0.234  ; 0.000         ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -186,150 +156,41 @@ No paths to report.
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock                                           ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-; -1.214 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1.000        ; 0.000      ; 1.881      ;
+; -1.482 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1.000        ; 0.000      ; 2.149      ;
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'                                                                                                                                                                                                                      ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                               ; To Node                                                 ; Launch Clock                                          ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -1.195 ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.862      ;
-; -0.953 ; register7bit:register7bit_1|d_flipflop:d_flipflop_4|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_5|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.620      ;
-; -0.952 ; register7bit:register7bit_1|d_flipflop:d_flipflop_5|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_6|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.619      ;
-; -0.949 ; register7bit:register7bit_1|d_flipflop:d_flipflop_2|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.616      ;
-; -0.947 ; register7bit:register7bit_1|d_flipflop:d_flipflop_1|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.614      ;
-; -0.943 ; register7bit:register7bit_1|d_flipflop:d_flipflop_3|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 0.000      ; 1.610      ;
-; -0.227 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.500        ; 1.492      ; 1.886      ;
-; 1.372  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.500        ; 3.666      ; 2.837      ;
-; 1.511  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.500        ; 3.666      ; 2.698      ;
-; 1.872  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 3.666      ; 2.837      ;
-; 2.011  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 3.666      ; 2.698      ;
-; 2.071  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.500        ; 3.666      ; 2.138      ;
-; 2.571  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 1.000        ; 3.666      ; 2.138      ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'                                                                                                                                                                                                                  ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock                                           ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
+; -1.102 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1.000        ; 0.386      ; 2.155      ;
+; 0.267  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.500        ; 2.193      ; 2.469      ;
+; 0.450  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.500        ; 2.193      ; 2.286      ;
+; 0.767  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1.000        ; 2.193      ; 2.469      ;
+; 0.950  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1.000        ; 2.193      ; 2.286      ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'                                                                                                                                                                                                                 ;
-+-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock                                           ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-; 0.466 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.500        ; 1.784      ; 1.861      ;
-; 0.966 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1.000        ; 1.784      ; 1.861      ;
-+-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'cpld_clk'                                                                                                                                                                                                                    ;
++-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
+; 1.950 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 0.500        ; 3.267      ; 1.860      ;
+; 2.450 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 1.000        ; 3.267      ; 1.860      ;
++-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'                                                                                                                                                                                               ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; 0.466 ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; 0.500        ; 1.784      ; 1.861      ;
-; 0.966 ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; 1.000        ; 1.784      ; 1.861      ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'                                                                                                                                                                                               ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; 0.467 ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; 0.500        ; 1.784      ; 1.860      ;
-; 0.967 ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; 1.000        ; 1.784      ; 1.860      ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'                                                                                                                                                                                               ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; 0.853 ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; 0.500        ; 2.189      ; 1.879      ;
-; 1.353 ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; 1.000        ; 2.189      ; 1.879      ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'                                                                                                                                                                                               ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; 1.653 ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; 0.500        ; 2.971      ; 1.861      ;
-; 2.153 ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; 1.000        ; 2.971      ; 1.861      ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'cpld_clk'                                                                                                                                                                                                  ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-; 1.666 ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 0.500        ; 3.261      ; 2.138      ;
-; 2.166 ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 1.000        ; 3.261      ; 2.138      ;
-+-------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'                                                                                                                                                                                                                       ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                               ; To Node                                                 ; Launch Clock                                          ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -2.125 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 3.666      ; 2.138      ;
-; -1.625 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; -0.500       ; 3.666      ; 2.138      ;
-; -1.565 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 3.666      ; 2.698      ;
-; -1.426 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 3.666      ; 2.837      ;
-; -1.065 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; -0.500       ; 3.666      ; 2.698      ;
-; -0.926 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; -0.500       ; 3.666      ; 2.837      ;
-; 0.673  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out   ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; -0.500       ; 1.492      ; 1.886      ;
-; 1.389  ; register7bit:register7bit_1|d_flipflop:d_flipflop_3|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.610      ;
-; 1.393  ; register7bit:register7bit_1|d_flipflop:d_flipflop_1|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.614      ;
-; 1.395  ; register7bit:register7bit_1|d_flipflop:d_flipflop_2|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.616      ;
-; 1.398  ; register7bit:register7bit_1|d_flipflop:d_flipflop_5|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_6|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.619      ;
-; 1.399  ; register7bit:register7bit_1|d_flipflop:d_flipflop_4|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_5|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.620      ;
-; 1.641  ; register7bit:register7bit_1|d_flipflop:d_flipflop_0|out ; register7bit:register7bit_1|d_flipflop:d_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; 0.000        ; 0.000      ; 1.862      ;
-+--------+---------------------------------------------------------+---------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'cpld_clk'                                                                                                                                                                                                    ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-; -1.720 ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 0.000        ; 3.261      ; 2.138      ;
-; -1.220 ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; -0.500       ; 3.261      ; 2.138      ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'                                                                                                                                                                                                 ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -1.707 ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; 0.000        ; 2.971      ; 1.861      ;
-; -1.207 ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; -0.500       ; 2.971      ; 1.861      ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'                                                                                                                                                                                                 ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -0.907 ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; 0.000        ; 2.189      ; 1.879      ;
-; -0.407 ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; -0.500       ; 2.189      ; 1.879      ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'                                                                                                                                                                                                 ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -0.521 ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; 0.000        ; 1.784      ; 1.860      ;
-; -0.021 ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ; -0.500       ; 1.784      ; 1.860      ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'cpld_clk'                                                                                                                                                                                                                      ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
+; -2.004 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; 0.000        ; 3.267      ; 1.860      ;
+; -1.504 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk    ; -0.500       ; 3.267      ; 1.860      ;
++--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -337,19 +198,12 @@ No paths to report.
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock                                           ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-; -0.520 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.000        ; 1.784      ; 1.861      ;
-; -0.020 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -0.500       ; 1.784      ; 1.861      ;
+; -0.504 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.000        ; 2.193      ; 2.286      ;
+; -0.321 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.000        ; 2.193      ; 2.469      ;
+; -0.004 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -0.500       ; 2.193      ; 2.286      ;
+; 0.179  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; -0.500       ; 2.193      ; 2.469      ;
+; 1.548  ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0.000        ; 0.386      ; 2.155      ;
 +--------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'                                                                                                                                                                                                 ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                       ; To Node                                         ; Launch Clock                                    ; Latch Clock                                     ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
-; -0.520 ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; 0.000        ; 1.784      ; 1.861      ;
-; -0.020 ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out ; -0.500       ; 1.784      ; 1.861      ;
-+--------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+-------------------------------------------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -357,7 +211,7 @@ No paths to report.
 +-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                                             ; To Node                                               ; Launch Clock                                          ; Latch Clock                                           ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
-; 1.660 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 0.000        ; 0.000      ; 1.881      ;
+; 1.928 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 0.000        ; 0.000      ; 2.149      ;
 +-------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+--------------+------------+------------+
 
 
@@ -366,16 +220,10 @@ No paths to report.
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1        ; 1        ; 0        ; 0        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1        ; 0        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; cpld_clk                                              ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; 1        ; 1        ; 0        ; 0        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 1        ; 1        ; 1        ; 1        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 0        ; 0        ; 2        ; 1        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 0        ; 0        ; 0        ; 6        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0        ; 0        ; 1        ; 1        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0        ; 0        ; 1        ; 2        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 0        ; 0        ; 0        ; 1        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk                                              ; 0        ; 0        ; 1        ; 1        ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -385,16 +233,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 1        ; 1        ; 0        ; 0        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 1        ; 0        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; cpld_clk                                              ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; 1        ; 1        ; 0        ; 0        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; 1        ; 1        ; 0        ; 0        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 1        ; 1        ; 1        ; 1        ;
-; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 0        ; 0        ; 2        ; 1        ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; 0        ; 0        ; 0        ; 6        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0        ; 0        ; 1        ; 1        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; 0        ; 0        ; 1        ; 2        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; 0        ; 0        ; 0        ; 1        ;
+; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; cpld_clk                                              ; 0        ; 0        ; 1        ; 1        ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -420,8 +262,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 7     ; 7    ;
-; Unconstrained Output Port Paths ; 9     ; 9    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
 +---------------------------------+-------+------+
 
 
@@ -433,42 +275,31 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out ; Base ; Constrained ;
 ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out ; Base ; Constrained ;
 ; cpld_clk                                              ; cpld_clk                                              ; Base ; Constrained ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_0|out       ; Base ; Constrained ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_1|out       ; Base ; Constrained ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out       ; Base ; Constrained ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_3|out       ; Base ; Constrained ;
-; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; freq_div:freq_div_1|t_flipflop:t_flipflop_4|out       ; Base ; Constrained ;
 +-------------------------------------------------------+-------------------------------------------------------+------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                                ;
-+-------------------+---------------------------------------------------------------------------------------+
-; Output Port       ; Comment                                                                               ;
-+-------------------+---------------------------------------------------------------------------------------+
-; coluna_matriz[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; final_clk_teste   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mod5counter_teste ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; teste[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                                ;
-+-------------------+---------------------------------------------------------------------------------------+
-; Output Port       ; Comment                                                                               ;
-+-------------------+---------------------------------------------------------------------------------------+
-; coluna_matriz[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; coluna_matriz[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; final_clk_teste   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; mod5counter_teste ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; teste[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; teste[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -477,7 +308,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Nov 28 22:26:51 2023
+    Info: Processing started: Sun Dec  3 10:50:07 2023
 Info: Command: quartus_sta batalha_naval -c batalha_naval
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -489,39 +320,24 @@ Info (334004): Delay annotation completed successfully
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'batalha_naval.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name freq_div:freq_div_1|t_flipflop:t_flipflop_4|out freq_div:freq_div_1|t_flipflop:t_flipflop_4|out
-    Info (332105): create_clock -period 1.000 -name freq_div:freq_div_1|t_flipflop:t_flipflop_3|out freq_div:freq_div_1|t_flipflop:t_flipflop_3|out
-    Info (332105): create_clock -period 1.000 -name freq_div:freq_div_1|t_flipflop:t_flipflop_2|out freq_div:freq_div_1|t_flipflop:t_flipflop_2|out
+    Info (332105): create_clock -period 1.000 -name cpld_clk cpld_clk
     Info (332105): create_clock -period 1.000 -name counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out
     Info (332105): create_clock -period 1.000 -name counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out
-    Info (332105): create_clock -period 1.000 -name freq_div:freq_div_1|t_flipflop:t_flipflop_1|out freq_div:freq_div_1|t_flipflop:t_flipflop_1|out
-    Info (332105): create_clock -period 1.000 -name freq_div:freq_div_1|t_flipflop:t_flipflop_0|out freq_div:freq_div_1|t_flipflop:t_flipflop_0|out
-    Info (332105): create_clock -period 1.000 -name cpld_clk cpld_clk
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.214
+Info (332146): Worst-case setup slack is -1.482
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.214              -1.214 counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out 
-    Info (332119):    -1.195              -6.166 freq_div:freq_div_1|t_flipflop:t_flipflop_4|out 
-    Info (332119):     0.466               0.000 counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out 
-    Info (332119):     0.466               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_0|out 
-    Info (332119):     0.467               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_2|out 
-    Info (332119):     0.853               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_1|out 
-    Info (332119):     1.653               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_3|out 
-    Info (332119):     1.666               0.000 cpld_clk 
-Info (332146): Worst-case hold slack is -2.125
+    Info (332119):    -1.482              -1.482 counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out 
+    Info (332119):    -1.102              -1.102 counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out 
+    Info (332119):     1.950               0.000 cpld_clk 
+Info (332146): Worst-case hold slack is -2.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.125              -3.690 freq_div:freq_div_1|t_flipflop:t_flipflop_4|out 
-    Info (332119):    -1.720              -1.720 cpld_clk 
-    Info (332119):    -1.707              -1.707 freq_div:freq_div_1|t_flipflop:t_flipflop_3|out 
-    Info (332119):    -0.907              -0.907 freq_div:freq_div_1|t_flipflop:t_flipflop_1|out 
-    Info (332119):    -0.521              -0.521 freq_div:freq_div_1|t_flipflop:t_flipflop_2|out 
-    Info (332119):    -0.520              -0.520 counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out 
-    Info (332119):    -0.520              -0.520 freq_div:freq_div_1|t_flipflop:t_flipflop_0|out 
-    Info (332119):     1.660               0.000 counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out 
+    Info (332119):    -2.004              -2.004 cpld_clk 
+    Info (332119):    -0.504              -0.504 counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out 
+    Info (332119):     1.928               0.000 counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -530,17 +346,12 @@ Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):    -2.289              -2.289 cpld_clk 
     Info (332119):     0.234               0.000 counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out 
     Info (332119):     0.234               0.000 counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out 
-    Info (332119):     0.234               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_0|out 
-    Info (332119):     0.234               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_1|out 
-    Info (332119):     0.234               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_2|out 
-    Info (332119):     0.234               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_3|out 
-    Info (332119):     0.234               0.000 freq_div:freq_div_1|t_flipflop:t_flipflop_4|out 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4676 megabytes
-    Info: Processing ended: Tue Nov 28 22:26:53 2023
+    Info: Processing ended: Sun Dec  3 10:50:09 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -3,67 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : -1.214
-TNS   : -1.214
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
-Slack : -1.195
-TNS   : -6.166
+Slack : -1.482
+TNS   : -1.482
 
 Type  : Setup 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.466
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : 0.853
-TNS   : 0.000
-
-Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
-Slack : 1.653
-TNS   : 0.000
+Slack : -1.102
+TNS   : -1.102
 
 Type  : Setup 'cpld_clk'
-Slack : 1.666
+Slack : 1.950
 TNS   : 0.000
 
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
-Slack : -2.125
-TNS   : -3.690
-
 Type  : Hold 'cpld_clk'
-Slack : -1.720
-TNS   : -1.720
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
-Slack : -1.707
-TNS   : -1.707
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : -0.907
-TNS   : -0.907
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : -0.521
-TNS   : -0.521
+Slack : -2.004
+TNS   : -2.004
 
 Type  : Hold 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : -0.520
-TNS   : -0.520
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : -0.520
-TNS   : -0.520
+Slack : -0.504
+TNS   : -0.504
 
 Type  : Hold 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : 1.660
+Slack : 1.928
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'cpld_clk'
@@ -75,26 +35,6 @@ Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_3|out'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'freq_div:freq_div_1|t_flipflop:t_flipflop_4|out'
 Slack : 0.234
 TNS   : 0.000
 

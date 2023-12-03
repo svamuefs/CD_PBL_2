@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-// DATE "11/28/2023 22:27:24"
+// DATE "12/03/2023 12:39:22"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -31,18 +31,23 @@
 
 module batalha_naval (
 	cpld_clk,
-	linha_matriz,
-	coluna_matriz,
-	mod5counter_teste,
-	final_clk_teste);
+	matriz_colune_data,
+	display_colune_data,
+	matriz_colune_activator,
+	display_colune_activator,
+	counter_teste,
+	final_clk_teste,
+	teste,
+	mapteste);
 input 	cpld_clk;
-output 	[6:0] linha_matriz;
-output 	[4:0] coluna_matriz;
-output 	mod5counter_teste;
+output 	[6:0] matriz_colune_data;
+output 	[6:0] display_colune_data;
+output 	[4:0] matriz_colune_activator;
+output 	[3:0] display_colune_activator;
+output 	counter_teste;
 output 	final_clk_teste;
-
-// Design Ports Information
-
+output 	[10:0] teste;
+output 	[34:0] mapteste;
 
 wire gnd;
 wire vcc;
@@ -59,22 +64,34 @@ wire \cpld_clk~combout ;
 wire \freq_div_1|t_flipflop_0|out~regout ;
 wire \freq_div_1|t_flipflop_1|out~regout ;
 wire \freq_div_1|t_flipflop_2|out~regout ;
-wire \freq_div_1|t_flipflop_3|out~regout ;
-wire \freq_div_1|t_flipflop_4|out~regout ;
-wire \counter3bit_1|t_flipflop_0|out~regout ;
-wire \counter3bit_1|t_flipflop_1|out~regout ;
-wire \counter3bit_1|t_flipflop_2|out~regout ;
-wire \register7bit_1|d_flipflop_0|out~regout ;
-wire \register7bit_1|d_flipflop_1|out~regout ;
-wire \register7bit_1|d_flipflop_2|out~regout ;
-wire \register7bit_1|d_flipflop_3|out~regout ;
-wire \register7bit_1|d_flipflop_4|out~regout ;
-wire \register7bit_1|d_flipflop_5|out~regout ;
-wire \register7bit_1|d_flipflop_6|out~regout ;
-wire \counter3bit_1|and1~0 ;
+wire \matriz_displayer|counter3bit_1|andMod1~combout ;
+wire \matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ;
+wire \matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ;
+wire \matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ;
+wire \matriz_displayer|mux8x1_1|and2[0]~0_combout ;
+wire \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0_combout ;
+wire \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1_combout ;
+wire \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2_combout ;
+wire \matriz_displayer|mux8x1_1|and1[4]~combout ;
+wire \segment_display|counter3bit_1|t_flipflop_1|out~regout ;
+wire \segment_display|counter3bit_1|t_flipflop_2|out~regout ;
+wire \segment_display|counter3bit_1|andMod1~combout ;
+wire \segment_display|counter3bit_1|t_flipflop_0|out~regout ;
+wire \segment_display|mux8x1_1|mux4x1_1|and3[1]~0_combout ;
+wire \segment_display|mux8x1_1|mux4x1_1|and3[1]~1_combout ;
+wire \segment_display|mux8x1_1|mux4x1_1|and3[1]~2_combout ;
+wire \segment_display|mux8x1_1|and1[3]~combout ;
+wire \matriz_displayer|register8bit_1|d_flipflop_0|out~regout ;
+wire \matriz_displayer|register8bit_1|d_flipflop_1|out~regout ;
+wire \matriz_displayer|register8bit_1|d_flipflop_2|out~regout ;
+wire \matriz_displayer|register8bit_1|d_flipflop_3|out~regout ;
+wire \matriz_displayer|register8bit_1|d_flipflop_4|out~regout ;
+wire \segment_display|register8bit_1|d_flipflop_0|out~regout ;
+wire \segment_display|register8bit_1|d_flipflop_1|out~regout ;
+wire \segment_display|register8bit_1|d_flipflop_2|out~regout ;
+wire \segment_display|register8bit_1|d_flipflop_3|out~regout ;
 
 
-// Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 maxii_io \cpld_clk~I (
 	.datain(gnd),
 	.oe(gnd),
@@ -84,15 +101,14 @@ maxii_io \cpld_clk~I (
 defparam \cpld_clk~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X2_Y4_N4
 maxii_lcell \freq_div_1|t_flipflop_0|out (
 // Equation(s):
-// \freq_div_1|t_flipflop_0|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_0|out~regout ))), \cpld_clk~combout , VCC, , , , , , )
+// \freq_div_1|t_flipflop_0|out~regout  = DFFEAS((!\freq_div_1|t_flipflop_0|out~regout ), !\cpld_clk~combout , VCC, , , , , , )
 
-	.clk(\cpld_clk~combout ),
-	.dataa(vcc),
+	.clk(!\cpld_clk~combout ),
+	.dataa(\freq_div_1|t_flipflop_0|out~regout ),
 	.datab(vcc),
-	.datac(\freq_div_1|t_flipflop_0|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
@@ -112,7 +128,7 @@ maxii_lcell \freq_div_1|t_flipflop_0|out (
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \freq_div_1|t_flipflop_0|out .lut_mask = "0f0f";
+defparam \freq_div_1|t_flipflop_0|out .lut_mask = "5555";
 defparam \freq_div_1|t_flipflop_0|out .operation_mode = "normal";
 defparam \freq_div_1|t_flipflop_0|out .output_mode = "reg_only";
 defparam \freq_div_1|t_flipflop_0|out .register_cascade_mode = "off";
@@ -120,16 +136,15 @@ defparam \freq_div_1|t_flipflop_0|out .sum_lutc_input = "datac";
 defparam \freq_div_1|t_flipflop_0|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X2_Y4_N2
 maxii_lcell \freq_div_1|t_flipflop_1|out (
 // Equation(s):
-// \freq_div_1|t_flipflop_1|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_1|out~regout ))), \freq_div_1|t_flipflop_0|out~regout , VCC, , , , , , )
+// \freq_div_1|t_flipflop_1|out~regout  = DFFEAS((!\freq_div_1|t_flipflop_1|out~regout ), !\freq_div_1|t_flipflop_0|out~regout , VCC, , , , , , )
 
-	.clk(\freq_div_1|t_flipflop_0|out~regout ),
-	.dataa(vcc),
+	.clk(!\freq_div_1|t_flipflop_0|out~regout ),
+	.dataa(\freq_div_1|t_flipflop_1|out~regout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\freq_div_1|t_flipflop_1|out~regout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -148,7 +163,7 @@ maxii_lcell \freq_div_1|t_flipflop_1|out (
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \freq_div_1|t_flipflop_1|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_1|out .lut_mask = "5555";
 defparam \freq_div_1|t_flipflop_1|out .operation_mode = "normal";
 defparam \freq_div_1|t_flipflop_1|out .output_mode = "reg_only";
 defparam \freq_div_1|t_flipflop_1|out .register_cascade_mode = "off";
@@ -156,16 +171,15 @@ defparam \freq_div_1|t_flipflop_1|out .sum_lutc_input = "datac";
 defparam \freq_div_1|t_flipflop_1|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N9
 maxii_lcell \freq_div_1|t_flipflop_2|out (
 // Equation(s):
-// \freq_div_1|t_flipflop_2|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_2|out~regout ))), \freq_div_1|t_flipflop_1|out~regout , VCC, , , , , , )
+// \freq_div_1|t_flipflop_2|out~regout  = DFFEAS((!\freq_div_1|t_flipflop_2|out~regout ), !\freq_div_1|t_flipflop_1|out~regout , VCC, , , , , , )
 
-	.clk(\freq_div_1|t_flipflop_1|out~regout ),
-	.dataa(vcc),
+	.clk(!\freq_div_1|t_flipflop_1|out~regout ),
+	.dataa(\freq_div_1|t_flipflop_2|out~regout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\freq_div_1|t_flipflop_2|out~regout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -184,7 +198,7 @@ maxii_lcell \freq_div_1|t_flipflop_2|out (
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \freq_div_1|t_flipflop_2|out .lut_mask = "00ff";
+defparam \freq_div_1|t_flipflop_2|out .lut_mask = "5555";
 defparam \freq_div_1|t_flipflop_2|out .operation_mode = "normal";
 defparam \freq_div_1|t_flipflop_2|out .output_mode = "reg_only";
 defparam \freq_div_1|t_flipflop_2|out .register_cascade_mode = "off";
@@ -192,87 +206,609 @@ defparam \freq_div_1|t_flipflop_2|out .sum_lutc_input = "datac";
 defparam \freq_div_1|t_flipflop_2|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N8
-maxii_lcell \freq_div_1|t_flipflop_3|out (
+maxii_lcell \matriz_displayer|counter3bit_1|andMod1 (
 // Equation(s):
-// \freq_div_1|t_flipflop_3|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_3|out~regout ))), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
+// \matriz_displayer|counter3bit_1|andMod1~combout  = (\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  & (\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout  & ((!\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.datac(vcc),
+	.datad(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|counter3bit_1|andMod1~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|counter3bit_1|andMod1 .lut_mask = "0088";
+defparam \matriz_displayer|counter3bit_1|andMod1 .operation_mode = "normal";
+defparam \matriz_displayer|counter3bit_1|andMod1 .output_mode = "comb_only";
+defparam \matriz_displayer|counter3bit_1|andMod1 .register_cascade_mode = "off";
+defparam \matriz_displayer|counter3bit_1|andMod1 .sum_lutc_input = "datac";
+defparam \matriz_displayer|counter3bit_1|andMod1 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|counter3bit_1|t_flipflop_0|out (
+// Equation(s):
+// \matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  = DFFEAS((!\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ), !\freq_div_1|t_flipflop_2|out~regout , !\matriz_displayer|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\matriz_displayer|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .lut_mask = "5555";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .operation_mode = "normal";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .output_mode = "reg_only";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .register_cascade_mode = "off";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_0|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|counter3bit_1|t_flipflop_1|out (
+// Equation(s):
+// \matriz_displayer|counter3bit_1|t_flipflop_1|out~regout  = DFFEAS((!\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ), !\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout , !\matriz_displayer|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\matriz_displayer|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .lut_mask = "5555";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .operation_mode = "normal";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .output_mode = "reg_only";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .register_cascade_mode = "off";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_1|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|counter3bit_1|t_flipflop_2|out (
+// Equation(s):
+// \matriz_displayer|counter3bit_1|t_flipflop_2|out~regout  = DFFEAS((!\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ), !\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout , !\matriz_displayer|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\matriz_displayer|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .lut_mask = "5555";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .operation_mode = "normal";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .output_mode = "reg_only";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .register_cascade_mode = "off";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|counter3bit_1|t_flipflop_2|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|mux8x1_1|and2[0]~0 (
+// Equation(s):
+// \matriz_displayer|mux8x1_1|and2[0]~0_combout  = (\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout  & (((!\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  & !\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.datab(vcc),
+	.datac(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datad(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|mux8x1_1|and2[0]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .lut_mask = "000a";
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .operation_mode = "normal";
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .output_mode = "comb_only";
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .register_cascade_mode = "off";
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .sum_lutc_input = "datac";
+defparam \matriz_displayer|mux8x1_1|and2[0]~0 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 (
+// Equation(s):
+// \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0_combout  = (\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  & (\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout  & ((!\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.datac(vcc),
+	.datad(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .lut_mask = "0088";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .operation_mode = "normal";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .output_mode = "comb_only";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .register_cascade_mode = "off";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .sum_lutc_input = "datac";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 (
+// Equation(s):
+// \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1_combout  = (\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout  & (((!\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  & !\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.datab(vcc),
+	.datac(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datad(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .lut_mask = "000a";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .operation_mode = "normal";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .output_mode = "comb_only";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .register_cascade_mode = "off";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .sum_lutc_input = "datac";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 (
+// Equation(s):
+// \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2_combout  = (\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout  & (((!\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout  & !\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(vcc),
+	.datac(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.datad(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .lut_mask = "000a";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .operation_mode = "normal";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .output_mode = "comb_only";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .register_cascade_mode = "off";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .sum_lutc_input = "datac";
+defparam \matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|mux8x1_1|and1[4] (
+// Equation(s):
+// \matriz_displayer|mux8x1_1|and1[4]~combout  = (\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ) # ((\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ) # ((\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout )))
+
+	.clk(gnd),
+	.dataa(\matriz_displayer|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\matriz_displayer|counter3bit_1|t_flipflop_1|out~regout ),
+	.datac(\matriz_displayer|counter3bit_1|t_flipflop_2|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\matriz_displayer|mux8x1_1|and1[4]~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \matriz_displayer|mux8x1_1|and1[4] .lut_mask = "fefe";
+defparam \matriz_displayer|mux8x1_1|and1[4] .operation_mode = "normal";
+defparam \matriz_displayer|mux8x1_1|and1[4] .output_mode = "comb_only";
+defparam \matriz_displayer|mux8x1_1|and1[4] .register_cascade_mode = "off";
+defparam \matriz_displayer|mux8x1_1|and1[4] .sum_lutc_input = "datac";
+defparam \matriz_displayer|mux8x1_1|and1[4] .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|counter3bit_1|t_flipflop_1|out (
+// Equation(s):
+// \segment_display|counter3bit_1|t_flipflop_1|out~regout  = DFFEAS((!\segment_display|counter3bit_1|t_flipflop_1|out~regout ), !\segment_display|counter3bit_1|t_flipflop_0|out~regout , !\segment_display|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\segment_display|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .lut_mask = "5555";
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .operation_mode = "normal";
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .output_mode = "reg_only";
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .register_cascade_mode = "off";
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .sum_lutc_input = "datac";
+defparam \segment_display|counter3bit_1|t_flipflop_1|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|counter3bit_1|t_flipflop_2|out (
+// Equation(s):
+// \segment_display|counter3bit_1|t_flipflop_2|out~regout  = DFFEAS((!\segment_display|counter3bit_1|t_flipflop_2|out~regout ), !\segment_display|counter3bit_1|t_flipflop_1|out~regout , !\segment_display|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\segment_display|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .lut_mask = "5555";
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .operation_mode = "normal";
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .output_mode = "reg_only";
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .register_cascade_mode = "off";
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .sum_lutc_input = "datac";
+defparam \segment_display|counter3bit_1|t_flipflop_2|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|counter3bit_1|andMod1 (
+// Equation(s):
+// \segment_display|counter3bit_1|andMod1~combout  = (\segment_display|counter3bit_1|t_flipflop_0|out~regout  & (\segment_display|counter3bit_1|t_flipflop_2|out~regout  & ((!\segment_display|counter3bit_1|t_flipflop_1|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.datac(vcc),
+	.datad(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\segment_display|counter3bit_1|andMod1~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|counter3bit_1|andMod1 .lut_mask = "0088";
+defparam \segment_display|counter3bit_1|andMod1 .operation_mode = "normal";
+defparam \segment_display|counter3bit_1|andMod1 .output_mode = "comb_only";
+defparam \segment_display|counter3bit_1|andMod1 .register_cascade_mode = "off";
+defparam \segment_display|counter3bit_1|andMod1 .sum_lutc_input = "datac";
+defparam \segment_display|counter3bit_1|andMod1 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|counter3bit_1|t_flipflop_0|out (
+// Equation(s):
+// \segment_display|counter3bit_1|t_flipflop_0|out~regout  = DFFEAS((!\segment_display|counter3bit_1|t_flipflop_0|out~regout ), !\freq_div_1|t_flipflop_2|out~regout , !\segment_display|counter3bit_1|andMod1~combout , , , , , , )
+
+	.clk(!\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(\segment_display|counter3bit_1|andMod1~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .lut_mask = "5555";
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .operation_mode = "normal";
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .output_mode = "reg_only";
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .register_cascade_mode = "off";
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .sum_lutc_input = "datac";
+defparam \segment_display|counter3bit_1|t_flipflop_0|out .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 (
+// Equation(s):
+// \segment_display|mux8x1_1|mux4x1_1|and3[1]~0_combout  = (\segment_display|counter3bit_1|t_flipflop_0|out~regout  & (\segment_display|counter3bit_1|t_flipflop_1|out~regout  & ((!\segment_display|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.datac(vcc),
+	.datad(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\segment_display|mux8x1_1|mux4x1_1|and3[1]~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .lut_mask = "0088";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .operation_mode = "normal";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .output_mode = "comb_only";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .register_cascade_mode = "off";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .sum_lutc_input = "datac";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~0 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 (
+// Equation(s):
+// \segment_display|mux8x1_1|mux4x1_1|and3[1]~1_combout  = (\segment_display|counter3bit_1|t_flipflop_1|out~regout  & (((!\segment_display|counter3bit_1|t_flipflop_0|out~regout  & !\segment_display|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.datab(vcc),
+	.datac(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datad(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\segment_display|mux8x1_1|mux4x1_1|and3[1]~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .lut_mask = "000a";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .operation_mode = "normal";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .output_mode = "comb_only";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .register_cascade_mode = "off";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .sum_lutc_input = "datac";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~1 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 (
+// Equation(s):
+// \segment_display|mux8x1_1|mux4x1_1|and3[1]~2_combout  = (\segment_display|counter3bit_1|t_flipflop_0|out~regout  & (((!\segment_display|counter3bit_1|t_flipflop_1|out~regout  & !\segment_display|counter3bit_1|t_flipflop_2|out~regout ))))
+
+	.clk(gnd),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(vcc),
+	.datac(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.datad(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\segment_display|mux8x1_1|mux4x1_1|and3[1]~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .lut_mask = "000a";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .operation_mode = "normal";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .output_mode = "comb_only";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .register_cascade_mode = "off";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .sum_lutc_input = "datac";
+defparam \segment_display|mux8x1_1|mux4x1_1|and3[1]~2 .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \segment_display|mux8x1_1|and1[3] (
+// Equation(s):
+// \segment_display|mux8x1_1|and1[3]~combout  = (\segment_display|counter3bit_1|t_flipflop_0|out~regout ) # ((\segment_display|counter3bit_1|t_flipflop_1|out~regout ) # ((\segment_display|counter3bit_1|t_flipflop_2|out~regout )))
+
+	.clk(gnd),
+	.dataa(\segment_display|counter3bit_1|t_flipflop_0|out~regout ),
+	.datab(\segment_display|counter3bit_1|t_flipflop_1|out~regout ),
+	.datac(\segment_display|counter3bit_1|t_flipflop_2|out~regout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\segment_display|mux8x1_1|and1[3]~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \segment_display|mux8x1_1|and1[3] .lut_mask = "fefe";
+defparam \segment_display|mux8x1_1|and1[3] .operation_mode = "normal";
+defparam \segment_display|mux8x1_1|and1[3] .output_mode = "comb_only";
+defparam \segment_display|mux8x1_1|and1[3] .register_cascade_mode = "off";
+defparam \segment_display|mux8x1_1|and1[3] .sum_lutc_input = "datac";
+defparam \segment_display|mux8x1_1|and1[3] .synch_mode = "off";
+// synopsys translate_on
+
+maxii_lcell \matriz_displayer|register8bit_1|d_flipflop_0|out (
+// Equation(s):
+// \matriz_displayer|register8bit_1|d_flipflop_0|out~regout  = DFFEAS((!\matriz_displayer|mux8x1_1|and1[4]~combout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
 	.clk(\freq_div_1|t_flipflop_2|out~regout ),
-	.dataa(vcc),
+	.dataa(\matriz_displayer|mux8x1_1|and1[4]~combout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\freq_div_1|t_flipflop_3|out~regout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(),
-	.regout(\freq_div_1|t_flipflop_3|out~regout ),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \freq_div_1|t_flipflop_3|out .lut_mask = "00ff";
-defparam \freq_div_1|t_flipflop_3|out .operation_mode = "normal";
-defparam \freq_div_1|t_flipflop_3|out .output_mode = "reg_only";
-defparam \freq_div_1|t_flipflop_3|out .register_cascade_mode = "off";
-defparam \freq_div_1|t_flipflop_3|out .sum_lutc_input = "datac";
-defparam \freq_div_1|t_flipflop_3|out .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y3_N2
-maxii_lcell \freq_div_1|t_flipflop_4|out (
-// Equation(s):
-// \freq_div_1|t_flipflop_4|out~regout  = DFFEAS((((!\freq_div_1|t_flipflop_4|out~regout ))), \freq_div_1|t_flipflop_3|out~regout , VCC, , , , , , )
-
-	.clk(\freq_div_1|t_flipflop_3|out~regout ),
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(vcc),
-	.datad(\freq_div_1|t_flipflop_4|out~regout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(),
-	.regout(\freq_div_1|t_flipflop_4|out~regout ),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \freq_div_1|t_flipflop_4|out .lut_mask = "00ff";
-defparam \freq_div_1|t_flipflop_4|out .operation_mode = "normal";
-defparam \freq_div_1|t_flipflop_4|out .output_mode = "reg_only";
-defparam \freq_div_1|t_flipflop_4|out .register_cascade_mode = "off";
-defparam \freq_div_1|t_flipflop_4|out .sum_lutc_input = "datac";
-defparam \freq_div_1|t_flipflop_4|out .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X6_Y3_N4
-maxii_lcell \counter3bit_1|t_flipflop_0|out (
-// Equation(s):
-// \counter3bit_1|t_flipflop_0|out~regout  = DFFEAS((((!\counter3bit_1|t_flipflop_0|out~regout ))), GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , , , , )
-
-	.clk(\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\counter3bit_1|t_flipflop_0|out~regout ),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
@@ -287,29 +823,28 @@ maxii_lcell \counter3bit_1|t_flipflop_0|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\counter3bit_1|t_flipflop_0|out~regout ),
+	.regout(\matriz_displayer|register8bit_1|d_flipflop_0|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \counter3bit_1|t_flipflop_0|out .lut_mask = "0f0f";
-defparam \counter3bit_1|t_flipflop_0|out .operation_mode = "normal";
-defparam \counter3bit_1|t_flipflop_0|out .output_mode = "reg_only";
-defparam \counter3bit_1|t_flipflop_0|out .register_cascade_mode = "off";
-defparam \counter3bit_1|t_flipflop_0|out .sum_lutc_input = "datac";
-defparam \counter3bit_1|t_flipflop_0|out .synch_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .lut_mask = "5555";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .operation_mode = "normal";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .output_mode = "reg_only";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .register_cascade_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|register8bit_1|d_flipflop_0|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X6_Y3_N9
-maxii_lcell \counter3bit_1|t_flipflop_1|out (
+maxii_lcell \matriz_displayer|register8bit_1|d_flipflop_1|out (
 // Equation(s):
-// \counter3bit_1|t_flipflop_1|out~regout  = DFFEAS((((!\counter3bit_1|t_flipflop_1|out~regout ))), \counter3bit_1|t_flipflop_0|out~regout , VCC, , , , , , )
+// \matriz_displayer|register8bit_1|d_flipflop_1|out~regout  = DFFEAS((\matriz_displayer|register8bit_1|d_flipflop_0|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(\counter3bit_1|t_flipflop_0|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\matriz_displayer|register8bit_1|d_flipflop_0|out~regout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\counter3bit_1|t_flipflop_1|out~regout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -323,29 +858,28 @@ maxii_lcell \counter3bit_1|t_flipflop_1|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\counter3bit_1|t_flipflop_1|out~regout ),
+	.regout(\matriz_displayer|register8bit_1|d_flipflop_1|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \counter3bit_1|t_flipflop_1|out .lut_mask = "00ff";
-defparam \counter3bit_1|t_flipflop_1|out .operation_mode = "normal";
-defparam \counter3bit_1|t_flipflop_1|out .output_mode = "reg_only";
-defparam \counter3bit_1|t_flipflop_1|out .register_cascade_mode = "off";
-defparam \counter3bit_1|t_flipflop_1|out .sum_lutc_input = "datac";
-defparam \counter3bit_1|t_flipflop_1|out .synch_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .lut_mask = "aaaa";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .operation_mode = "normal";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .output_mode = "reg_only";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .register_cascade_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|register8bit_1|d_flipflop_1|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N8
-maxii_lcell \counter3bit_1|t_flipflop_2|out (
+maxii_lcell \matriz_displayer|register8bit_1|d_flipflop_2|out (
 // Equation(s):
-// \counter3bit_1|t_flipflop_2|out~regout  = DFFEAS((((!\counter3bit_1|t_flipflop_2|out~regout ))), \counter3bit_1|t_flipflop_1|out~regout , VCC, , , , , , )
+// \matriz_displayer|register8bit_1|d_flipflop_2|out~regout  = DFFEAS((\matriz_displayer|register8bit_1|d_flipflop_1|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(\counter3bit_1|t_flipflop_1|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\matriz_displayer|register8bit_1|d_flipflop_1|out~regout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\counter3bit_1|t_flipflop_2|out~regout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -359,66 +893,28 @@ maxii_lcell \counter3bit_1|t_flipflop_2|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\counter3bit_1|t_flipflop_2|out~regout ),
+	.regout(\matriz_displayer|register8bit_1|d_flipflop_2|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \counter3bit_1|t_flipflop_2|out .lut_mask = "00ff";
-defparam \counter3bit_1|t_flipflop_2|out .operation_mode = "normal";
-defparam \counter3bit_1|t_flipflop_2|out .output_mode = "reg_only";
-defparam \counter3bit_1|t_flipflop_2|out .register_cascade_mode = "off";
-defparam \counter3bit_1|t_flipflop_2|out .sum_lutc_input = "datac";
-defparam \counter3bit_1|t_flipflop_2|out .synch_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .lut_mask = "aaaa";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .operation_mode = "normal";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .output_mode = "reg_only";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .register_cascade_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|register8bit_1|d_flipflop_2|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N2
-maxii_lcell \register7bit_1|d_flipflop_0|out (
+maxii_lcell \matriz_displayer|register8bit_1|d_flipflop_3|out (
 // Equation(s):
-// \counter3bit_1|and1~0  = (\counter3bit_1|t_flipflop_1|out~regout  & (\counter3bit_1|t_flipflop_0|out~regout  & ((\counter3bit_1|t_flipflop_2|out~regout ))))
-// \register7bit_1|d_flipflop_0|out~regout  = DFFEAS(\counter3bit_1|and1~0 , !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , , , , )
+// \matriz_displayer|register8bit_1|d_flipflop_3|out~regout  = DFFEAS((\matriz_displayer|register8bit_1|d_flipflop_2|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(\counter3bit_1|t_flipflop_1|out~regout ),
-	.datab(\counter3bit_1|t_flipflop_0|out~regout ),
-	.datac(vcc),
-	.datad(\counter3bit_1|t_flipflop_2|out~regout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\counter3bit_1|and1~0 ),
-	.regout(\register7bit_1|d_flipflop_0|out~regout ),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \register7bit_1|d_flipflop_0|out .lut_mask = "8800";
-defparam \register7bit_1|d_flipflop_0|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_0|out .output_mode = "reg_and_comb";
-defparam \register7bit_1|d_flipflop_0|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_0|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_0|out .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X7_Y3_N0
-maxii_lcell \register7bit_1|d_flipflop_1|out (
-// Equation(s):
-// \register7bit_1|d_flipflop_1|out~regout  = DFFEAS((((\register7bit_1|d_flipflop_0|out~regout ))), !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , , , , )
-
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\matriz_displayer|register8bit_1|d_flipflop_2|out~regout ),
 	.datab(vcc),
 	.datac(vcc),
-	.datad(\register7bit_1|d_flipflop_0|out~regout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -432,33 +928,32 @@ maxii_lcell \register7bit_1|d_flipflop_1|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_1|out~regout ),
+	.regout(\matriz_displayer|register8bit_1|d_flipflop_3|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_1|out .lut_mask = "ff00";
-defparam \register7bit_1|d_flipflop_1|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_1|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_1|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_1|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_1|out .synch_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .lut_mask = "aaaa";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .operation_mode = "normal";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .output_mode = "reg_only";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .register_cascade_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|register8bit_1|d_flipflop_3|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N6
-maxii_lcell \register7bit_1|d_flipflop_2|out (
+maxii_lcell \matriz_displayer|register8bit_1|d_flipflop_4|out (
 // Equation(s):
-// \register7bit_1|d_flipflop_2|out~regout  = DFFEAS(GND, !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , \register7bit_1|d_flipflop_1|out~regout , , , VCC)
+// \matriz_displayer|register8bit_1|d_flipflop_4|out~regout  = DFFEAS((\matriz_displayer|register8bit_1|d_flipflop_3|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\matriz_displayer|register8bit_1|d_flipflop_3|out~regout ),
 	.datab(vcc),
-	.datac(\register7bit_1|d_flipflop_1|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.cin(gnd),
 	.cin0(gnd),
@@ -468,33 +963,32 @@ maxii_lcell \register7bit_1|d_flipflop_2|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_2|out~regout ),
+	.regout(\matriz_displayer|register8bit_1|d_flipflop_4|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_2|out .lut_mask = "0000";
-defparam \register7bit_1|d_flipflop_2|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_2|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_2|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_2|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_2|out .synch_mode = "on";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .lut_mask = "aaaa";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .operation_mode = "normal";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .output_mode = "reg_only";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .register_cascade_mode = "off";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .sum_lutc_input = "datac";
+defparam \matriz_displayer|register8bit_1|d_flipflop_4|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N7
-maxii_lcell \register7bit_1|d_flipflop_3|out (
+maxii_lcell \segment_display|register8bit_1|d_flipflop_0|out (
 // Equation(s):
-// \register7bit_1|d_flipflop_3|out~regout  = DFFEAS(GND, !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , \register7bit_1|d_flipflop_2|out~regout , , , VCC)
+// \segment_display|register8bit_1|d_flipflop_0|out~regout  = DFFEAS((!\segment_display|mux8x1_1|and1[3]~combout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\segment_display|mux8x1_1|and1[3]~combout ),
 	.datab(vcc),
-	.datac(\register7bit_1|d_flipflop_2|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.cin(gnd),
 	.cin0(gnd),
@@ -504,33 +998,32 @@ maxii_lcell \register7bit_1|d_flipflop_3|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_3|out~regout ),
+	.regout(\segment_display|register8bit_1|d_flipflop_0|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_3|out .lut_mask = "0000";
-defparam \register7bit_1|d_flipflop_3|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_3|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_3|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_3|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_3|out .synch_mode = "on";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .lut_mask = "5555";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .operation_mode = "normal";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .output_mode = "reg_only";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .register_cascade_mode = "off";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .sum_lutc_input = "datac";
+defparam \segment_display|register8bit_1|d_flipflop_0|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N4
-maxii_lcell \register7bit_1|d_flipflop_4|out (
+maxii_lcell \segment_display|register8bit_1|d_flipflop_1|out (
 // Equation(s):
-// \register7bit_1|d_flipflop_4|out~regout  = DFFEAS(GND, !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , \register7bit_1|d_flipflop_3|out~regout , , , VCC)
+// \segment_display|register8bit_1|d_flipflop_1|out~regout  = DFFEAS((\segment_display|register8bit_1|d_flipflop_0|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\segment_display|register8bit_1|d_flipflop_0|out~regout ),
 	.datab(vcc),
-	.datac(\register7bit_1|d_flipflop_3|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.cin(gnd),
 	.cin0(gnd),
@@ -540,33 +1033,32 @@ maxii_lcell \register7bit_1|d_flipflop_4|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_4|out~regout ),
+	.regout(\segment_display|register8bit_1|d_flipflop_1|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_4|out .lut_mask = "0000";
-defparam \register7bit_1|d_flipflop_4|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_4|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_4|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_4|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_4|out .synch_mode = "on";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .lut_mask = "aaaa";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .operation_mode = "normal";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .output_mode = "reg_only";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .register_cascade_mode = "off";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .sum_lutc_input = "datac";
+defparam \segment_display|register8bit_1|d_flipflop_1|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N5
-maxii_lcell \register7bit_1|d_flipflop_5|out (
+maxii_lcell \segment_display|register8bit_1|d_flipflop_2|out (
 // Equation(s):
-// \register7bit_1|d_flipflop_5|out~regout  = DFFEAS(GND, !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , \register7bit_1|d_flipflop_4|out~regout , , , VCC)
+// \segment_display|register8bit_1|d_flipflop_2|out~regout  = DFFEAS((\segment_display|register8bit_1|d_flipflop_1|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\segment_display|register8bit_1|d_flipflop_1|out~regout ),
 	.datab(vcc),
-	.datac(\register7bit_1|d_flipflop_4|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.cin(gnd),
 	.cin0(gnd),
@@ -576,33 +1068,32 @@ maxii_lcell \register7bit_1|d_flipflop_5|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_5|out~regout ),
+	.regout(\segment_display|register8bit_1|d_flipflop_2|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_5|out .lut_mask = "0000";
-defparam \register7bit_1|d_flipflop_5|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_5|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_5|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_5|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_5|out .synch_mode = "on";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .lut_mask = "aaaa";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .operation_mode = "normal";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .output_mode = "reg_only";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .register_cascade_mode = "off";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .sum_lutc_input = "datac";
+defparam \segment_display|register8bit_1|d_flipflop_2|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N9
-maxii_lcell \register7bit_1|d_flipflop_6|out (
+maxii_lcell \segment_display|register8bit_1|d_flipflop_3|out (
 // Equation(s):
-// \register7bit_1|d_flipflop_6|out~regout  = DFFEAS(GND, !GLOBAL(\freq_div_1|t_flipflop_4|out~regout ), VCC, , , \register7bit_1|d_flipflop_5|out~regout , , , VCC)
+// \segment_display|register8bit_1|d_flipflop_3|out~regout  = DFFEAS((\segment_display|register8bit_1|d_flipflop_2|out~regout ), \freq_div_1|t_flipflop_2|out~regout , VCC, , , , , , )
 
-	.clk(!\freq_div_1|t_flipflop_4|out~regout ),
-	.dataa(vcc),
+	.clk(\freq_div_1|t_flipflop_2|out~regout ),
+	.dataa(\segment_display|register8bit_1|d_flipflop_2|out~regout ),
 	.datab(vcc),
-	.datac(\register7bit_1|d_flipflop_5|out~regout ),
+	.datac(vcc),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(vcc),
+	.sload(gnd),
 	.ena(vcc),
 	.cin(gnd),
 	.cin0(gnd),
@@ -612,157 +1103,656 @@ maxii_lcell \register7bit_1|d_flipflop_6|out (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.combout(),
-	.regout(\register7bit_1|d_flipflop_6|out~regout ),
+	.regout(\segment_display|register8bit_1|d_flipflop_3|out~regout ),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \register7bit_1|d_flipflop_6|out .lut_mask = "0000";
-defparam \register7bit_1|d_flipflop_6|out .operation_mode = "normal";
-defparam \register7bit_1|d_flipflop_6|out .output_mode = "reg_only";
-defparam \register7bit_1|d_flipflop_6|out .register_cascade_mode = "off";
-defparam \register7bit_1|d_flipflop_6|out .sum_lutc_input = "datac";
-defparam \register7bit_1|d_flipflop_6|out .synch_mode = "on";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .lut_mask = "aaaa";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .operation_mode = "normal";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .output_mode = "reg_only";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .register_cascade_mode = "off";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .sum_lutc_input = "datac";
+defparam \segment_display|register8bit_1|d_flipflop_3|out .synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[0]~I (
+maxii_io \matriz_colune_data[0]~I (
+	.datain(\matriz_displayer|mux8x1_1|and2[0]~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_data[0]));
+// synopsys translate_off
+defparam \matriz_colune_data[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_data[1]~I (
+	.datain(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_data[1]));
+// synopsys translate_off
+defparam \matriz_colune_data[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_data[2]~I (
+	.datain(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_data[2]));
+// synopsys translate_off
+defparam \matriz_colune_data[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_data[3]~I (
+	.datain(\matriz_displayer|mux8x1_1|mux4x1_1|and3[2]~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_data[3]));
+// synopsys translate_off
+defparam \matriz_colune_data[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_data[4]~I (
+	.datain(!\matriz_displayer|mux8x1_1|and1[4]~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_data[4]));
+// synopsys translate_off
+defparam \matriz_colune_data[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_data[5]~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[0]));
+	.padio(matriz_colune_data[5]));
 // synopsys translate_off
-defparam \linha_matriz[0]~I .operation_mode = "output";
+defparam \matriz_colune_data[5]~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[1]~I (
+maxii_io \matriz_colune_data[6]~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[1]));
+	.padio(matriz_colune_data[6]));
 // synopsys translate_off
-defparam \linha_matriz[1]~I .operation_mode = "output";
+defparam \matriz_colune_data[6]~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[2]~I (
+maxii_io \display_colune_data[0]~I (
+	.datain(\segment_display|mux8x1_1|mux4x1_1|and3[1]~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_data[0]));
+// synopsys translate_off
+defparam \display_colune_data[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_data[1]~I (
+	.datain(\segment_display|mux8x1_1|mux4x1_1|and3[1]~1_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_data[1]));
+// synopsys translate_off
+defparam \display_colune_data[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_data[2]~I (
+	.datain(\segment_display|mux8x1_1|mux4x1_1|and3[1]~2_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_data[2]));
+// synopsys translate_off
+defparam \display_colune_data[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_data[3]~I (
+	.datain(!\segment_display|mux8x1_1|and1[3]~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_data[3]));
+// synopsys translate_off
+defparam \display_colune_data[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_data[4]~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[2]));
+	.padio(display_colune_data[4]));
 // synopsys translate_off
-defparam \linha_matriz[2]~I .operation_mode = "output";
+defparam \display_colune_data[4]~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_78,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[3]~I (
+maxii_io \display_colune_data[5]~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[3]));
+	.padio(display_colune_data[5]));
 // synopsys translate_off
-defparam \linha_matriz[3]~I .operation_mode = "output";
+defparam \display_colune_data[5]~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[4]~I (
+maxii_io \display_colune_data[6]~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[4]));
+	.padio(display_colune_data[6]));
 // synopsys translate_off
-defparam \linha_matriz[4]~I .operation_mode = "output";
+defparam \display_colune_data[6]~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[5]~I (
+maxii_io \matriz_colune_activator[0]~I (
+	.datain(\matriz_displayer|register8bit_1|d_flipflop_0|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_activator[0]));
+// synopsys translate_off
+defparam \matriz_colune_activator[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_activator[1]~I (
+	.datain(\matriz_displayer|register8bit_1|d_flipflop_1|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_activator[1]));
+// synopsys translate_off
+defparam \matriz_colune_activator[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_activator[2]~I (
+	.datain(\matriz_displayer|register8bit_1|d_flipflop_2|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_activator[2]));
+// synopsys translate_off
+defparam \matriz_colune_activator[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_activator[3]~I (
+	.datain(\matriz_displayer|register8bit_1|d_flipflop_3|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_activator[3]));
+// synopsys translate_off
+defparam \matriz_colune_activator[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \matriz_colune_activator[4]~I (
+	.datain(\matriz_displayer|register8bit_1|d_flipflop_4|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(matriz_colune_activator[4]));
+// synopsys translate_off
+defparam \matriz_colune_activator[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_activator[0]~I (
+	.datain(\segment_display|register8bit_1|d_flipflop_0|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_activator[0]));
+// synopsys translate_off
+defparam \display_colune_activator[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_activator[1]~I (
+	.datain(\segment_display|register8bit_1|d_flipflop_1|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_activator[1]));
+// synopsys translate_off
+defparam \display_colune_activator[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_activator[2]~I (
+	.datain(\segment_display|register8bit_1|d_flipflop_2|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_activator[2]));
+// synopsys translate_off
+defparam \display_colune_activator[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \display_colune_activator[3]~I (
+	.datain(\segment_display|register8bit_1|d_flipflop_3|out~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(display_colune_activator[3]));
+// synopsys translate_off
+defparam \display_colune_activator[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \counter_teste~I (
 	.datain(gnd),
 	.oe(vcc),
 	.combout(),
-	.padio(linha_matriz[5]));
+	.padio(counter_teste));
 // synopsys translate_off
-defparam \linha_matriz[5]~I .operation_mode = "output";
+defparam \counter_teste~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_27,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \linha_matriz[6]~I (
-	.datain(gnd),
-	.oe(vcc),
-	.combout(),
-	.padio(linha_matriz[6]));
-// synopsys translate_off
-defparam \linha_matriz[6]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_66,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \coluna_matriz[0]~I (
-	.datain(\register7bit_1|d_flipflop_6|out~regout ),
-	.oe(vcc),
-	.combout(),
-	.padio(coluna_matriz[0]));
-// synopsys translate_off
-defparam \coluna_matriz[0]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_67,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \coluna_matriz[1]~I (
-	.datain(\register7bit_1|d_flipflop_5|out~regout ),
-	.oe(vcc),
-	.combout(),
-	.padio(coluna_matriz[1]));
-// synopsys translate_off
-defparam \coluna_matriz[1]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_68,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \coluna_matriz[2]~I (
-	.datain(\register7bit_1|d_flipflop_4|out~regout ),
-	.oe(vcc),
-	.combout(),
-	.padio(coluna_matriz[2]));
-// synopsys translate_off
-defparam \coluna_matriz[2]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_64,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \coluna_matriz[3]~I (
-	.datain(\register7bit_1|d_flipflop_3|out~regout ),
-	.oe(vcc),
-	.combout(),
-	.padio(coluna_matriz[3]));
-// synopsys translate_off
-defparam \coluna_matriz[3]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \coluna_matriz[4]~I (
-	.datain(\register7bit_1|d_flipflop_2|out~regout ),
-	.oe(vcc),
-	.combout(),
-	.padio(coluna_matriz[4]));
-// synopsys translate_off
-defparam \coluna_matriz[4]~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \mod5counter_teste~I (
-	.datain(\counter3bit_1|and1~0 ),
-	.oe(vcc),
-	.combout(),
-	.padio(mod5counter_teste));
-// synopsys translate_off
-defparam \mod5counter_teste~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \final_clk_teste~I (
-	.datain(\freq_div_1|t_flipflop_4|out~regout ),
+	.datain(gnd),
 	.oe(vcc),
 	.combout(),
 	.padio(final_clk_teste));
 // synopsys translate_off
 defparam \final_clk_teste~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[0]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[0]));
+// synopsys translate_off
+defparam \teste[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[1]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[1]));
+// synopsys translate_off
+defparam \teste[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[2]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[2]));
+// synopsys translate_off
+defparam \teste[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[3]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[3]));
+// synopsys translate_off
+defparam \teste[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[4]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[4]));
+// synopsys translate_off
+defparam \teste[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[5]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[5]));
+// synopsys translate_off
+defparam \teste[5]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[6]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[6]));
+// synopsys translate_off
+defparam \teste[6]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[7]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[7]));
+// synopsys translate_off
+defparam \teste[7]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[8]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[8]));
+// synopsys translate_off
+defparam \teste[8]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[9]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[9]));
+// synopsys translate_off
+defparam \teste[9]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \teste[10]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(teste[10]));
+// synopsys translate_off
+defparam \teste[10]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[0]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[0]));
+// synopsys translate_off
+defparam \mapteste[0]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[1]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[1]));
+// synopsys translate_off
+defparam \mapteste[1]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[2]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[2]));
+// synopsys translate_off
+defparam \mapteste[2]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[3]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[3]));
+// synopsys translate_off
+defparam \mapteste[3]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[4]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[4]));
+// synopsys translate_off
+defparam \mapteste[4]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[5]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[5]));
+// synopsys translate_off
+defparam \mapteste[5]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[6]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[6]));
+// synopsys translate_off
+defparam \mapteste[6]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[7]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[7]));
+// synopsys translate_off
+defparam \mapteste[7]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[8]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[8]));
+// synopsys translate_off
+defparam \mapteste[8]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[9]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[9]));
+// synopsys translate_off
+defparam \mapteste[9]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[10]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[10]));
+// synopsys translate_off
+defparam \mapteste[10]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[11]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[11]));
+// synopsys translate_off
+defparam \mapteste[11]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[12]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[12]));
+// synopsys translate_off
+defparam \mapteste[12]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[13]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[13]));
+// synopsys translate_off
+defparam \mapteste[13]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[14]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[14]));
+// synopsys translate_off
+defparam \mapteste[14]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[15]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[15]));
+// synopsys translate_off
+defparam \mapteste[15]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[16]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[16]));
+// synopsys translate_off
+defparam \mapteste[16]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[17]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[17]));
+// synopsys translate_off
+defparam \mapteste[17]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[18]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[18]));
+// synopsys translate_off
+defparam \mapteste[18]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[19]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[19]));
+// synopsys translate_off
+defparam \mapteste[19]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[20]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[20]));
+// synopsys translate_off
+defparam \mapteste[20]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[21]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[21]));
+// synopsys translate_off
+defparam \mapteste[21]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[22]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[22]));
+// synopsys translate_off
+defparam \mapteste[22]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[23]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[23]));
+// synopsys translate_off
+defparam \mapteste[23]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[24]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[24]));
+// synopsys translate_off
+defparam \mapteste[24]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[25]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[25]));
+// synopsys translate_off
+defparam \mapteste[25]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[26]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[26]));
+// synopsys translate_off
+defparam \mapteste[26]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[27]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[27]));
+// synopsys translate_off
+defparam \mapteste[27]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[28]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[28]));
+// synopsys translate_off
+defparam \mapteste[28]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[29]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[29]));
+// synopsys translate_off
+defparam \mapteste[29]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[30]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[30]));
+// synopsys translate_off
+defparam \mapteste[30]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[31]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[31]));
+// synopsys translate_off
+defparam \mapteste[31]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[32]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[32]));
+// synopsys translate_off
+defparam \mapteste[32]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[33]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[33]));
+// synopsys translate_off
+defparam \mapteste[33]~I .operation_mode = "output";
+// synopsys translate_on
+
+maxii_io \mapteste[34]~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(mapteste[34]));
+// synopsys translate_off
+defparam \mapteste[34]~I .operation_mode = "output";
 // synopsys translate_on
 
 endmodule

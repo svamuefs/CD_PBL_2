@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Thu Nov 30 23:44:25 2023
+Sun Dec  3 12:39:00 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -11,7 +11,30 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: displayer:matriz_displayer
+ 10. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1
+ 11. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1
+ 12. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_2
+ 13. Parameter Settings for User Entity Instance: displayer:segment_display
+ 14. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1
+ 15. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1
+ 16. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_2
+ 17. Port Connectivity Checks: "displayer:segment_display"
+ 18. Port Connectivity Checks: "displayer:matriz_displayer|mux8x1:mux8x1_1"
+ 19. Port Connectivity Checks: "displayer:matriz_displayer|register8bit:register8bit_1"
+ 20. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2"
+ 21. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1"
+ 22. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0"
+ 23. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1"
+ 24. Port Connectivity Checks: "displayer:matriz_displayer"
+ 25. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"
+ 26. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"
+ 27. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"
+ 28. Analysis & Synthesis Equations
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -38,11 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Nov 30 23:44:25 2023              ;
+; Analysis & Synthesis Status ; Successful - Sun Dec  3 12:39:00 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
+; Total logic elements        ; 29                                             ;
+; Total pins                  ; 72                                             ;
+; Total virtual pins          ; 0                                              ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
 
 
@@ -133,20 +160,341 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                    ;
-+----------------------------------+-----------------+------------------------+-----------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path      ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------+---------+
-; t_fliflop.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_fliflop.v        ;         ;
-; register7bit.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/register7bit.v     ;         ;
-; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux8x1.v           ;         ;
-; matriz_displayer.v               ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/matriz_displayer.v ;         ;
-; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/freq_div.v         ;         ;
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/d_flipflop.v       ;         ;
-; counter3bit.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/counter3bit.v      ;         ;
-; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v    ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                 ;
++----------------------------------+-----------------+------------------------+--------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------+---------+
+; t_fliflop.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_fliflop.v     ;         ;
+; register8bit.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/register8bit.v  ;         ;
+; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux8x1.v        ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux4x1.v        ;         ;
+; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/freq_div.v      ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/d_flipflop.v    ;         ;
+; displayer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/displayer.v     ;         ;
+; counter3bit.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/counter3bit.v   ;         ;
+; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Total logic elements                        ; 29                                              ;
+;     -- Combinational with no register       ; 11                                              ;
+;     -- Register only                        ; 7                                               ;
+;     -- Combinational with a register        ; 11                                              ;
+;                                             ;                                                 ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 0                                               ;
+;     -- 3 input functions                    ; 11                                              ;
+;     -- 2 input functions                    ; 0                                               ;
+;     -- 1 input functions                    ; 11                                              ;
+;     -- 0 input functions                    ; 0                                               ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 29                                              ;
+;     -- arithmetic mode                      ; 0                                               ;
+;     -- qfbk mode                            ; 0                                               ;
+;     -- register cascade mode                ; 0                                               ;
+;     -- synchronous clear/load mode          ; 0                                               ;
+;     -- asynchronous clear/load mode         ; 6                                               ;
+;                                             ;                                                 ;
+; Total registers                             ; 18                                              ;
+; I/O pins                                    ; 72                                              ;
+; Maximum fan-out node                        ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ;
+; Maximum fan-out                             ; 12                                              ;
+; Total fan-out                               ; 93                                              ;
+; Average fan-out                             ; 0.92                                            ;
++---------------------------------------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Entity Name   ; Library Name ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
+; |batalha_naval                      ; 29 (0)      ; 18           ; 0          ; 72   ; 0            ; 11 (0)       ; 7 (0)             ; 11 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                                ; batalha_naval ; work         ;
+;    |displayer:matriz_displayer|     ; 14 (0)      ; 8            ; 0          ; 0    ; 0            ; 6 (0)        ; 4 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer                                                     ; displayer     ; work         ;
+;       |counter3bit:counter3bit_1|   ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1                           ; counter3bit   ; work         ;
+;          |t_flipflop:t_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0   ; t_flipflop    ; work         ;
+;          |t_flipflop:t_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1   ; t_flipflop    ; work         ;
+;          |t_flipflop:t_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2   ; t_flipflop    ; work         ;
+;       |mux8x1:mux8x1_1|             ; 5 (2)       ; 0            ; 0          ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1                                     ; mux8x1        ; work         ;
+;          |mux4x1:mux4x1_1|          ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1                     ; mux4x1        ; work         ;
+;       |register8bit:register8bit_1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1                         ; register8bit  ; work         ;
+;          |d_flipflop:d_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_0 ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_1 ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_2 ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_3|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_3 ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_4|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_4 ; d_flipflop    ; work         ;
+;    |displayer:segment_display|      ; 12 (0)      ; 7            ; 0          ; 0    ; 0            ; 5 (0)        ; 3 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display                                                      ; displayer     ; work         ;
+;       |counter3bit:counter3bit_1|   ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|counter3bit:counter3bit_1                            ; counter3bit   ; work         ;
+;          |t_flipflop:t_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0    ; t_flipflop    ; work         ;
+;          |t_flipflop:t_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1    ; t_flipflop    ; work         ;
+;          |t_flipflop:t_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2    ; t_flipflop    ; work         ;
+;       |mux8x1:mux8x1_1|             ; 4 (1)       ; 0            ; 0          ; 0    ; 0            ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|mux8x1:mux8x1_1                                      ; mux8x1        ; work         ;
+;          |mux4x1:mux4x1_1|          ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1                      ; mux4x1        ; work         ;
+;       |register8bit:register8bit_1| ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|register8bit:register8bit_1                          ; register8bit  ; work         ;
+;          |d_flipflop:d_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_0  ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_1  ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_2  ; d_flipflop    ; work         ;
+;          |d_flipflop:d_flipflop_3|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_3  ; d_flipflop    ; work         ;
+;    |freq_div:freq_div_1|            ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1                                                            ; freq_div      ; work         ;
+;       |t_flipflop:t_flipflop_0|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_0                                    ; t_flipflop    ; work         ;
+;       |t_flipflop:t_flipflop_1|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_1                                    ; t_flipflop    ; work         ;
+;       |t_flipflop:t_flipflop_2|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_2                                    ; t_flipflop    ; work         ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 18    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:matriz_displayer ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; DATA_WIDTH     ; 35    ; Signed Integer                                 ;
+; COLUNE_SIZE    ; 7     ; Signed Integer                                 ;
+; TOTAL_COLUNES  ; 5     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_2 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:segment_display ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; DATA_WIDTH     ; 35    ; Signed Integer                                ;
+; COLUNE_SIZE    ; 7     ; Signed Integer                                ;
+; TOTAL_COLUNES  ; 5     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_2 ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 7     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:segment_display"                                                                                                                                    ;
++------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                                           ;
++------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; image            ; Input  ; Warning  ; Input port expression (28 bits) is smaller than the input port (35 bits) it drives.  Extra input bit(s) "image[34..28]" will be connected to GND. ;
+; image[27..22]    ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
+; image[20..16]    ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
+; image[14..10]    ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
+; image[8..4]      ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
+; image[2..0]      ; Input  ; Info     ; Stuck at GND                                                                                                                                      ;
+; image[28]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                      ;
+; image[22]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                      ;
+; image[16]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                      ;
+; image[10]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                      ;
+; colune_activator ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (4 bits) it drives; bit(s) "colune_activator[4..4]" have no fanouts               ;
++------------------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|mux8x1:mux8x1_1"                                                                                                                                             ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in_f       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in_f[6..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; in_g       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in_g[6..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; in_h       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in_h[6..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|register8bit:register8bit_1"                                                                                                                                 ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; out       ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (5 bits) it drives; bit(s) "out[7..5]" have no fanouts                                                             ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2"                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1"                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0"                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1"                                                                                                                                     ;
++--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; down         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; down[-1]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; mod_value[2] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; mod_value[1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; mod_value[0] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "displayer:matriz_displayer" ;
++---------------+-------+----------+---------------------+
+; Port          ; Type  ; Severity ; Details             ;
++---------------+-------+----------+---------------------+
+; image[34..29] ; Input ; Info     ; Stuck at GND        ;
+; image[27..23] ; Input ; Info     ; Stuck at GND        ;
+; image[21..17] ; Input ; Info     ; Stuck at GND        ;
+; image[15..11] ; Input ; Info     ; Stuck at GND        ;
+; image[9..5]   ; Input ; Info     ; Stuck at GND        ;
+; image[3..0]   ; Input ; Info     ; Stuck at GND        ;
+; image[28]     ; Input ; Info     ; Stuck at VCC        ;
+; image[22]     ; Input ; Info     ; Stuck at VCC        ;
+; image[16]     ; Input ; Info     ; Stuck at VCC        ;
+; image[10]     ; Input ; Info     ; Stuck at VCC        ;
+; image[4]      ; Input ; Info     ; Stuck at VCC        ;
++---------------+-------+----------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"                                                                                                                                           ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"                                                                                                                                           ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"                                                                                                                                           ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 
 
 +-------------------------------+
@@ -155,7 +503,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Nov 30 23:44:14 2023
+    Info: Processing started: Sun Dec  3 12:38:43 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -163,61 +511,138 @@ Info (12021): Found 1 design units, including 1 entities, in source file t_flifl
     Info (12023): Found entity 1: t_flipflop File: C:/CD/CD_PBL_2/t_fliflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sr_flipflop.v
     Info (12023): Found entity 1: sr_flipflop File: C:/CD/CD_PBL_2/sr_flipflop.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file register7bit.v
-    Info (12023): Found entity 1: register7bit File: C:/CD/CD_PBL_2/register7bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register8bit.v
+    Info (12023): Found entity 1: register8bit File: C:/CD/CD_PBL_2/register8bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux8x1.v
     Info (12023): Found entity 1: mux8x1 File: C:/CD/CD_PBL_2/mux8x1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4x1.v
     Info (12023): Found entity 1: mux4x1 File: C:/CD/CD_PBL_2/mux4x1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file matriz_displayer.v
-    Info (12023): Found entity 1: matriz_displayer File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file jk_flipflop.v
     Info (12023): Found entity 1: jk_flipflop File: C:/CD/CD_PBL_2/jk_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file freq_div.v
     Info (12023): Found entity 1: freq_div File: C:/CD/CD_PBL_2/freq_div.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
     Info (12023): Found entity 1: d_flipflop File: C:/CD/CD_PBL_2/d_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displayer.v
+    Info (12023): Found entity 1: displayer File: C:/CD/CD_PBL_2/displayer.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter3bit.v
     Info (12023): Found entity 1: counter3bit File: C:/CD/CD_PBL_2/counter3bit.v Line: 1
-Warning (10259): Verilog HDL error at batalha_naval.v(11): constant value overflow File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
-Warning (10275): Verilog HDL Module Instantiation warning at batalha_naval.v(23): ignored dangling comma in List of Port Connections File: C:/CD/CD_PBL_2/batalha_naval.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file batalha_naval.v
     Info (12023): Found entity 1: batalha_naval File: C:/CD/CD_PBL_2/batalha_naval.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2/register7bit.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2/register7bit.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2/register7bit.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2/register7bit.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2/register7bit.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(55): created implicit net for "dff_out_6" File: C:/CD/CD_PBL_2/register7bit.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at register7bit.v(64): created implicit net for "dff_out_7" File: C:/CD/CD_PBL_2/register7bit.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(10): created implicit net for "dff_out_1" File: C:/CD/CD_PBL_2/register8bit.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(19): created implicit net for "dff_out_2" File: C:/CD/CD_PBL_2/register8bit.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(28): created implicit net for "dff_out_3" File: C:/CD/CD_PBL_2/register8bit.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(37): created implicit net for "dff_out_4" File: C:/CD/CD_PBL_2/register8bit.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(46): created implicit net for "dff_out_5" File: C:/CD/CD_PBL_2/register8bit.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(55): created implicit net for "dff_out_6" File: C:/CD/CD_PBL_2/register8bit.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(64): created implicit net for "dff_out_7" File: C:/CD/CD_PBL_2/register8bit.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at register8bit.v(73): created implicit net for "dff_out_8" File: C:/CD/CD_PBL_2/register8bit.v Line: 73
 Warning (10236): Verilog HDL Implicit Net warning at mux8x1.v(10): created implicit net for "notSelect2" File: C:/CD/CD_PBL_2/mux8x1.v Line: 10
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(10): created implicit net for "notSelect0" File: C:/CD/CD_PBL_2/mux4x1.v Line: 10
 Warning (10236): Verilog HDL Implicit Net warning at mux4x1.v(11): created implicit net for "notSelect1" File: C:/CD/CD_PBL_2/mux4x1.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at matriz_displayer.v(19): created implicit net for "reset" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at matriz_displayer.v(20): created implicit net for "counterLoop" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(11): created implicit net for "tff_out_1" File: C:/CD/CD_PBL_2/counter3bit.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(19): created implicit net for "tff_out_2" File: C:/CD/CD_PBL_2/counter3bit.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(27): created implicit net for "tff_out_3" File: C:/CD/CD_PBL_2/counter3bit.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(16): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at displayer.v(20): created implicit net for "loopReset" File: C:/CD/CD_PBL_2/displayer.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at displayer.v(23): created implicit net for "loopStart" File: C:/CD/CD_PBL_2/displayer.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at displayer.v(24): created implicit net for "loopEnd" File: C:/CD/CD_PBL_2/displayer.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(20): created implicit net for "tff_out_1" File: C:/CD/CD_PBL_2/counter3bit.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(22): created implicit net for "notTff1_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(34): created implicit net for "tff_out_2" File: C:/CD/CD_PBL_2/counter3bit.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(36): created implicit net for "notTff2_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(46): created implicit net for "tff_out_3" File: C:/CD/CD_PBL_2/counter3bit.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(48): created implicit net for "notTff3_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(60): created implicit net for "xorMod1_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(62): created implicit net for "xorMod2_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(64): created implicit net for "xorMod3_w" File: C:/CD/CD_PBL_2/counter3bit.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(70): created implicit net for "up" File: C:/CD/CD_PBL_2/counter3bit.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(72): created implicit net for "loopStartUp" File: C:/CD/CD_PBL_2/counter3bit.v Line: 72
+Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(73): created implicit net for "loopStartDown" File: C:/CD/CD_PBL_2/counter3bit.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(27): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Warning (10034): Output port "linha_matriz" at batalha_naval.v(3) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 3
-Warning (10034): Output port "coluna_matriz" at batalha_naval.v(4) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 4
-Warning (10034): Output port "mod5counter_teste" at batalha_naval.v(5) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 5
-Warning (10034): Output port "final_clk_teste" at batalha_naval.v(7) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 17
+Warning (10034): Output port "teste" at batalha_naval.v(13) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+Warning (10034): Output port "mapteste" at batalha_naval.v(16) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+Warning (10034): Output port "counter_teste" at batalha_naval.v(12) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+Warning (10034): Output port "final_clk_teste" at batalha_naval.v(12) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 28
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "freq_div:freq_div_1|t_flipflop:t_flipflop_0" File: C:/CD/CD_PBL_2/freq_div.v Line: 12
-Info (12128): Elaborating entity "matriz_displayer" for hierarchy "matriz_displayer:matriz_displayer_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 23
-Info (12128): Elaborating entity "counter3bit" for hierarchy "matriz_displayer:matriz_displayer_1|counter3bit:counter3bit_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 22
-Info (12128): Elaborating entity "register7bit" for hierarchy "matriz_displayer:matriz_displayer_1|register7bit:register7bit_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 29
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "matriz_displayer:matriz_displayer_1|register7bit:register7bit_1|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register7bit.v Line: 11
-Info (12128): Elaborating entity "mux8x1" for hierarchy "matriz_displayer:matriz_displayer_1|mux8x1:mux8x1_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 42
-Error (10207): Verilog HDL error at mux8x1.v(31): can't resolve reference to object "DATA_WIDTH" File: C:/CD/CD_PBL_2/mux8x1.v Line: 31
-Error (10252): Verilog HDL Module Instantiation error at mux8x1.v(31): illegal connection to port "<unamed port>" in array of instances - the actual bit length (7) does not equal either the formal port width (1) or the product of the formal port width and the number of instances (1) File: C:/CD/CD_PBL_2/mux8x1.v Line: 31
-Error (12152): Can't elaborate user hierarchy "matriz_displayer:matriz_displayer_1|mux8x1:mux8x1_1" File: C:/CD/CD_PBL_2/matriz_displayer.v Line: 42
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 23 warnings
-    Error: Peak virtual memory: 4695 megabytes
-    Error: Processing ended: Thu Nov 30 23:44:25 2023
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:30
+Info (12128): Elaborating entity "displayer" for hierarchy "displayer:matriz_displayer" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 35
+Info (12128): Elaborating entity "counter3bit" for hierarchy "displayer:matriz_displayer|counter3bit:counter3bit_1" File: C:/CD/CD_PBL_2/displayer.v Line: 26
+Info (12128): Elaborating entity "register8bit" for hierarchy "displayer:matriz_displayer|register8bit:register8bit_1" File: C:/CD/CD_PBL_2/displayer.v Line: 36
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register8bit.v Line: 11
+Info (12128): Elaborating entity "mux8x1" for hierarchy "displayer:matriz_displayer|mux8x1:mux8x1_1" File: C:/CD/CD_PBL_2/displayer.v Line: 50
+Info (12128): Elaborating entity "mux4x1" for hierarchy "displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1" File: C:/CD/CD_PBL_2/mux8x1.v Line: 19
+Warning (12020): Port "in_f" on the entity instantiation of "mux8x1_1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 50
+Warning (12020): Port "in_g" on the entity instantiation of "mux8x1_1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 50
+Warning (12020): Port "in_h" on the entity instantiation of "mux8x1_1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 50
+Warning (12030): Port "out" on the entity instantiation of "register8bit_1" is connected to a signal of width 5. The formal width of the signal in the module is 8.  The extra bits will be left dangling without any fan-out logic. File: C:/CD/CD_PBL_2/displayer.v Line: 36
+Warning (12020): Port "reset" on the entity instantiation of "register8bit_1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 36
+Warning (12020): Port "t" on the entity instantiation of "t_flipflop_2" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/counter3bit.v Line: 46
+Warning (12020): Port "t" on the entity instantiation of "t_flipflop_1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/counter3bit.v Line: 34
+Warning (12020): Port "t" on the entity instantiation of "t_flipflop_0" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/counter3bit.v Line: 20
+Warning (12020): Port "down" on the entity instantiation of "counter3bit_1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 26
+Info (13014): Ignored 15 buffer(s)
+    Info (13019): Ignored 15 SOFT buffer(s)
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "matriz_colune_data[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+    Warning (13410): Pin "matriz_colune_data[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+    Warning (13410): Pin "display_colune_data[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+    Warning (13410): Pin "display_colune_data[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+    Warning (13410): Pin "display_colune_data[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
+    Warning (13410): Pin "counter_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "final_clk_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "teste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
+    Warning (13410): Pin "mapteste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[11]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[12]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[13]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[14]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[15]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[16]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[17]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[18]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[19]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[20]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[21]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[22]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[23]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[24]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[25]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[26]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[27]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[28]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[29]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[30]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[31]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[32]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[33]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+    Warning (13410): Pin "mapteste[34]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 71 output pins
+    Info (21061): Implemented 29 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
+    Info: Peak virtual memory: 4723 megabytes
+    Info: Processing ended: Sun Dec  3 12:39:00 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:44
 
 
