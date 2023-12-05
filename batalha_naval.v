@@ -1,20 +1,33 @@
-module batalha_naval (
+module batalha_naval #(
+    //matriz parameters
+    parameter M_DATA_WIDTH = 35 ,
+    M_COLUNE_SIZE = 7 ,
+    M_TOTAL_COLUNES = 5 ,
+    //display parameters
+    D_DATA_WIDTH = 28 ,
+    D_COLUNE_SIZE = 7 ,
+    D_TOTAL_COLUNES = 4
+    
+)
+(
 
-    input [2:0] map_code , x_coord_code , y_coord_code , 
+    input [2:0] x_coord_code , y_coord_code , 
     input [1:0] game_state_code ,
-    input confirmAttack , cpld_clk ,
+    input nextMap , confirmAttack , cpld_clk ,
 
     output [6:0] matriz_colune_data , display_colune_data ,
 	output [4:0] matriz_colune_activator ,
     output [3:0] display_colune_activator ,
+    output [2:0] ledRgb ,
 
 
-    output [100:0] teste ,
+    output [100:0] teste 
 
  );
 
-    wire [34:0] selectedMap , mapAttack , matriz_data;
-    wire [27:0] display_data;
+    wire [M_DATA_WIDTH-1:0] selectedMap , mapAttack , matriz_data;
+    wire [D_DATA_WIDTH-1:0] display_data;
+	 wire [2:0] map_code;
 
     // assign map = 35'b00000010000010000010000010000010000;
     // assign display_data = 28'b0000001000001000001000001000;
@@ -38,6 +51,20 @@ module batalha_naval (
         .enable            (enable)
     );
 
+    debouncer debouncerNextMap (
+        .button (nextMap) ,
+        .clk    (clk) ,
+
+        .out    (debouncedNextMap)
+    );
+
+    counter3bit counterMapCode(
+        .clk   (debouncedNextMap) ,
+        .reset (enable) ,
+
+        .out   (map_code)
+    );
+
     map_decoder map_decoder_1 (
         .map_code (map_code) ,
         .enable   (enable) , //mudar
@@ -45,23 +72,32 @@ module batalha_naval (
         .mapOut   (selectedMap)
     ); //ativado tanto na preparação e no attack
 
+    debouncer debouncerConfirmAttack (
+        .button (confirmAttack),
+        .clk    (clk) ,
+
+        .out    (debouncedConfirmAttack)
+    );
+
     attack_round attack_round_1 (
         .selected_map  (selectedMap) ,
         .x_coord_code  (x_coord_code) ,
         .y_coord_code  (y_coord_code) ,
         .enable        (enableAttack) ,
-        .confirmAttack (confirmAttack) ,
+        .confirmAttack (debouncedConfirmAttack) ,
 
         .matriz_data   (mapAttack) ,
+        .ledRgb        (ledRgb)
     );//ativado no ataque
 
-    mux4x1 #(.DATA_WIDTH(35)) muxMaps (
-        .in_a (selectedMap) ,
-        .in_b (mapAttack) ,
-        .select (enableAttack) ,
-        .enable (enable) ,
 
-        .out    (matriz_data)
+    imageSelect imageSelect_1 (
+        .selectedMap  (selectedMap) ,
+        .mapAttack    (mapAttack) ,
+        .enable       (enable) ,
+        .enableAttack (enableAttack),
+
+        .matriz_data  (matriz_data)
     );
 
     displayer matriz_displayer (
@@ -83,7 +119,7 @@ module batalha_naval (
         .display_data      (display_data)
     ); //ativado sempre, mas muda o que mostra baseado no status do jogo
 
-    displayer segment_display (
+    displayer #(.TOTAL_COLUNES(4)) segment_display (
         .clk              (clk) ,
         .image            (display_data) ,
         .enable           (enable) , //mudar

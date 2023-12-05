@@ -1,7 +1,14 @@
 |batalha_naval
-map_select[0] => map_select[0].IN1
-map_select[1] => map_select[1].IN1
-map_select[2] => map_select[2].IN1
+x_coord_code[0] => x_coord_code[0].IN2
+x_coord_code[1] => x_coord_code[1].IN2
+x_coord_code[2] => x_coord_code[2].IN2
+y_coord_code[0] => y_coord_code[0].IN2
+y_coord_code[1] => y_coord_code[1].IN2
+y_coord_code[2] => y_coord_code[2].IN2
+game_state_code[0] => game_state_code[0].IN2
+game_state_code[1] => game_state_code[1].IN2
+nextMap => nextMap.IN1
+confirmAttack => confirmAttack.IN1
 cpld_clk => cpld_clk.IN1
 matriz_colune_data[0] << displayer:matriz_displayer.colune_data
 matriz_colune_data[1] << displayer:matriz_displayer.colune_data
@@ -26,8 +33,9 @@ display_colune_activator[0] << displayer:segment_display.colune_activator
 display_colune_activator[1] << displayer:segment_display.colune_activator
 display_colune_activator[2] << displayer:segment_display.colune_activator
 display_colune_activator[3] << displayer:segment_display.colune_activator
-counter_teste << <GND>
-final_clk_teste << <GND>
+ledRgb[0] << attack_round:attack_round_1.ledRgb
+ledRgb[1] << attack_round:attack_round_1.ledRgb
+ledRgb[2] << attack_round:attack_round_1.ledRgb
 teste[0] << <GND>
 teste[1] << <GND>
 teste[2] << <GND>
@@ -39,41 +47,96 @@ teste[7] << <GND>
 teste[8] << <GND>
 teste[9] << <GND>
 teste[10] << <GND>
-mapteste[0] << <GND>
-mapteste[1] << <GND>
-mapteste[2] << <GND>
-mapteste[3] << <GND>
-mapteste[4] << <GND>
-mapteste[5] << <GND>
-mapteste[6] << <GND>
-mapteste[7] << <GND>
-mapteste[8] << <GND>
-mapteste[9] << <GND>
-mapteste[10] << <GND>
-mapteste[11] << <GND>
-mapteste[12] << <GND>
-mapteste[13] << <GND>
-mapteste[14] << <GND>
-mapteste[15] << <GND>
-mapteste[16] << <GND>
-mapteste[17] << <GND>
-mapteste[18] << <GND>
-mapteste[19] << <GND>
-mapteste[20] << <GND>
-mapteste[21] << <GND>
-mapteste[22] << <GND>
-mapteste[23] << <GND>
-mapteste[24] << <GND>
-mapteste[25] << <GND>
-mapteste[26] << <GND>
-mapteste[27] << <GND>
-mapteste[28] << <GND>
-mapteste[29] << <GND>
-mapteste[30] << <GND>
-mapteste[31] << <GND>
-mapteste[32] << <GND>
-mapteste[33] << <GND>
-mapteste[34] << <GND>
+teste[11] << <GND>
+teste[12] << <GND>
+teste[13] << <GND>
+teste[14] << <GND>
+teste[15] << <GND>
+teste[16] << <GND>
+teste[17] << <GND>
+teste[18] << <GND>
+teste[19] << <GND>
+teste[20] << <GND>
+teste[21] << <GND>
+teste[22] << <GND>
+teste[23] << <GND>
+teste[24] << <GND>
+teste[25] << <GND>
+teste[26] << <GND>
+teste[27] << <GND>
+teste[28] << <GND>
+teste[29] << <GND>
+teste[30] << <GND>
+teste[31] << <GND>
+teste[32] << <GND>
+teste[33] << <GND>
+teste[34] << <GND>
+teste[35] << <GND>
+teste[36] << <GND>
+teste[37] << <GND>
+teste[38] << <GND>
+teste[39] << <GND>
+teste[40] << <GND>
+teste[41] << <GND>
+teste[42] << <GND>
+teste[43] << <GND>
+teste[44] << <GND>
+teste[45] << <GND>
+teste[46] << <GND>
+teste[47] << <GND>
+teste[48] << <GND>
+teste[49] << <GND>
+teste[50] << <GND>
+teste[51] << <GND>
+teste[52] << <GND>
+teste[53] << <GND>
+teste[54] << <GND>
+teste[55] << <GND>
+teste[56] << <GND>
+teste[57] << <GND>
+teste[58] << <GND>
+teste[59] << <GND>
+teste[60] << <GND>
+teste[61] << <GND>
+teste[62] << <GND>
+teste[63] << <GND>
+teste[64] << <GND>
+teste[65] << <GND>
+teste[66] << <GND>
+teste[67] << <GND>
+teste[68] << <GND>
+teste[69] << <GND>
+teste[70] << <GND>
+teste[71] << <GND>
+teste[72] << <GND>
+teste[73] << <GND>
+teste[74] << <GND>
+teste[75] << <GND>
+teste[76] << <GND>
+teste[77] << <GND>
+teste[78] << <GND>
+teste[79] << <GND>
+teste[80] << <GND>
+teste[81] << <GND>
+teste[82] << <GND>
+teste[83] << <GND>
+teste[84] << <GND>
+teste[85] << <GND>
+teste[86] << <GND>
+teste[87] << <GND>
+teste[88] << <GND>
+teste[89] << <GND>
+teste[90] << <GND>
+teste[91] << <GND>
+teste[92] << <GND>
+teste[93] << <GND>
+teste[94] << <GND>
+teste[95] << <GND>
+teste[96] << <GND>
+teste[97] << <GND>
+teste[98] << <GND>
+teste[99] << <GND>
+teste[100] << <GND>
 
 
 |batalha_naval|freq_div:freq_div_1
@@ -96,6 +159,96 @@ out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |batalha_naval|freq_div:freq_div_1|t_flipflop:t_flipflop_2
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|game_state_decoder:game_state_decoder_1
+game_state_code[0] => and0.DATAIN
+game_state_code[0] => and1.IN0
+game_state_code[1] => and1.IN1
+enablePreparation <= and0.DB_MAX_OUTPUT_PORT_TYPE
+enableAttack <= and1.DB_MAX_OUTPUT_PORT_TYPE
+enable <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap
+button => or0.IN1
+button => notButton.IN5
+clk => or0.IN2
+out <= and0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap|t_flipflop:t_flipflop_1
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap|t_flipflop:t_flipflop_2
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap|t_flipflop:t_flipflop_3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap|t_flipflop:t_flipflop_4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerNextMap|t_flipflop:t_flipflop_5
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|counter3bit:counterMapCode
+clk => clk.IN1
+reset => reset.IN3
+down => xor1.IN0
+down => xor2.IN0
+down => xor3.IN1
+down => andLoopStart_2.IN3
+down => andLoopStart_1.IN1
+mod_value[0] => xorMod1.IN1
+mod_value[1] => xorMod2.IN1
+mod_value[2] => xorMod3.IN1
+loopStart <= orLoopStart_1.DB_MAX_OUTPUT_PORT_TYPE
+loopEnd <= andMod1.DB_MAX_OUTPUT_PORT_TYPE
+out[0] <= andOut1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= andOut2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= andOut3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|counter3bit:counterMapCode|t_flipflop:t_flipflop_0
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|counter3bit:counterMapCode|t_flipflop:t_flipflop_1
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|counter3bit:counterMapCode|t_flipflop:t_flipflop_2
 t => out~reg0.ENA
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
@@ -283,55 +436,2015 @@ mapOut[33] <= orEnable[33].DB_MAX_OUTPUT_PORT_TYPE
 mapOut[34] <= orEnable[34].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|batalha_naval|debouncer:debouncerConfirmAttack
+button => or0.IN1
+button => notButton.IN5
+clk => or0.IN2
+out <= and0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_1
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_2
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_3
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_4
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_5
+t => out~reg0.ENA
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1
+selected_map[0] => d_flipflop:selected_map_register[0].d
+selected_map[1] => d_flipflop:selected_map_register[1].d
+selected_map[2] => d_flipflop:selected_map_register[2].d
+selected_map[3] => d_flipflop:selected_map_register[3].d
+selected_map[4] => d_flipflop:selected_map_register[4].d
+selected_map[5] => d_flipflop:selected_map_register[5].d
+selected_map[6] => d_flipflop:selected_map_register[6].d
+selected_map[7] => d_flipflop:selected_map_register[7].d
+selected_map[8] => d_flipflop:selected_map_register[8].d
+selected_map[9] => d_flipflop:selected_map_register[9].d
+selected_map[10] => d_flipflop:selected_map_register[10].d
+selected_map[11] => d_flipflop:selected_map_register[11].d
+selected_map[12] => d_flipflop:selected_map_register[12].d
+selected_map[13] => d_flipflop:selected_map_register[13].d
+selected_map[14] => d_flipflop:selected_map_register[14].d
+selected_map[15] => d_flipflop:selected_map_register[15].d
+selected_map[16] => d_flipflop:selected_map_register[16].d
+selected_map[17] => d_flipflop:selected_map_register[17].d
+selected_map[18] => d_flipflop:selected_map_register[18].d
+selected_map[19] => d_flipflop:selected_map_register[19].d
+selected_map[20] => d_flipflop:selected_map_register[20].d
+selected_map[21] => d_flipflop:selected_map_register[21].d
+selected_map[22] => d_flipflop:selected_map_register[22].d
+selected_map[23] => d_flipflop:selected_map_register[23].d
+selected_map[24] => d_flipflop:selected_map_register[24].d
+selected_map[25] => d_flipflop:selected_map_register[25].d
+selected_map[26] => d_flipflop:selected_map_register[26].d
+selected_map[27] => d_flipflop:selected_map_register[27].d
+selected_map[28] => d_flipflop:selected_map_register[28].d
+selected_map[29] => d_flipflop:selected_map_register[29].d
+selected_map[30] => d_flipflop:selected_map_register[30].d
+selected_map[31] => d_flipflop:selected_map_register[31].d
+selected_map[32] => d_flipflop:selected_map_register[32].d
+selected_map[33] => d_flipflop:selected_map_register[33].d
+selected_map[34] => d_flipflop:selected_map_register[34].d
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[0].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[1].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[2].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[3].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[4].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[5].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxHitsMap[6].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[0].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[1].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[2].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[3].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[4].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[5].select[0]
+x_coord_code[0] => mux8x1:xCoordMuxSelectedMap[6].select[0]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[0].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[1].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[2].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[3].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[4].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[5].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxHitsMap[6].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[0].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[1].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[2].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[3].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[4].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[5].select[1]
+x_coord_code[1] => mux8x1:xCoordMuxSelectedMap[6].select[1]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[0].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[1].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[2].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[3].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[4].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[5].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxHitsMap[6].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[0].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[1].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[2].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[3].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[4].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[5].select[2]
+x_coord_code[2] => mux8x1:xCoordMuxSelectedMap[6].select[2]
+y_coord_code[0] => y_coord_code[0].IN2
+y_coord_code[1] => y_coord_code[1].IN2
+y_coord_code[2] => y_coord_code[2].IN2
+enable => enable.IN2
+confirmAttack => confirmAttack_w.IN1
+matriz_data[0] <= orMatriz[0].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[1] <= orMatriz[1].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[2] <= orMatriz[2].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[3] <= orMatriz[3].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[4] <= orMatriz[4].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[5] <= orMatriz[5].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[6] <= orMatriz[6].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[7] <= orMatriz[7].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[8] <= orMatriz[8].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[9] <= orMatriz[9].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[10] <= orMatriz[10].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[11] <= orMatriz[11].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[12] <= orMatriz[12].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[13] <= orMatriz[13].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[14] <= orMatriz[14].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[15] <= orMatriz[15].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[16] <= orMatriz[16].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[17] <= orMatriz[17].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[18] <= orMatriz[18].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[19] <= orMatriz[19].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[20] <= orMatriz[20].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[21] <= orMatriz[21].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[22] <= orMatriz[22].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[23] <= orMatriz[23].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[24] <= orMatriz[24].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[25] <= orMatriz[25].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[26] <= orMatriz[26].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[27] <= orMatriz[27].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[28] <= orMatriz[28].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[29] <= orMatriz[29].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[30] <= orMatriz[30].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[31] <= orMatriz[31].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[32] <= orMatriz[32].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[33] <= orMatriz[33].DB_MAX_OUTPUT_PORT_TYPE
+matriz_data[34] <= orMatriz[34].DB_MAX_OUTPUT_PORT_TYPE
+ledRgb[0] <= andGreen.DB_MAX_OUTPUT_PORT_TYPE
+ledRgb[1] <= andRed.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[0]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[1]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[2]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[3]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[4]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[5]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[6]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[7]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[8]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[9]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[10]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[11]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[12]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[13]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[14]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[15]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[16]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[17]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[18]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[19]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[20]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[21]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[22]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[23]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[24]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[25]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[26]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[27]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[28]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[29]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[30]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[31]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[32]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[33]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:selected_map_register[34]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[0]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[1]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[2]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[3]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[4]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[5]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[6]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[7]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[8]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[9]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[10]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[11]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[12]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[13]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[14]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[15]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[16]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[17]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[18]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[19]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[20]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[21]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[22]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[23]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[24]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[25]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[26]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[27]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[28]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[29]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[30]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[31]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[32]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[33]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|d_flipflop:hits_map_register[34]
+d => out~reg0.DATAIN
+clk => out~reg0.CLK
+reset => out~reg0.ACLR
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[0]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[0]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[0]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[1]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[1]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[1]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[2]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[2]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[2]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[3]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[3]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[3]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[4]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[4]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[4]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[5]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[5]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[5]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[6]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[6]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxHitsMap[6]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|demux1x8:yCoordDemuxHitsMap
+in => in.IN2
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out_a <= demux1x4:demux1x4_1.out_a
+out_b <= demux1x4:demux1x4_1.out_b
+out_c <= demux1x4:demux1x4_1.out_c
+out_d <= demux1x4:demux1x4_1.out_d
+out_e <= demux1x4:demux1x4_2.out_a
+out_f <= demux1x4:demux1x4_2.out_b
+out_g <= demux1x4:demux1x4_2.out_c
+out_h <= demux1x4:demux1x4_2.out_d
+
+
+|batalha_naval|attack_round:attack_round_1|demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_1
+in => and1.IN0
+in => and2.IN0
+in => and3.IN0
+in => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => and1.IN3
+enable => and2.IN3
+enable => and3.IN3
+enable => and4.IN3
+out_a <= and1.DB_MAX_OUTPUT_PORT_TYPE
+out_b <= and2.DB_MAX_OUTPUT_PORT_TYPE
+out_c <= and3.DB_MAX_OUTPUT_PORT_TYPE
+out_d <= and4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|demux1x8:yCoordDemuxHitsMap|demux1x4:demux1x4_2
+in => and1.IN0
+in => and2.IN0
+in => and3.IN0
+in => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => and1.IN3
+enable => and2.IN3
+enable => and3.IN3
+enable => and4.IN3
+out_a <= and1.DB_MAX_OUTPUT_PORT_TYPE
+out_b <= and2.DB_MAX_OUTPUT_PORT_TYPE
+out_c <= and3.DB_MAX_OUTPUT_PORT_TYPE
+out_d <= and4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[0]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[0]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[0]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[1]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[1]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[1]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[2]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[2]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[2]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[3]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[3]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[3]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[4]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[4]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[4]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[5]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[5]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[5]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[6]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[6]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:xCoordMuxSelectedMap[6]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1
+selectedMap[0] => mux2x1:muxMaps[0].in_a
+selectedMap[1] => mux2x1:muxMaps[1].in_a
+selectedMap[2] => mux2x1:muxMaps[2].in_a
+selectedMap[3] => mux2x1:muxMaps[3].in_a
+selectedMap[4] => mux2x1:muxMaps[4].in_a
+selectedMap[5] => mux2x1:muxMaps[5].in_a
+selectedMap[6] => mux2x1:muxMaps[6].in_a
+selectedMap[7] => mux2x1:muxMaps[7].in_a
+selectedMap[8] => mux2x1:muxMaps[8].in_a
+selectedMap[9] => mux2x1:muxMaps[9].in_a
+selectedMap[10] => mux2x1:muxMaps[10].in_a
+selectedMap[11] => mux2x1:muxMaps[11].in_a
+selectedMap[12] => mux2x1:muxMaps[12].in_a
+selectedMap[13] => mux2x1:muxMaps[13].in_a
+selectedMap[14] => mux2x1:muxMaps[14].in_a
+selectedMap[15] => mux2x1:muxMaps[15].in_a
+selectedMap[16] => mux2x1:muxMaps[16].in_a
+selectedMap[17] => mux2x1:muxMaps[17].in_a
+selectedMap[18] => mux2x1:muxMaps[18].in_a
+selectedMap[19] => mux2x1:muxMaps[19].in_a
+selectedMap[20] => mux2x1:muxMaps[20].in_a
+selectedMap[21] => mux2x1:muxMaps[21].in_a
+selectedMap[22] => mux2x1:muxMaps[22].in_a
+selectedMap[23] => mux2x1:muxMaps[23].in_a
+selectedMap[24] => mux2x1:muxMaps[24].in_a
+selectedMap[25] => mux2x1:muxMaps[25].in_a
+selectedMap[26] => mux2x1:muxMaps[26].in_a
+selectedMap[27] => mux2x1:muxMaps[27].in_a
+selectedMap[28] => mux2x1:muxMaps[28].in_a
+selectedMap[29] => mux2x1:muxMaps[29].in_a
+selectedMap[30] => mux2x1:muxMaps[30].in_a
+selectedMap[31] => mux2x1:muxMaps[31].in_a
+selectedMap[32] => mux2x1:muxMaps[32].in_a
+selectedMap[33] => mux2x1:muxMaps[33].in_a
+selectedMap[34] => mux2x1:muxMaps[34].in_a
+mapAttack[0] => mux2x1:muxMaps[0].in_b
+mapAttack[1] => mux2x1:muxMaps[1].in_b
+mapAttack[2] => mux2x1:muxMaps[2].in_b
+mapAttack[3] => mux2x1:muxMaps[3].in_b
+mapAttack[4] => mux2x1:muxMaps[4].in_b
+mapAttack[5] => mux2x1:muxMaps[5].in_b
+mapAttack[6] => mux2x1:muxMaps[6].in_b
+mapAttack[7] => mux2x1:muxMaps[7].in_b
+mapAttack[8] => mux2x1:muxMaps[8].in_b
+mapAttack[9] => mux2x1:muxMaps[9].in_b
+mapAttack[10] => mux2x1:muxMaps[10].in_b
+mapAttack[11] => mux2x1:muxMaps[11].in_b
+mapAttack[12] => mux2x1:muxMaps[12].in_b
+mapAttack[13] => mux2x1:muxMaps[13].in_b
+mapAttack[14] => mux2x1:muxMaps[14].in_b
+mapAttack[15] => mux2x1:muxMaps[15].in_b
+mapAttack[16] => mux2x1:muxMaps[16].in_b
+mapAttack[17] => mux2x1:muxMaps[17].in_b
+mapAttack[18] => mux2x1:muxMaps[18].in_b
+mapAttack[19] => mux2x1:muxMaps[19].in_b
+mapAttack[20] => mux2x1:muxMaps[20].in_b
+mapAttack[21] => mux2x1:muxMaps[21].in_b
+mapAttack[22] => mux2x1:muxMaps[22].in_b
+mapAttack[23] => mux2x1:muxMaps[23].in_b
+mapAttack[24] => mux2x1:muxMaps[24].in_b
+mapAttack[25] => mux2x1:muxMaps[25].in_b
+mapAttack[26] => mux2x1:muxMaps[26].in_b
+mapAttack[27] => mux2x1:muxMaps[27].in_b
+mapAttack[28] => mux2x1:muxMaps[28].in_b
+mapAttack[29] => mux2x1:muxMaps[29].in_b
+mapAttack[30] => mux2x1:muxMaps[30].in_b
+mapAttack[31] => mux2x1:muxMaps[31].in_b
+mapAttack[32] => mux2x1:muxMaps[32].in_b
+mapAttack[33] => mux2x1:muxMaps[33].in_b
+mapAttack[34] => mux2x1:muxMaps[34].in_b
+enable => mux2x1:muxMaps[0].enable
+enable => mux2x1:muxMaps[1].enable
+enable => mux2x1:muxMaps[2].enable
+enable => mux2x1:muxMaps[3].enable
+enable => mux2x1:muxMaps[4].enable
+enable => mux2x1:muxMaps[5].enable
+enable => mux2x1:muxMaps[6].enable
+enable => mux2x1:muxMaps[7].enable
+enable => mux2x1:muxMaps[8].enable
+enable => mux2x1:muxMaps[9].enable
+enable => mux2x1:muxMaps[10].enable
+enable => mux2x1:muxMaps[11].enable
+enable => mux2x1:muxMaps[12].enable
+enable => mux2x1:muxMaps[13].enable
+enable => mux2x1:muxMaps[14].enable
+enable => mux2x1:muxMaps[15].enable
+enable => mux2x1:muxMaps[16].enable
+enable => mux2x1:muxMaps[17].enable
+enable => mux2x1:muxMaps[18].enable
+enable => mux2x1:muxMaps[19].enable
+enable => mux2x1:muxMaps[20].enable
+enable => mux2x1:muxMaps[21].enable
+enable => mux2x1:muxMaps[22].enable
+enable => mux2x1:muxMaps[23].enable
+enable => mux2x1:muxMaps[24].enable
+enable => mux2x1:muxMaps[25].enable
+enable => mux2x1:muxMaps[26].enable
+enable => mux2x1:muxMaps[27].enable
+enable => mux2x1:muxMaps[28].enable
+enable => mux2x1:muxMaps[29].enable
+enable => mux2x1:muxMaps[30].enable
+enable => mux2x1:muxMaps[31].enable
+enable => mux2x1:muxMaps[32].enable
+enable => mux2x1:muxMaps[33].enable
+enable => mux2x1:muxMaps[34].enable
+enableAttack => mux2x1:muxMaps[0].select
+enableAttack => mux2x1:muxMaps[1].select
+enableAttack => mux2x1:muxMaps[2].select
+enableAttack => mux2x1:muxMaps[3].select
+enableAttack => mux2x1:muxMaps[4].select
+enableAttack => mux2x1:muxMaps[5].select
+enableAttack => mux2x1:muxMaps[6].select
+enableAttack => mux2x1:muxMaps[7].select
+enableAttack => mux2x1:muxMaps[8].select
+enableAttack => mux2x1:muxMaps[9].select
+enableAttack => mux2x1:muxMaps[10].select
+enableAttack => mux2x1:muxMaps[11].select
+enableAttack => mux2x1:muxMaps[12].select
+enableAttack => mux2x1:muxMaps[13].select
+enableAttack => mux2x1:muxMaps[14].select
+enableAttack => mux2x1:muxMaps[15].select
+enableAttack => mux2x1:muxMaps[16].select
+enableAttack => mux2x1:muxMaps[17].select
+enableAttack => mux2x1:muxMaps[18].select
+enableAttack => mux2x1:muxMaps[19].select
+enableAttack => mux2x1:muxMaps[20].select
+enableAttack => mux2x1:muxMaps[21].select
+enableAttack => mux2x1:muxMaps[22].select
+enableAttack => mux2x1:muxMaps[23].select
+enableAttack => mux2x1:muxMaps[24].select
+enableAttack => mux2x1:muxMaps[25].select
+enableAttack => mux2x1:muxMaps[26].select
+enableAttack => mux2x1:muxMaps[27].select
+enableAttack => mux2x1:muxMaps[28].select
+enableAttack => mux2x1:muxMaps[29].select
+enableAttack => mux2x1:muxMaps[30].select
+enableAttack => mux2x1:muxMaps[31].select
+enableAttack => mux2x1:muxMaps[32].select
+enableAttack => mux2x1:muxMaps[33].select
+enableAttack => mux2x1:muxMaps[34].select
+matriz_data[0] <= mux2x1:muxMaps[0].out
+matriz_data[1] <= mux2x1:muxMaps[1].out
+matriz_data[2] <= mux2x1:muxMaps[2].out
+matriz_data[3] <= mux2x1:muxMaps[3].out
+matriz_data[4] <= mux2x1:muxMaps[4].out
+matriz_data[5] <= mux2x1:muxMaps[5].out
+matriz_data[6] <= mux2x1:muxMaps[6].out
+matriz_data[7] <= mux2x1:muxMaps[7].out
+matriz_data[8] <= mux2x1:muxMaps[8].out
+matriz_data[9] <= mux2x1:muxMaps[9].out
+matriz_data[10] <= mux2x1:muxMaps[10].out
+matriz_data[11] <= mux2x1:muxMaps[11].out
+matriz_data[12] <= mux2x1:muxMaps[12].out
+matriz_data[13] <= mux2x1:muxMaps[13].out
+matriz_data[14] <= mux2x1:muxMaps[14].out
+matriz_data[15] <= mux2x1:muxMaps[15].out
+matriz_data[16] <= mux2x1:muxMaps[16].out
+matriz_data[17] <= mux2x1:muxMaps[17].out
+matriz_data[18] <= mux2x1:muxMaps[18].out
+matriz_data[19] <= mux2x1:muxMaps[19].out
+matriz_data[20] <= mux2x1:muxMaps[20].out
+matriz_data[21] <= mux2x1:muxMaps[21].out
+matriz_data[22] <= mux2x1:muxMaps[22].out
+matriz_data[23] <= mux2x1:muxMaps[23].out
+matriz_data[24] <= mux2x1:muxMaps[24].out
+matriz_data[25] <= mux2x1:muxMaps[25].out
+matriz_data[26] <= mux2x1:muxMaps[26].out
+matriz_data[27] <= mux2x1:muxMaps[27].out
+matriz_data[28] <= mux2x1:muxMaps[28].out
+matriz_data[29] <= mux2x1:muxMaps[29].out
+matriz_data[30] <= mux2x1:muxMaps[30].out
+matriz_data[31] <= mux2x1:muxMaps[31].out
+matriz_data[32] <= mux2x1:muxMaps[32].out
+matriz_data[33] <= mux2x1:muxMaps[33].out
+matriz_data[34] <= mux2x1:muxMaps[34].out
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[0]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[1]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[2]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[3]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[4]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[5]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[6]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[7]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[8]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[9]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[10]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[11]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[12]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[13]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[14]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[15]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[16]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[17]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[18]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[19]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[20]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[21]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[22]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[23]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[24]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[25]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[26]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[27]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[28]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[29]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[30]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[31]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[32]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[33]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|imageSelect:imageSelect_1|mux2x1:muxMaps[34]
+in_a => and0.IN0
+in_b => and1.IN0
+select => and1.IN1
+select => and0.IN1
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |batalha_naval|displayer:matriz_displayer
+image[0] => mux8x1:mux8x1_1[0].in_a
+image[1] => mux8x1:mux8x1_1[1].in_a
+image[2] => mux8x1:mux8x1_1[2].in_a
+image[3] => mux8x1:mux8x1_1[3].in_a
+image[4] => mux8x1:mux8x1_1[4].in_a
+image[5] => mux8x1:mux8x1_1[5].in_a
+image[6] => mux8x1:mux8x1_1[6].in_a
+image[7] => mux8x1:mux8x1_1[0].in_b
+image[8] => mux8x1:mux8x1_1[1].in_b
+image[9] => mux8x1:mux8x1_1[2].in_b
+image[10] => mux8x1:mux8x1_1[3].in_b
+image[11] => mux8x1:mux8x1_1[4].in_b
+image[12] => mux8x1:mux8x1_1[5].in_b
+image[13] => mux8x1:mux8x1_1[6].in_b
+image[14] => mux8x1:mux8x1_1[0].in_c
+image[15] => mux8x1:mux8x1_1[1].in_c
+image[16] => mux8x1:mux8x1_1[2].in_c
+image[17] => mux8x1:mux8x1_1[3].in_c
+image[18] => mux8x1:mux8x1_1[4].in_c
+image[19] => mux8x1:mux8x1_1[5].in_c
+image[20] => mux8x1:mux8x1_1[6].in_c
+image[21] => mux8x1:mux8x1_1[0].in_d
+image[22] => mux8x1:mux8x1_1[1].in_d
+image[23] => mux8x1:mux8x1_1[2].in_d
+image[24] => mux8x1:mux8x1_1[3].in_d
+image[25] => mux8x1:mux8x1_1[4].in_d
+image[26] => mux8x1:mux8x1_1[5].in_d
+image[27] => mux8x1:mux8x1_1[6].in_d
+image[28] => mux8x1:mux8x1_1[0].in_e
+image[29] => mux8x1:mux8x1_1[1].in_e
+image[30] => mux8x1:mux8x1_1[2].in_e
+image[31] => mux8x1:mux8x1_1[3].in_e
+image[32] => mux8x1:mux8x1_1[4].in_e
+image[33] => mux8x1:mux8x1_1[5].in_e
+image[34] => mux8x1:mux8x1_1[6].in_e
 clk => clk.IN2
-image[0] => image[0].IN1
-image[1] => image[1].IN1
-image[2] => image[2].IN1
-image[3] => image[3].IN1
-image[4] => image[4].IN1
-image[5] => image[5].IN1
-image[6] => image[6].IN1
-image[7] => image[7].IN1
-image[8] => image[8].IN1
-image[9] => image[9].IN1
-image[10] => image[10].IN1
-image[11] => image[11].IN1
-image[12] => image[12].IN1
-image[13] => image[13].IN1
-image[14] => image[14].IN1
-image[15] => image[15].IN1
-image[16] => image[16].IN1
-image[17] => image[17].IN1
-image[18] => image[18].IN1
-image[19] => image[19].IN1
-image[20] => image[20].IN1
-image[21] => image[21].IN1
-image[22] => image[22].IN1
-image[23] => image[23].IN1
-image[24] => image[24].IN1
-image[25] => image[25].IN1
-image[26] => image[26].IN1
-image[27] => image[27].IN1
-image[28] => image[28].IN1
-image[29] => image[29].IN1
-image[30] => image[30].IN1
-image[31] => image[31].IN1
-image[32] => image[32].IN1
-image[33] => image[33].IN1
-image[34] => image[34].IN1
-colune_data[0] <= mux8x1:mux8x1_1.out
-colune_data[1] <= mux8x1:mux8x1_1.out
-colune_data[2] <= mux8x1:mux8x1_1.out
-colune_data[3] <= mux8x1:mux8x1_1.out
-colune_data[4] <= mux8x1:mux8x1_1.out
-colune_data[5] <= mux8x1:mux8x1_1.out
-colune_data[6] <= mux8x1:mux8x1_1.out
-colune_activator[0] <= register8bit:register8bit_1.out
-colune_activator[1] <= register8bit:register8bit_1.out
-colune_activator[2] <= register8bit:register8bit_1.out
-colune_activator[3] <= register8bit:register8bit_1.out
-colune_activator[4] <= register8bit:register8bit_1.out
+enable => enable.IN1
+colune_data[0] <= mux8x1:mux8x1_1[0].out
+colune_data[1] <= mux8x1:mux8x1_1[1].out
+colune_data[2] <= mux8x1:mux8x1_1[2].out
+colune_data[3] <= mux8x1:mux8x1_1[3].out
+colune_data[4] <= mux8x1:mux8x1_1[4].out
+colune_data[5] <= mux8x1:mux8x1_1[5].out
+colune_data[6] <= mux8x1:mux8x1_1[6].out
+colune_activator[0] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[1] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[2] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[3] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[4] <= register8bitSIPO:register8bitSIPO_1.out
 
 
 |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1
@@ -373,7 +2486,7 @@ reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1
 in => in.IN1
 clk => clk.IN8
 reset => reset.IN8
@@ -387,381 +2500,687 @@ out[6] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= and8.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_0
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_0
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_1
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_1
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_2
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_2
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_3
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_3
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_4
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_4
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_5
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_5
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_6
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_6
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_7
+|batalha_naval|displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_7
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1
-in_a[0] => in_a[0].IN1
-in_a[1] => in_a[1].IN1
-in_a[2] => in_a[2].IN1
-in_a[3] => in_a[3].IN1
-in_a[4] => in_a[4].IN1
-in_a[5] => in_a[5].IN1
-in_a[6] => in_a[6].IN1
-in_b[0] => in_b[0].IN1
-in_b[1] => in_b[1].IN1
-in_b[2] => in_b[2].IN1
-in_b[3] => in_b[3].IN1
-in_b[4] => in_b[4].IN1
-in_b[5] => in_b[5].IN1
-in_b[6] => in_b[6].IN1
-in_c[0] => in_c[0].IN1
-in_c[1] => in_c[1].IN1
-in_c[2] => in_c[2].IN1
-in_c[3] => in_c[3].IN1
-in_c[4] => in_c[4].IN1
-in_c[5] => in_c[5].IN1
-in_c[6] => in_c[6].IN1
-in_d[0] => in_d[0].IN1
-in_d[1] => in_d[1].IN1
-in_d[2] => in_d[2].IN1
-in_d[3] => in_d[3].IN1
-in_d[4] => in_d[4].IN1
-in_d[5] => in_d[5].IN1
-in_d[6] => in_d[6].IN1
-in_e[0] => in_e[0].IN1
-in_e[1] => in_e[1].IN1
-in_e[2] => in_e[2].IN1
-in_e[3] => in_e[3].IN1
-in_e[4] => in_e[4].IN1
-in_e[5] => in_e[5].IN1
-in_e[6] => in_e[6].IN1
-in_f[0] => in_f[0].IN1
-in_f[1] => in_f[1].IN1
-in_f[2] => in_f[2].IN1
-in_f[3] => in_f[3].IN1
-in_f[4] => in_f[4].IN1
-in_f[5] => in_f[5].IN1
-in_f[6] => in_f[6].IN1
-in_g[0] => in_g[0].IN1
-in_g[1] => in_g[1].IN1
-in_g[2] => in_g[2].IN1
-in_g[3] => in_g[3].IN1
-in_g[4] => in_g[4].IN1
-in_g[5] => in_g[5].IN1
-in_g[6] => in_g[6].IN1
-in_h[0] => in_h[0].IN1
-in_h[1] => in_h[1].IN1
-in_h[2] => in_h[2].IN1
-in_h[3] => in_h[3].IN1
-in_h[4] => in_h[4].IN1
-in_h[5] => in_h[5].IN1
-in_h[6] => in_h[6].IN1
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[0]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
 select[0] => select[0].IN2
 select[1] => select[1].IN2
-select[2] => and2[0].IN1
-select[2] => and2[1].IN1
-select[2] => and2[2].IN1
-select[2] => and2[3].IN1
-select[2] => and2[4].IN1
-select[2] => and2[5].IN1
-select[2] => and2[6].IN1
-select[2] => and1[0].IN1
-select[2] => and1[1].IN1
-select[2] => and1[2].IN1
-select[2] => and1[3].IN1
-select[2] => and1[4].IN1
-select[2] => and1[5].IN1
-select[2] => and1[6].IN1
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1
-in_a[0] => and1[0].IN0
-in_a[1] => and1[1].IN0
-in_a[2] => and1[2].IN0
-in_a[3] => and1[3].IN0
-in_a[4] => and1[4].IN0
-in_a[5] => and1[5].IN0
-in_a[6] => and1[6].IN0
-in_b[0] => and2[0].IN0
-in_b[1] => and2[1].IN0
-in_b[2] => and2[2].IN0
-in_b[3] => and2[3].IN0
-in_b[4] => and2[4].IN0
-in_b[5] => and2[5].IN0
-in_b[6] => and2[6].IN0
-in_c[0] => and3[0].IN0
-in_c[1] => and3[1].IN0
-in_c[2] => and3[2].IN0
-in_c[3] => and3[3].IN0
-in_c[4] => and3[4].IN0
-in_c[5] => and3[5].IN0
-in_c[6] => and3[6].IN0
-in_d[0] => and4[0].IN0
-in_d[1] => and4[1].IN0
-in_d[2] => and4[2].IN0
-in_d[3] => and4[3].IN0
-in_d[4] => and4[4].IN0
-in_d[5] => and4[5].IN0
-in_d[6] => and4[6].IN0
-select[0] => and2[0].IN1
-select[0] => and2[1].IN1
-select[0] => and2[2].IN1
-select[0] => and2[3].IN1
-select[0] => and2[4].IN1
-select[0] => and2[5].IN1
-select[0] => and2[6].IN1
-select[0] => and4[0].IN1
-select[0] => and4[1].IN1
-select[0] => and4[2].IN1
-select[0] => and4[3].IN1
-select[0] => and4[4].IN1
-select[0] => and4[5].IN1
-select[0] => and4[6].IN1
-select[0] => and1[0].IN1
-select[0] => and1[1].IN1
-select[0] => and1[2].IN1
-select[0] => and1[3].IN1
-select[0] => and1[4].IN1
-select[0] => and1[5].IN1
-select[0] => and1[6].IN1
-select[0] => and3[0].IN1
-select[0] => and3[1].IN1
-select[0] => and3[2].IN1
-select[0] => and3[3].IN1
-select[0] => and3[4].IN1
-select[0] => and3[5].IN1
-select[0] => and3[6].IN1
-select[1] => and3[0].IN2
-select[1] => and3[1].IN2
-select[1] => and3[2].IN2
-select[1] => and3[3].IN2
-select[1] => and3[4].IN2
-select[1] => and3[5].IN2
-select[1] => and3[6].IN2
-select[1] => and4[0].IN2
-select[1] => and4[1].IN2
-select[1] => and4[2].IN2
-select[1] => and4[3].IN2
-select[1] => and4[4].IN2
-select[1] => and4[5].IN2
-select[1] => and4[6].IN2
-select[1] => and1[0].IN2
-select[1] => and1[1].IN2
-select[1] => and1[2].IN2
-select[1] => and1[3].IN2
-select[1] => and1[4].IN2
-select[1] => and1[5].IN2
-select[1] => and1[6].IN2
-select[1] => and2[0].IN2
-select[1] => and2[1].IN2
-select[1] => and2[2].IN2
-select[1] => and2[3].IN2
-select[1] => and2[4].IN2
-select[1] => and2[5].IN2
-select[1] => and2[6].IN2
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_2
-in_a[0] => and1[0].IN0
-in_a[1] => and1[1].IN0
-in_a[2] => and1[2].IN0
-in_a[3] => and1[3].IN0
-in_a[4] => and1[4].IN0
-in_a[5] => and1[5].IN0
-in_a[6] => and1[6].IN0
-in_b[0] => and2[0].IN0
-in_b[1] => and2[1].IN0
-in_b[2] => and2[2].IN0
-in_b[3] => and2[3].IN0
-in_b[4] => and2[4].IN0
-in_b[5] => and2[5].IN0
-in_b[6] => and2[6].IN0
-in_c[0] => and3[0].IN0
-in_c[1] => and3[1].IN0
-in_c[2] => and3[2].IN0
-in_c[3] => and3[3].IN0
-in_c[4] => and3[4].IN0
-in_c[5] => and3[5].IN0
-in_c[6] => and3[6].IN0
-in_d[0] => and4[0].IN0
-in_d[1] => and4[1].IN0
-in_d[2] => and4[2].IN0
-in_d[3] => and4[3].IN0
-in_d[4] => and4[4].IN0
-in_d[5] => and4[5].IN0
-in_d[6] => and4[6].IN0
-select[0] => and2[0].IN1
-select[0] => and2[1].IN1
-select[0] => and2[2].IN1
-select[0] => and2[3].IN1
-select[0] => and2[4].IN1
-select[0] => and2[5].IN1
-select[0] => and2[6].IN1
-select[0] => and4[0].IN1
-select[0] => and4[1].IN1
-select[0] => and4[2].IN1
-select[0] => and4[3].IN1
-select[0] => and4[4].IN1
-select[0] => and4[5].IN1
-select[0] => and4[6].IN1
-select[0] => and1[0].IN1
-select[0] => and1[1].IN1
-select[0] => and1[2].IN1
-select[0] => and1[3].IN1
-select[0] => and1[4].IN1
-select[0] => and1[5].IN1
-select[0] => and1[6].IN1
-select[0] => and3[0].IN1
-select[0] => and3[1].IN1
-select[0] => and3[2].IN1
-select[0] => and3[3].IN1
-select[0] => and3[4].IN1
-select[0] => and3[5].IN1
-select[0] => and3[6].IN1
-select[1] => and3[0].IN2
-select[1] => and3[1].IN2
-select[1] => and3[2].IN2
-select[1] => and3[3].IN2
-select[1] => and3[4].IN2
-select[1] => and3[5].IN2
-select[1] => and3[6].IN2
-select[1] => and4[0].IN2
-select[1] => and4[1].IN2
-select[1] => and4[2].IN2
-select[1] => and4[3].IN2
-select[1] => and4[4].IN2
-select[1] => and4[5].IN2
-select[1] => and4[6].IN2
-select[1] => and1[0].IN2
-select[1] => and1[1].IN2
-select[1] => and1[2].IN2
-select[1] => and1[3].IN2
-select[1] => and1[4].IN2
-select[1] => and1[5].IN2
-select[1] => and1[6].IN2
-select[1] => and2[0].IN2
-select[1] => and2[1].IN2
-select[1] => and2[2].IN2
-select[1] => and2[3].IN2
-select[1] => and2[4].IN2
-select[1] => and2[5].IN2
-select[1] => and2[6].IN2
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[1]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[2]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[3]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[4]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[5]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[6]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|full_display_decoder:full_display_decoder_1
+status_code[0] => status_code[0].IN3
+status_code[1] => status_code[1].IN3
+status_code[2] => status_code[2].IN3
+x_coord_code[0] => ~NO_FANOUT~
+x_coord_code[1] => ~NO_FANOUT~
+x_coord_code[2] => ~NO_FANOUT~
+y_coord_code[0] => ~NO_FANOUT~
+y_coord_code[1] => ~NO_FANOUT~
+y_coord_code[2] => ~NO_FANOUT~
+enable => enable.IN1
+enableAttack => enableAttack.IN2
+display_data[0] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[1] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[2] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[3] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[4] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[5] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[6] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[7] <= display_data[7].DB_MAX_OUTPUT_PORT_TYPE
+display_data[8] <= display_data[8].DB_MAX_OUTPUT_PORT_TYPE
+display_data[9] <= display_data[9].DB_MAX_OUTPUT_PORT_TYPE
+display_data[10] <= display_data[10].DB_MAX_OUTPUT_PORT_TYPE
+display_data[11] <= display_data[11].DB_MAX_OUTPUT_PORT_TYPE
+display_data[12] <= display_data[12].DB_MAX_OUTPUT_PORT_TYPE
+display_data[13] <= display_data[13].DB_MAX_OUTPUT_PORT_TYPE
+display_data[14] <= display_data[14].DB_MAX_OUTPUT_PORT_TYPE
+display_data[15] <= display_data[15].DB_MAX_OUTPUT_PORT_TYPE
+display_data[16] <= display_data[16].DB_MAX_OUTPUT_PORT_TYPE
+display_data[17] <= display_data[17].DB_MAX_OUTPUT_PORT_TYPE
+display_data[18] <= display_data[18].DB_MAX_OUTPUT_PORT_TYPE
+display_data[19] <= display_data[19].DB_MAX_OUTPUT_PORT_TYPE
+display_data[20] <= display_data[20].DB_MAX_OUTPUT_PORT_TYPE
+display_data[21] <= display_data[21].DB_MAX_OUTPUT_PORT_TYPE
+display_data[22] <= display_data[22].DB_MAX_OUTPUT_PORT_TYPE
+display_data[23] <= display_data[23].DB_MAX_OUTPUT_PORT_TYPE
+display_data[24] <= display_data[24].DB_MAX_OUTPUT_PORT_TYPE
+display_data[25] <= display_data[25].DB_MAX_OUTPUT_PORT_TYPE
+display_data[26] <= display_data[26].DB_MAX_OUTPUT_PORT_TYPE
+display_data[27] <= display_data[27].DB_MAX_OUTPUT_PORT_TYPE
+display_data[28] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[29] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[30] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[31] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[32] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[33] <= colune_display_decoder:y_coord_decoder.digitOut
+display_data[34] <= colune_display_decoder:y_coord_decoder.digitOut
+
+
+|batalha_naval|full_display_decoder:full_display_decoder_1|colune_display_decoder:status_decoder
+binary_code[0] => and00.IN0
+binary_code[0] => and10.IN0
+binary_code[0] => and20.IN0
+binary_code[0] => and30.IN0
+binary_code[0] => and32.IN0
+binary_code[0] => or40.IN1
+binary_code[0] => and50.IN0
+binary_code[0] => and52.IN0
+binary_code[0] => and61.IN0
+binary_code[0] => and01.IN0
+binary_code[0] => and11.IN0
+binary_code[0] => and31.IN0
+binary_code[1] => and11.IN1
+binary_code[1] => and20.IN1
+binary_code[1] => and32.IN1
+binary_code[1] => and51.IN0
+binary_code[1] => and52.IN1
+binary_code[1] => and61.IN1
+binary_code[1] => and00.IN1
+binary_code[1] => and01.IN1
+binary_code[1] => and10.IN1
+binary_code[1] => and30.IN1
+binary_code[1] => and31.IN1
+binary_code[1] => and41.IN0
+binary_code[1] => and60.IN0
+binary_code[2] => and01.IN2
+binary_code[2] => and10.IN2
+binary_code[2] => and11.IN2
+binary_code[2] => and31.IN2
+binary_code[2] => and32.IN2
+binary_code[2] => and41.IN1
+binary_code[2] => and61.IN2
+binary_code[2] => and00.IN2
+binary_code[2] => and20.IN2
+binary_code[2] => and30.IN2
+binary_code[2] => and50.IN1
+binary_code[2] => and51.IN1
+binary_code[2] => and60.IN1
+binary_code[3] => and00.IN3
+binary_code[3] => and30.IN3
+binary_code[3] => and50.IN2
+binary_code[3] => and60.IN2
+enable => orEnable[0].IN1
+enable => orEnable[1].IN1
+enable => orEnable[2].IN1
+enable => orEnable[3].IN1
+enable => orEnable[4].IN1
+enable => orEnable[5].IN1
+enable => orEnable[6].IN1
+digitOut[0] <= orEnable[0].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[1] <= orEnable[1].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[2] <= orEnable[2].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[3] <= orEnable[3].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[4] <= orEnable[4].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[5] <= orEnable[5].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[6] <= orEnable[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|full_display_decoder:full_display_decoder_1|colune_display_decoder:x_coord_decoder
+binary_code[0] => and00.IN0
+binary_code[0] => and10.IN0
+binary_code[0] => and20.IN0
+binary_code[0] => and30.IN0
+binary_code[0] => and32.IN0
+binary_code[0] => or40.IN1
+binary_code[0] => and50.IN0
+binary_code[0] => and52.IN0
+binary_code[0] => and61.IN0
+binary_code[0] => and01.IN0
+binary_code[0] => and11.IN0
+binary_code[0] => and31.IN0
+binary_code[1] => and11.IN1
+binary_code[1] => and20.IN1
+binary_code[1] => and32.IN1
+binary_code[1] => and51.IN0
+binary_code[1] => and52.IN1
+binary_code[1] => and61.IN1
+binary_code[1] => and00.IN1
+binary_code[1] => and01.IN1
+binary_code[1] => and10.IN1
+binary_code[1] => and30.IN1
+binary_code[1] => and31.IN1
+binary_code[1] => and41.IN0
+binary_code[1] => and60.IN0
+binary_code[2] => and01.IN2
+binary_code[2] => and10.IN2
+binary_code[2] => and11.IN2
+binary_code[2] => and31.IN2
+binary_code[2] => and32.IN2
+binary_code[2] => and41.IN1
+binary_code[2] => and61.IN2
+binary_code[2] => and00.IN2
+binary_code[2] => and20.IN2
+binary_code[2] => and30.IN2
+binary_code[2] => and50.IN1
+binary_code[2] => and51.IN1
+binary_code[2] => and60.IN1
+binary_code[3] => and00.IN3
+binary_code[3] => and30.IN3
+binary_code[3] => and50.IN2
+binary_code[3] => and60.IN2
+enable => orEnable[0].IN1
+enable => orEnable[1].IN1
+enable => orEnable[2].IN1
+enable => orEnable[3].IN1
+enable => orEnable[4].IN1
+enable => orEnable[5].IN1
+enable => orEnable[6].IN1
+digitOut[0] <= orEnable[0].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[1] <= orEnable[1].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[2] <= orEnable[2].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[3] <= orEnable[3].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[4] <= orEnable[4].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[5] <= orEnable[5].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[6] <= orEnable[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|full_display_decoder:full_display_decoder_1|colune_display_decoder:y_coord_decoder
+binary_code[0] => and00.IN0
+binary_code[0] => and10.IN0
+binary_code[0] => and20.IN0
+binary_code[0] => and30.IN0
+binary_code[0] => and32.IN0
+binary_code[0] => or40.IN1
+binary_code[0] => and50.IN0
+binary_code[0] => and52.IN0
+binary_code[0] => and61.IN0
+binary_code[0] => and01.IN0
+binary_code[0] => and11.IN0
+binary_code[0] => and31.IN0
+binary_code[1] => and11.IN1
+binary_code[1] => and20.IN1
+binary_code[1] => and32.IN1
+binary_code[1] => and51.IN0
+binary_code[1] => and52.IN1
+binary_code[1] => and61.IN1
+binary_code[1] => and00.IN1
+binary_code[1] => and01.IN1
+binary_code[1] => and10.IN1
+binary_code[1] => and30.IN1
+binary_code[1] => and31.IN1
+binary_code[1] => and41.IN0
+binary_code[1] => and60.IN0
+binary_code[2] => and01.IN2
+binary_code[2] => and10.IN2
+binary_code[2] => and11.IN2
+binary_code[2] => and31.IN2
+binary_code[2] => and32.IN2
+binary_code[2] => and41.IN1
+binary_code[2] => and61.IN2
+binary_code[2] => and00.IN2
+binary_code[2] => and20.IN2
+binary_code[2] => and30.IN2
+binary_code[2] => and50.IN1
+binary_code[2] => and51.IN1
+binary_code[2] => and60.IN1
+binary_code[3] => and00.IN3
+binary_code[3] => and30.IN3
+binary_code[3] => and50.IN2
+binary_code[3] => and60.IN2
+enable => orEnable[0].IN1
+enable => orEnable[1].IN1
+enable => orEnable[2].IN1
+enable => orEnable[3].IN1
+enable => orEnable[4].IN1
+enable => orEnable[5].IN1
+enable => orEnable[6].IN1
+digitOut[0] <= orEnable[0].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[1] <= orEnable[1].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[2] <= orEnable[2].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[3] <= orEnable[3].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[4] <= orEnable[4].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[5] <= orEnable[5].DB_MAX_OUTPUT_PORT_TYPE
+digitOut[6] <= orEnable[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |batalha_naval|displayer:segment_display
+image[0] => mux8x1:mux8x1_1[0].in_a
+image[1] => mux8x1:mux8x1_1[1].in_a
+image[2] => mux8x1:mux8x1_1[2].in_a
+image[3] => mux8x1:mux8x1_1[3].in_a
+image[4] => mux8x1:mux8x1_1[4].in_a
+image[5] => mux8x1:mux8x1_1[5].in_a
+image[6] => mux8x1:mux8x1_1[6].in_a
+image[7] => mux8x1:mux8x1_1[0].in_b
+image[8] => mux8x1:mux8x1_1[1].in_b
+image[9] => mux8x1:mux8x1_1[2].in_b
+image[10] => mux8x1:mux8x1_1[3].in_b
+image[11] => mux8x1:mux8x1_1[4].in_b
+image[12] => mux8x1:mux8x1_1[5].in_b
+image[13] => mux8x1:mux8x1_1[6].in_b
+image[14] => mux8x1:mux8x1_1[0].in_c
+image[15] => mux8x1:mux8x1_1[1].in_c
+image[16] => mux8x1:mux8x1_1[2].in_c
+image[17] => mux8x1:mux8x1_1[3].in_c
+image[18] => mux8x1:mux8x1_1[4].in_c
+image[19] => mux8x1:mux8x1_1[5].in_c
+image[20] => mux8x1:mux8x1_1[6].in_c
+image[21] => mux8x1:mux8x1_1[0].in_d
+image[22] => mux8x1:mux8x1_1[1].in_d
+image[23] => mux8x1:mux8x1_1[2].in_d
+image[24] => mux8x1:mux8x1_1[3].in_d
+image[25] => mux8x1:mux8x1_1[4].in_d
+image[26] => mux8x1:mux8x1_1[5].in_d
+image[27] => mux8x1:mux8x1_1[6].in_d
+image[28] => mux8x1:mux8x1_1[0].in_e
+image[29] => mux8x1:mux8x1_1[1].in_e
+image[30] => mux8x1:mux8x1_1[2].in_e
+image[31] => mux8x1:mux8x1_1[3].in_e
+image[32] => mux8x1:mux8x1_1[4].in_e
+image[33] => mux8x1:mux8x1_1[5].in_e
+image[34] => mux8x1:mux8x1_1[6].in_e
 clk => clk.IN2
-image[0] => image[0].IN1
-image[1] => image[1].IN1
-image[2] => image[2].IN1
-image[3] => image[3].IN1
-image[4] => image[4].IN1
-image[5] => image[5].IN1
-image[6] => image[6].IN1
-image[7] => image[7].IN1
-image[8] => image[8].IN1
-image[9] => image[9].IN1
-image[10] => image[10].IN1
-image[11] => image[11].IN1
-image[12] => image[12].IN1
-image[13] => image[13].IN1
-image[14] => image[14].IN1
-image[15] => image[15].IN1
-image[16] => image[16].IN1
-image[17] => image[17].IN1
-image[18] => image[18].IN1
-image[19] => image[19].IN1
-image[20] => image[20].IN1
-image[21] => image[21].IN1
-image[22] => image[22].IN1
-image[23] => image[23].IN1
-image[24] => image[24].IN1
-image[25] => image[25].IN1
-image[26] => image[26].IN1
-image[27] => image[27].IN1
-image[28] => image[28].IN1
-image[29] => image[29].IN1
-image[30] => image[30].IN1
-image[31] => image[31].IN1
-image[32] => image[32].IN1
-image[33] => image[33].IN1
-image[34] => image[34].IN1
-colune_data[0] <= mux8x1:mux8x1_1.out
-colune_data[1] <= mux8x1:mux8x1_1.out
-colune_data[2] <= mux8x1:mux8x1_1.out
-colune_data[3] <= mux8x1:mux8x1_1.out
-colune_data[4] <= mux8x1:mux8x1_1.out
-colune_data[5] <= mux8x1:mux8x1_1.out
-colune_data[6] <= mux8x1:mux8x1_1.out
-colune_activator[0] <= register8bit:register8bit_1.out
-colune_activator[1] <= register8bit:register8bit_1.out
-colune_activator[2] <= register8bit:register8bit_1.out
-colune_activator[3] <= register8bit:register8bit_1.out
-colune_activator[4] <= register8bit:register8bit_1.out
+enable => enable.IN1
+colune_data[0] <= mux8x1:mux8x1_1[0].out
+colune_data[1] <= mux8x1:mux8x1_1[1].out
+colune_data[2] <= mux8x1:mux8x1_1[2].out
+colune_data[3] <= mux8x1:mux8x1_1[3].out
+colune_data[4] <= mux8x1:mux8x1_1[4].out
+colune_data[5] <= mux8x1:mux8x1_1[5].out
+colune_data[6] <= mux8x1:mux8x1_1[6].out
+colune_activator[0] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[1] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[2] <= register8bitSIPO:register8bitSIPO_1.out
+colune_activator[3] <= register8bitSIPO:register8bitSIPO_1.out
 
 
 |batalha_naval|displayer:segment_display|counter3bit:counter3bit_1
@@ -803,7 +3222,7 @@ reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1
 in => in.IN1
 clk => clk.IN8
 reset => reset.IN8
@@ -817,329 +3236,409 @@ out[6] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= and8.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_0
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_0
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_1
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_1
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_2
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_2
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_3
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_3
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_4
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_4
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_5
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_5
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_6
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_6
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|register8bit:register8bit_1|d_flipflop:d_flipflop_7
+|batalha_naval|displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_7
 d => out~reg0.DATAIN
 clk => out~reg0.CLK
 reset => out~reg0.ACLR
 out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1
-in_a[0] => in_a[0].IN1
-in_a[1] => in_a[1].IN1
-in_a[2] => in_a[2].IN1
-in_a[3] => in_a[3].IN1
-in_a[4] => in_a[4].IN1
-in_a[5] => in_a[5].IN1
-in_a[6] => in_a[6].IN1
-in_b[0] => in_b[0].IN1
-in_b[1] => in_b[1].IN1
-in_b[2] => in_b[2].IN1
-in_b[3] => in_b[3].IN1
-in_b[4] => in_b[4].IN1
-in_b[5] => in_b[5].IN1
-in_b[6] => in_b[6].IN1
-in_c[0] => in_c[0].IN1
-in_c[1] => in_c[1].IN1
-in_c[2] => in_c[2].IN1
-in_c[3] => in_c[3].IN1
-in_c[4] => in_c[4].IN1
-in_c[5] => in_c[5].IN1
-in_c[6] => in_c[6].IN1
-in_d[0] => in_d[0].IN1
-in_d[1] => in_d[1].IN1
-in_d[2] => in_d[2].IN1
-in_d[3] => in_d[3].IN1
-in_d[4] => in_d[4].IN1
-in_d[5] => in_d[5].IN1
-in_d[6] => in_d[6].IN1
-in_e[0] => in_e[0].IN1
-in_e[1] => in_e[1].IN1
-in_e[2] => in_e[2].IN1
-in_e[3] => in_e[3].IN1
-in_e[4] => in_e[4].IN1
-in_e[5] => in_e[5].IN1
-in_e[6] => in_e[6].IN1
-in_f[0] => in_f[0].IN1
-in_f[1] => in_f[1].IN1
-in_f[2] => in_f[2].IN1
-in_f[3] => in_f[3].IN1
-in_f[4] => in_f[4].IN1
-in_f[5] => in_f[5].IN1
-in_f[6] => in_f[6].IN1
-in_g[0] => in_g[0].IN1
-in_g[1] => in_g[1].IN1
-in_g[2] => in_g[2].IN1
-in_g[3] => in_g[3].IN1
-in_g[4] => in_g[4].IN1
-in_g[5] => in_g[5].IN1
-in_g[6] => in_g[6].IN1
-in_h[0] => in_h[0].IN1
-in_h[1] => in_h[1].IN1
-in_h[2] => in_h[2].IN1
-in_h[3] => in_h[3].IN1
-in_h[4] => in_h[4].IN1
-in_h[5] => in_h[5].IN1
-in_h[6] => in_h[6].IN1
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[0]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
 select[0] => select[0].IN2
 select[1] => select[1].IN2
-select[2] => and2[0].IN1
-select[2] => and2[1].IN1
-select[2] => and2[2].IN1
-select[2] => and2[3].IN1
-select[2] => and2[4].IN1
-select[2] => and2[5].IN1
-select[2] => and2[6].IN1
-select[2] => and1[0].IN1
-select[2] => and1[1].IN1
-select[2] => and1[2].IN1
-select[2] => and1[3].IN1
-select[2] => and1[4].IN1
-select[2] => and1[5].IN1
-select[2] => and1[6].IN1
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1
-in_a[0] => and1[0].IN0
-in_a[1] => and1[1].IN0
-in_a[2] => and1[2].IN0
-in_a[3] => and1[3].IN0
-in_a[4] => and1[4].IN0
-in_a[5] => and1[5].IN0
-in_a[6] => and1[6].IN0
-in_b[0] => and2[0].IN0
-in_b[1] => and2[1].IN0
-in_b[2] => and2[2].IN0
-in_b[3] => and2[3].IN0
-in_b[4] => and2[4].IN0
-in_b[5] => and2[5].IN0
-in_b[6] => and2[6].IN0
-in_c[0] => and3[0].IN0
-in_c[1] => and3[1].IN0
-in_c[2] => and3[2].IN0
-in_c[3] => and3[3].IN0
-in_c[4] => and3[4].IN0
-in_c[5] => and3[5].IN0
-in_c[6] => and3[6].IN0
-in_d[0] => and4[0].IN0
-in_d[1] => and4[1].IN0
-in_d[2] => and4[2].IN0
-in_d[3] => and4[3].IN0
-in_d[4] => and4[4].IN0
-in_d[5] => and4[5].IN0
-in_d[6] => and4[6].IN0
-select[0] => and2[0].IN1
-select[0] => and2[1].IN1
-select[0] => and2[2].IN1
-select[0] => and2[3].IN1
-select[0] => and2[4].IN1
-select[0] => and2[5].IN1
-select[0] => and2[6].IN1
-select[0] => and4[0].IN1
-select[0] => and4[1].IN1
-select[0] => and4[2].IN1
-select[0] => and4[3].IN1
-select[0] => and4[4].IN1
-select[0] => and4[5].IN1
-select[0] => and4[6].IN1
-select[0] => and1[0].IN1
-select[0] => and1[1].IN1
-select[0] => and1[2].IN1
-select[0] => and1[3].IN1
-select[0] => and1[4].IN1
-select[0] => and1[5].IN1
-select[0] => and1[6].IN1
-select[0] => and3[0].IN1
-select[0] => and3[1].IN1
-select[0] => and3[2].IN1
-select[0] => and3[3].IN1
-select[0] => and3[4].IN1
-select[0] => and3[5].IN1
-select[0] => and3[6].IN1
-select[1] => and3[0].IN2
-select[1] => and3[1].IN2
-select[1] => and3[2].IN2
-select[1] => and3[3].IN2
-select[1] => and3[4].IN2
-select[1] => and3[5].IN2
-select[1] => and3[6].IN2
-select[1] => and4[0].IN2
-select[1] => and4[1].IN2
-select[1] => and4[2].IN2
-select[1] => and4[3].IN2
-select[1] => and4[4].IN2
-select[1] => and4[5].IN2
-select[1] => and4[6].IN2
-select[1] => and1[0].IN2
-select[1] => and1[1].IN2
-select[1] => and1[2].IN2
-select[1] => and1[3].IN2
-select[1] => and1[4].IN2
-select[1] => and1[5].IN2
-select[1] => and1[6].IN2
-select[1] => and2[0].IN2
-select[1] => and2[1].IN2
-select[1] => and2[2].IN2
-select[1] => and2[3].IN2
-select[1] => and2[4].IN2
-select[1] => and2[5].IN2
-select[1] => and2[6].IN2
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_2
-in_a[0] => and1[0].IN0
-in_a[1] => and1[1].IN0
-in_a[2] => and1[2].IN0
-in_a[3] => and1[3].IN0
-in_a[4] => and1[4].IN0
-in_a[5] => and1[5].IN0
-in_a[6] => and1[6].IN0
-in_b[0] => and2[0].IN0
-in_b[1] => and2[1].IN0
-in_b[2] => and2[2].IN0
-in_b[3] => and2[3].IN0
-in_b[4] => and2[4].IN0
-in_b[5] => and2[5].IN0
-in_b[6] => and2[6].IN0
-in_c[0] => and3[0].IN0
-in_c[1] => and3[1].IN0
-in_c[2] => and3[2].IN0
-in_c[3] => and3[3].IN0
-in_c[4] => and3[4].IN0
-in_c[5] => and3[5].IN0
-in_c[6] => and3[6].IN0
-in_d[0] => and4[0].IN0
-in_d[1] => and4[1].IN0
-in_d[2] => and4[2].IN0
-in_d[3] => and4[3].IN0
-in_d[4] => and4[4].IN0
-in_d[5] => and4[5].IN0
-in_d[6] => and4[6].IN0
-select[0] => and2[0].IN1
-select[0] => and2[1].IN1
-select[0] => and2[2].IN1
-select[0] => and2[3].IN1
-select[0] => and2[4].IN1
-select[0] => and2[5].IN1
-select[0] => and2[6].IN1
-select[0] => and4[0].IN1
-select[0] => and4[1].IN1
-select[0] => and4[2].IN1
-select[0] => and4[3].IN1
-select[0] => and4[4].IN1
-select[0] => and4[5].IN1
-select[0] => and4[6].IN1
-select[0] => and1[0].IN1
-select[0] => and1[1].IN1
-select[0] => and1[2].IN1
-select[0] => and1[3].IN1
-select[0] => and1[4].IN1
-select[0] => and1[5].IN1
-select[0] => and1[6].IN1
-select[0] => and3[0].IN1
-select[0] => and3[1].IN1
-select[0] => and3[2].IN1
-select[0] => and3[3].IN1
-select[0] => and3[4].IN1
-select[0] => and3[5].IN1
-select[0] => and3[6].IN1
-select[1] => and3[0].IN2
-select[1] => and3[1].IN2
-select[1] => and3[2].IN2
-select[1] => and3[3].IN2
-select[1] => and3[4].IN2
-select[1] => and3[5].IN2
-select[1] => and3[6].IN2
-select[1] => and4[0].IN2
-select[1] => and4[1].IN2
-select[1] => and4[2].IN2
-select[1] => and4[3].IN2
-select[1] => and4[4].IN2
-select[1] => and4[5].IN2
-select[1] => and4[6].IN2
-select[1] => and1[0].IN2
-select[1] => and1[1].IN2
-select[1] => and1[2].IN2
-select[1] => and1[3].IN2
-select[1] => and1[4].IN2
-select[1] => and1[5].IN2
-select[1] => and1[6].IN2
-select[1] => and2[0].IN2
-select[1] => and2[1].IN2
-select[1] => and2[2].IN2
-select[1] => and2[3].IN2
-select[1] => and2[4].IN2
-select[1] => and2[5].IN2
-select[1] => and2[6].IN2
-out[0] <= or1[0].DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= or1[1].DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= or1[2].DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= or1[3].DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= or1[4].DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= or1[5].DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= or1[6].DB_MAX_OUTPUT_PORT_TYPE
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[1]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[2]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[3]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[4]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[5]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[6]
+in_a => in_a.IN1
+in_b => in_b.IN1
+in_c => in_c.IN1
+in_d => in_d.IN1
+in_e => in_e.IN1
+in_f => in_f.IN1
+in_g => in_g.IN1
+in_h => in_h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+enable => ~NO_FANOUT~
+out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|batalha_naval|displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_2
+in_a => and1.IN0
+in_b => and2.IN0
+in_c => and3.IN0
+in_d => and4.IN0
+select[0] => and2.IN1
+select[0] => and4.IN1
+select[0] => and1.IN1
+select[0] => and3.IN1
+select[1] => and3.IN2
+select[1] => and4.IN2
+select[1] => and1.IN2
+select[1] => and2.IN2
+enable => andEnable.IN1
+out <= andEnable.DB_MAX_OUTPUT_PORT_TYPE
 
 

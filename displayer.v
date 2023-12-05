@@ -18,7 +18,6 @@ module displayer #(
 
     counter3bit counter3bit_1(
         .clk       (clk) , 
-        .down      (0) ,
         .reset     (counterEnable) , 
         .mod_value (3'b101) ,
 
@@ -38,15 +37,12 @@ module displayer #(
         .out    (colune_activator)
     );
 
-    mux8x1 #(.DATA_WIDTH(COLUNE_SIZE)) mux8x1_1 (
+    mux8x1 mux8x1_1 [COLUNE_SIZE-1:0] (
         .in_a   (image[COLUNE_SIZE-1:0]) ,
         .in_b   (image[(COLUNE_SIZE*2)-1:COLUNE_SIZE]) ,
         .in_c   (image[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
         .in_d   (image[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
         .in_e   (image[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_f   (0) ,
-        .in_g   (0) ,
-        .in_h   (0) , 
         .select (counter3bit_out) ,
         .enable (enable) ,
 
