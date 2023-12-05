@@ -4,7 +4,7 @@ module t_flipflop (
 );
 
     always @(negedge clk or negedge reset) begin
-
+        
         if (! reset)
             out <=0;
         else 

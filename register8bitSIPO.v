@@ -1,5 +1,5 @@
-module register8bit (
-    input in , clk , reset , 
+module register8bitSIPO (
+    input in , clk , reset
     output [7:0] out
 );
     

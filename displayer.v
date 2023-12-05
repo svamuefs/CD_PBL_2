@@ -6,10 +6,12 @@ module displayer #(
 
 ) (
 
-    input clk ,
     input [DATA_WIDTH-1:0] image ,
+    input clk , enable , 
+
     output [COLUNE_SIZE-1:0] colune_data ,
     output [TOTAL_COLUNES-1:0] colune_activator
+    
 );
 
     wire [2:0] counter3bit_out;
@@ -17,7 +19,7 @@ module displayer #(
     counter3bit counter3bit_1(
         .clk       (clk) , 
         .down      (0) ,
-        .reset     (loopReset) , 
+        .reset     (counterEnable) , 
         .mod_value (3'b101) ,
 
         .loopStart (loopStart) ,
@@ -26,13 +28,14 @@ module displayer #(
     );
 
     not notLoopEnd (loopReset , loopEnd);
+    and andLoopResetEnable (counterEnable , loopReset , enable);
 
-    register8bit register8bit_1(
-        .in    (loopStart) , 
-        .clk   (clk) , 
-        .reset (1) , 
+    register8bitSIPO register8bitSIPO_1(
+        .in     (loopStart) , 
+        .clk    (clk) , 
+        .reset  (enable) , 
 
-        .out   (colune_activator)
+        .out    (colune_activator)
     );
 
     mux8x1 #(.DATA_WIDTH(COLUNE_SIZE)) mux8x1_1 (
@@ -45,6 +48,7 @@ module displayer #(
         .in_g   (0) ,
         .in_h   (0) , 
         .select (counter3bit_out) ,
+        .enable (enable) ,
 
         .out    (colune_data)
     );

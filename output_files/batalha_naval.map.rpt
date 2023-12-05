@@ -1,5 +1,5 @@
 Analysis & Synthesis report for batalha_naval
-Sun Dec  3 12:39:00 2023
+Sun Dec  3 21:18:48 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -14,27 +14,28 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: displayer:matriz_displayer
- 10. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1
- 11. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1
- 12. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_2
- 13. Parameter Settings for User Entity Instance: displayer:segment_display
- 14. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1
- 15. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1
- 16. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_2
- 17. Port Connectivity Checks: "displayer:segment_display"
- 18. Port Connectivity Checks: "displayer:matriz_displayer|mux8x1:mux8x1_1"
- 19. Port Connectivity Checks: "displayer:matriz_displayer|register8bit:register8bit_1"
- 20. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2"
- 21. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1"
- 22. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0"
- 23. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1"
- 24. Port Connectivity Checks: "displayer:matriz_displayer"
- 25. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"
- 26. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"
- 27. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"
- 28. Analysis & Synthesis Equations
- 29. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: map_decoder:map_decoder_1
+ 10. Parameter Settings for User Entity Instance: displayer:matriz_displayer
+ 11. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1
+ 12. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1
+ 13. Parameter Settings for User Entity Instance: displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_2
+ 14. Parameter Settings for User Entity Instance: displayer:segment_display
+ 15. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1
+ 16. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_1
+ 17. Parameter Settings for User Entity Instance: displayer:segment_display|mux8x1:mux8x1_1|mux4x1:mux4x1_2
+ 18. Port Connectivity Checks: "displayer:segment_display"
+ 19. Port Connectivity Checks: "displayer:matriz_displayer|mux8x1:mux8x1_1"
+ 20. Port Connectivity Checks: "displayer:matriz_displayer|register8bit:register8bit_1"
+ 21. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2"
+ 22. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1"
+ 23. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0"
+ 24. Port Connectivity Checks: "displayer:matriz_displayer|counter3bit:counter3bit_1"
+ 25. Port Connectivity Checks: "map_decoder:map_decoder_1"
+ 26. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_2"
+ 27. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_1"
+ 28. Port Connectivity Checks: "freq_div:freq_div_1|t_flipflop:t_flipflop_0"
+ 29. Analysis & Synthesis Equations
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -61,13 +62,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Dec  3 12:39:00 2023          ;
+; Analysis & Synthesis Status ; Successful - Sun Dec  3 21:18:48 2023          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; batalha_naval                                  ;
 ; Top-level Entity Name       ; batalha_naval                                  ;
 ; Family                      ; MAX II                                         ;
-; Total logic elements        ; 29                                             ;
-; Total pins                  ; 72                                             ;
+; Total logic elements        ; 25                                             ;
+; Total pins                  ; 75                                             ;
 ; Total virtual pins          ; 0                                              ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                  ;
 +-----------------------------+------------------------------------------------+
@@ -160,21 +161,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
-; t_fliflop.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/t_fliflop.v     ;         ;
-; register8bit.v                   ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/register8bit.v  ;         ;
-; mux8x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux8x1.v        ;         ;
-; mux4x1.v                         ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/mux4x1.v        ;         ;
-; freq_div.v                       ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/freq_div.v      ;         ;
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/d_flipflop.v    ;         ;
-; displayer.v                      ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/displayer.v     ;         ;
-; counter3bit.v                    ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/counter3bit.v   ;         ;
-; batalha_naval.v                  ; yes             ; User Verilog HDL File  ; C:/CD/CD_PBL_2/batalha_naval.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------+---------+
+; t_fliflop.v                      ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/t_fliflop.v     ;         ;
+; register8bit.v                   ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/register8bit.v  ;         ;
+; mux8x1.v                         ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/mux8x1.v        ;         ;
+; mux4x1.v                         ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/mux4x1.v        ;         ;
+; freq_div.v                       ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/freq_div.v      ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/d_flipflop.v    ;         ;
+; displayer.v                      ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/displayer.v     ;         ;
+; counter3bit.v                    ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/counter3bit.v   ;         ;
+; batalha_naval.v                  ; yes             ; User Verilog HDL File        ; C:/CD/CD_PBL_2/batalha_naval.v ;         ;
+; map_decoder.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/CD/CD_PBL_2/map_decoder.v   ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -182,20 +184,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------+
 ; Resource                                    ; Usage                                           ;
 +---------------------------------------------+-------------------------------------------------+
-; Total logic elements                        ; 29                                              ;
-;     -- Combinational with no register       ; 11                                              ;
+; Total logic elements                        ; 25                                              ;
+;     -- Combinational with no register       ; 7                                               ;
 ;     -- Register only                        ; 7                                               ;
 ;     -- Combinational with a register        ; 11                                              ;
 ;                                             ;                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                 ;
 ;     -- 4 input functions                    ; 0                                               ;
-;     -- 3 input functions                    ; 11                                              ;
+;     -- 3 input functions                    ; 8                                               ;
 ;     -- 2 input functions                    ; 0                                               ;
-;     -- 1 input functions                    ; 11                                              ;
+;     -- 1 input functions                    ; 10                                              ;
 ;     -- 0 input functions                    ; 0                                               ;
 ;                                             ;                                                 ;
 ; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 29                                              ;
+;     -- normal mode                          ; 25                                              ;
 ;     -- arithmetic mode                      ; 0                                               ;
 ;     -- qfbk mode                            ; 0                                               ;
 ;     -- register cascade mode                ; 0                                               ;
@@ -203,11 +205,11 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 6                                               ;
 ;                                             ;                                                 ;
 ; Total registers                             ; 18                                              ;
-; I/O pins                                    ; 72                                              ;
+; I/O pins                                    ; 75                                              ;
 ; Maximum fan-out node                        ; freq_div:freq_div_1|t_flipflop:t_flipflop_2|out ;
 ; Maximum fan-out                             ; 12                                              ;
-; Total fan-out                               ; 93                                              ;
-; Average fan-out                             ; 0.92                                            ;
+; Total fan-out                               ; 85                                              ;
+; Average fan-out                             ; 0.85                                            ;
 +---------------------------------------------+-------------------------------------------------+
 
 
@@ -216,14 +218,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                           ; Entity Name   ; Library Name ;
 +-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------+---------------+--------------+
-; |batalha_naval                      ; 29 (0)      ; 18           ; 0          ; 72   ; 0            ; 11 (0)       ; 7 (0)             ; 11 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                                ; batalha_naval ; work         ;
-;    |displayer:matriz_displayer|     ; 14 (0)      ; 8            ; 0          ; 0    ; 0            ; 6 (0)        ; 4 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer                                                     ; displayer     ; work         ;
+; |batalha_naval                      ; 25 (0)      ; 18           ; 0          ; 75   ; 0            ; 7 (0)        ; 7 (0)             ; 11 (0)           ; 0 (0)           ; 0 (0)      ; |batalha_naval                                                                                ; batalha_naval ; work         ;
+;    |displayer:matriz_displayer|     ; 10 (0)      ; 8            ; 0          ; 0    ; 0            ; 2 (0)        ; 4 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer                                                     ; displayer     ; work         ;
 ;       |counter3bit:counter3bit_1|   ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1                           ; counter3bit   ; work         ;
 ;          |t_flipflop:t_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0   ; t_flipflop    ; work         ;
 ;          |t_flipflop:t_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1   ; t_flipflop    ; work         ;
 ;          |t_flipflop:t_flipflop_2|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2   ; t_flipflop    ; work         ;
-;       |mux8x1:mux8x1_1|             ; 5 (2)       ; 0            ; 0          ; 0    ; 0            ; 5 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1                                     ; mux8x1        ; work         ;
-;          |mux4x1:mux4x1_1|          ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1|mux4x1:mux4x1_1                     ; mux4x1        ; work         ;
+;       |mux8x1:mux8x1_1|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|mux8x1:mux8x1_1                                     ; mux8x1        ; work         ;
 ;       |register8bit:register8bit_1| ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1                         ; register8bit  ; work         ;
 ;          |d_flipflop:d_flipflop_0|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_0 ; d_flipflop    ; work         ;
 ;          |d_flipflop:d_flipflop_1|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |batalha_naval|displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_1 ; d_flipflop    ; work         ;
@@ -263,6 +264,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: map_decoder:map_decoder_1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; DATA_WIDTH     ; 35    ; Signed Integer                                ;
+; COLUNE_SIZE    ; 7     ; Signed Integer                                ;
+; TOTAL_COLUNES  ; 5     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------+
@@ -436,23 +449,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "displayer:matriz_displayer" ;
-+---------------+-------+----------+---------------------+
-; Port          ; Type  ; Severity ; Details             ;
-+---------------+-------+----------+---------------------+
-; image[34..29] ; Input ; Info     ; Stuck at GND        ;
-; image[27..23] ; Input ; Info     ; Stuck at GND        ;
-; image[21..17] ; Input ; Info     ; Stuck at GND        ;
-; image[15..11] ; Input ; Info     ; Stuck at GND        ;
-; image[9..5]   ; Input ; Info     ; Stuck at GND        ;
-; image[3..0]   ; Input ; Info     ; Stuck at GND        ;
-; image[28]     ; Input ; Info     ; Stuck at VCC        ;
-; image[22]     ; Input ; Info     ; Stuck at VCC        ;
-; image[16]     ; Input ; Info     ; Stuck at VCC        ;
-; image[10]     ; Input ; Info     ; Stuck at VCC        ;
-; image[4]      ; Input ; Info     ; Stuck at VCC        ;
-+---------------+-------+----------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "map_decoder:map_decoder_1"                                                                                                                                                              ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -503,7 +507,7 @@ The equations can be found in C:/CD/CD_PBL_2/output_files/batalha_naval.map.eqn.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Dec  3 12:38:43 2023
+    Info: Processing started: Sun Dec  3 21:18:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -555,15 +559,22 @@ Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(64): created 
 Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(70): created implicit net for "up" File: C:/CD/CD_PBL_2/counter3bit.v Line: 70
 Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(72): created implicit net for "loopStartUp" File: C:/CD/CD_PBL_2/counter3bit.v Line: 72
 Warning (10236): Verilog HDL Implicit Net warning at counter3bit.v(73): created implicit net for "loopStartDown" File: C:/CD/CD_PBL_2/counter3bit.v Line: 73
-Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(27): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at batalha_naval.v(26): created implicit net for "clk" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 26
 Info (12127): Elaborating entity "batalha_naval" for the top level hierarchy
-Warning (10034): Output port "teste" at batalha_naval.v(13) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-Warning (10034): Output port "mapteste" at batalha_naval.v(16) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-Warning (10034): Output port "counter_teste" at batalha_naval.v(12) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
-Warning (10034): Output port "final_clk_teste" at batalha_naval.v(12) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
-Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 28
+Warning (10034): Output port "teste" at batalha_naval.v(12) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+Warning (10034): Output port "mapteste" at batalha_naval.v(15) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+Warning (10034): Output port "counter_teste" at batalha_naval.v(11) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
+Warning (10034): Output port "final_clk_teste" at batalha_naval.v(11) has no driver File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
+Info (12128): Elaborating entity "freq_div" for hierarchy "freq_div:freq_div_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 27
 Info (12128): Elaborating entity "t_flipflop" for hierarchy "freq_div:freq_div_1|t_flipflop:t_flipflop_0" File: C:/CD/CD_PBL_2/freq_div.v Line: 12
-Info (12128): Elaborating entity "displayer" for hierarchy "displayer:matriz_displayer" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 35
+Warning (12125): Using design file map_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: map_decoder File: C:/CD/CD_PBL_2/map_decoder.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at map_decoder.v(22): created implicit net for "notEnable" File: C:/CD/CD_PBL_2/map_decoder.v Line: 22
+Info (12128): Elaborating entity "map_decoder" for hierarchy "map_decoder:map_decoder_1" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 33
+Warning (10739): Verilog HDL warning at map_decoder.v(278): actual bit length 32 differs from formal bit length 1 File: C:/CD/CD_PBL_2/map_decoder.v Line: 278
+Warning (10739): Verilog HDL warning at map_decoder.v(279): actual bit length 32 differs from formal bit length 1 File: C:/CD/CD_PBL_2/map_decoder.v Line: 279
+Warning (10739): Verilog HDL warning at map_decoder.v(280): actual bit length 32 differs from formal bit length 1 File: C:/CD/CD_PBL_2/map_decoder.v Line: 280
+Info (12128): Elaborating entity "displayer" for hierarchy "displayer:matriz_displayer" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 40
 Info (12128): Elaborating entity "counter3bit" for hierarchy "displayer:matriz_displayer|counter3bit:counter3bit_1" File: C:/CD/CD_PBL_2/displayer.v Line: 26
 Info (12128): Elaborating entity "register8bit" for hierarchy "displayer:matriz_displayer|register8bit:register8bit_1" File: C:/CD/CD_PBL_2/displayer.v Line: 36
 Info (12128): Elaborating entity "d_flipflop" for hierarchy "displayer:matriz_displayer|register8bit:register8bit_1|d_flipflop:d_flipflop_0" File: C:/CD/CD_PBL_2/register8bit.v Line: 11
@@ -580,69 +591,71 @@ Warning (12020): Port "t" on the entity instantiation of "t_flipflop_0" is conne
 Warning (12020): Port "down" on the entity instantiation of "counter3bit_1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: C:/CD/CD_PBL_2/displayer.v Line: 26
 Info (13014): Ignored 15 buffer(s)
     Info (13019): Ignored 15 SOFT buffer(s)
-Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "matriz_colune_data[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-    Warning (13410): Pin "matriz_colune_data[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-    Warning (13410): Pin "display_colune_data[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-    Warning (13410): Pin "display_colune_data[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-    Warning (13410): Pin "display_colune_data[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 7
-    Warning (13410): Pin "counter_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
-    Warning (13410): Pin "final_clk_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
-    Warning (13410): Pin "teste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "teste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 13
-    Warning (13410): Pin "mapteste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[11]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[12]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[13]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[14]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[15]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[16]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[17]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[18]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[19]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[20]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[21]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[22]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[23]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[24]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[25]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[26]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[27]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[28]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[29]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[30]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[31]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[32]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[33]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-    Warning (13410): Pin "mapteste[34]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 16
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+    Warning (13410): Pin "display_colune_data[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 6
+    Warning (13410): Pin "display_colune_data[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 6
+    Warning (13410): Pin "display_colune_data[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 6
+    Warning (13410): Pin "counter_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
+    Warning (13410): Pin "final_clk_teste" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 11
+    Warning (13410): Pin "teste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "teste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 12
+    Warning (13410): Pin "mapteste[0]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[1]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[2]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[3]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[4]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[5]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[6]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[7]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[8]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[9]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[10]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[11]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[12]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[13]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[14]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[15]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[16]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[17]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[18]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[19]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[20]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[21]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[22]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[23]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[24]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[25]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[26]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[27]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[28]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[29]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[30]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[31]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[32]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[33]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+    Warning (13410): Pin "mapteste[34]" is stuck at GND File: C:/CD/CD_PBL_2/batalha_naval.v Line: 15
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "map_select[0]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 3
+    Warning (15610): No output dependent on input pin "map_select[1]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 3
+    Warning (15610): No output dependent on input pin "map_select[2]" File: C:/CD/CD_PBL_2/batalha_naval.v Line: 3
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 71 output pins
-    Info (21061): Implemented 29 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 96 warnings
-    Info: Peak virtual memory: 4723 megabytes
-    Info: Processing ended: Sun Dec  3 12:39:00 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Sun Dec  3 21:18:49 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:46
 
 

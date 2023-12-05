@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/03/2023 12:39:21"
+// Generated on "12/03/2023 21:18:57"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          batalha_naval
 // 
@@ -31,6 +31,7 @@ module batalha_naval_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg cpld_clk;
+reg [2:0] map_select;
 // wires                                               
 wire counter_teste;
 wire [3:0] display_colune_activator;
@@ -49,6 +50,7 @@ batalha_naval i1 (
 	.display_colune_activator(display_colune_activator),
 	.display_colune_data(display_colune_data),
 	.final_clk_teste(final_clk_teste),
+	.map_select(map_select),
 	.mapteste(mapteste),
 	.matriz_colune_activator(matriz_colune_activator),
 	.matriz_colune_data(matriz_colune_data),
@@ -65,6 +67,21 @@ begin
 	cpld_clk = 1'b0;
 	cpld_clk = #5000 1'b1;
 	#5000;
+end 
+// map_select[ 2 ]
+initial
+begin
+	map_select[2] = 1'b1;
+end 
+// map_select[ 1 ]
+initial
+begin
+	map_select[1] = 1'b1;
+end 
+// map_select[ 0 ]
+initial
+begin
+	map_select[0] = 1'b1;
 end 
 endmodule
 
