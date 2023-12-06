@@ -15,8 +15,8 @@ module attack_round #(
 
     not notConfirmAttack (confirmAttack_w , confirmAttack); // !!
 
-    wire [DATA_WIDTH-1:0] selected_map_out , hits_map_clk , hits_map_out , notHitsMapOut;
-    wire [COLUNE_SIZE-1:0] hits_map_clk_colune , selected_map_out_colune;
+    wire [DATA_WIDTH-1:0] hits_map_clk , hits_map_out , notHitsMapOut;
+    wire [COLUNE_SIZE-1:0] hits_map_clk_colune , selected_map_colune;
 
     d_flipflop selected_map_register [DATA_WIDTH-1:0] (
         .d     (selected_map) ,
@@ -71,25 +71,25 @@ module attack_round #(
     //Indicar acerto ou erro atraves do led rgb
 
     mux8x1 xCoordMuxSelectedMap [COLUNE_SIZE-1:0] (
-        .in_b   (selected_map_out[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_c   (selected_map_out[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
-        .in_d   (selected_map_out[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
-        .in_e   (selected_map_out[(COLUNE_SIZE*2)-1:COLUNE_SIZE*1]) ,
-        .in_f   (selected_map_out[COLUNE_SIZE-1:0]) ,
+        .in_b   (selected_map[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
+        .in_c   (selected_map[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
+        .in_d   (selected_map[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
+        .in_e   (selected_map[(COLUNE_SIZE*2)-1:COLUNE_SIZE*1]) ,
+        .in_f   (selected_map[COLUNE_SIZE-1:0]) ,
         .select (x_coord_code) ,
         .enable (enableAttack) ,// !!
 
-        .out    (selected_map_out_colune)
+        .out    (selected_map_colune)
     );
 
     mux8x1 yCoordMuxSelectedMap (
-        .in_b   (selected_map_out_colune[0]) ,
-        .in_c   (selected_map_out_colune[1]) ,
-        .in_d   (selected_map_out_colune[2]) ,
-        .in_e   (selected_map_out_colune[3]) ,
-        .in_f   (selected_map_out_colune[4]) ,
-        .in_g   (selected_map_out_colune[5]) ,
-        .in_h   (selected_map_out_colune[6]) , 
+        .in_b   (selected_map_colune[0]) ,
+        .in_c   (selected_map_colune[1]) ,
+        .in_d   (selected_map_colune[2]) ,
+        .in_e   (selected_map_colune[3]) ,
+        .in_f   (selected_map_colune[4]) ,
+        .in_g   (selected_map_colune[5]) ,
+        .in_h   (selected_map_colune[6]) , 
         .select (y_coord_code) ,
         .enable (enableAttack) ,// !!
 
