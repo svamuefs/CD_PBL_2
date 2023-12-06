@@ -36,6 +36,14 @@ d_flipflop saveCodeRegister [2:0] (
 		.out (saveCodeOut)
 );
 
+mux2x1 mux2x1MapCode [2:0](
+		.in_a (codeInput) ,
+		.in_b (saveCodeOut) ,
+		.select (enableAttack) ,
+		.enable (enable) ,
+		
+		.out (map_code)
+);
 
 
 //pixel a1 , e1 , a2 , d7
