@@ -22,14 +22,14 @@ module full_display_decoder #(
 
     //segunda coluna (43->2<-1)
     colune_display_decoder x_coord_decoder(
-        .binary_code (status_code) ,
+        .binary_code (x_coord_code) ,
         .enable      (enableAttack) ,
         .digitOut    (display_data[COLUNE_SIZE*2-1:COLUNE_SIZE])
     );
 
     //primeira coluna (432->1<-)
     colune_display_decoder y_coord_decoder(
-        .binary_code (status_code) ,
+        .binary_code (y_coord_code) ,
         .enable      (enableAttack) ,
         .digitOut    (display_data[DATA_WIDTH-1:0])
     );

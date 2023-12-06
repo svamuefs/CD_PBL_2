@@ -12,124 +12,88 @@
 -- Intel and sold by Intel or its authorized distributors.  Please
 -- refer to the applicable agreement for further details, at
 -- https://fpgasoftware.intel.com/eula.
---x_coord_code[0] is x_coord_code[0]
---operation mode is input
-
-x_coord_code[0] = INPUT();
-
-
---x_coord_code[1] is x_coord_code[1]
---operation mode is input
-
-x_coord_code[1] = INPUT();
-
-
---x_coord_code[2] is x_coord_code[2]
---operation mode is input
-
-x_coord_code[2] = INPUT();
-
-
---y_coord_code[0] is y_coord_code[0]
---operation mode is input
-
-y_coord_code[0] = INPUT();
-
-
---y_coord_code[1] is y_coord_code[1]
---operation mode is input
-
-y_coord_code[1] = INPUT();
-
-
---y_coord_code[2] is y_coord_code[2]
---operation mode is input
-
-y_coord_code[2] = INPUT();
-
-
 --matriz_colune_data[0] is matriz_colune_data[0]
 --operation mode is output
 
-matriz_colune_data[0] = OUTPUT(M16L5);
+matriz_colune_data[0] = OUTPUT(N9L2);
 
 
 --matriz_colune_data[1] is matriz_colune_data[1]
 --operation mode is output
 
-matriz_colune_data[1] = OUTPUT(M17L2);
+matriz_colune_data[1] = OUTPUT(N10L3);
 
 
 --matriz_colune_data[2] is matriz_colune_data[2]
 --operation mode is output
 
-matriz_colune_data[2] = OUTPUT(M18L6);
+matriz_colune_data[2] = OUTPUT(N11L2);
 
 
 --matriz_colune_data[3] is matriz_colune_data[3]
 --operation mode is output
 
-matriz_colune_data[3] = OUTPUT(M19L3);
+matriz_colune_data[3] = OUTPUT(N12L1);
 
 
 --matriz_colune_data[4] is matriz_colune_data[4]
 --operation mode is output
 
-matriz_colune_data[4] = OUTPUT(M20L8);
+matriz_colune_data[4] = OUTPUT(N13L1);
 
 
 --matriz_colune_data[5] is matriz_colune_data[5]
 --operation mode is output
 
-matriz_colune_data[5] = OUTPUT(M21L4);
+matriz_colune_data[5] = OUTPUT(N14L1);
 
 
 --matriz_colune_data[6] is matriz_colune_data[6]
 --operation mode is output
 
-matriz_colune_data[6] = OUTPUT(M22L3);
+matriz_colune_data[6] = OUTPUT(N15L2);
 
 
 --display_colune_data[0] is display_colune_data[0]
 --operation mode is output
 
-display_colune_data[0] = OUTPUT(P45L2);
+display_colune_data[0] = OUTPUT(Q31L5);
 
 
 --display_colune_data[1] is display_colune_data[1]
 --operation mode is output
 
-display_colune_data[1] = OUTPUT(P47L2);
+display_colune_data[1] = OUTPUT(Q33L4);
 
 
 --display_colune_data[2] is display_colune_data[2]
 --operation mode is output
 
-display_colune_data[2] = OUTPUT(P49L1);
+display_colune_data[2] = OUTPUT(Q35L1);
 
 
 --display_colune_data[3] is display_colune_data[3]
 --operation mode is output
 
-display_colune_data[3] = OUTPUT(P45L2);
+display_colune_data[3] = OUTPUT(Q37L4);
 
 
 --display_colune_data[4] is display_colune_data[4]
 --operation mode is output
 
-display_colune_data[4] = OUTPUT(P53L1);
+display_colune_data[4] = OUTPUT(Q39L1);
 
 
 --display_colune_data[5] is display_colune_data[5]
 --operation mode is output
 
-display_colune_data[5] = OUTPUT(!R22_out);
+display_colune_data[5] = OUTPUT(Q41L5);
 
 
 --display_colune_data[6] is display_colune_data[6]
 --operation mode is output
 
-display_colune_data[6] = OUTPUT(P57L1);
+display_colune_data[6] = OUTPUT(Q43L6);
 
 
 --matriz_colune_activator[0] is matriz_colune_activator[0]
@@ -189,683 +153,13 @@ display_colune_activator[3] = OUTPUT(L82_out);
 --ledRgb[0] is ledRgb[0]
 --operation mode is output
 
-ledRgb[0] = OUTPUT(D2_and0);
+ledRgb[0] = OUTPUT(B1L1);
 
 
 --ledRgb[1] is ledRgb[1]
 --operation mode is output
 
-ledRgb[1] = OUTPUT(GND);
-
-
---ledRgb[2] is ledRgb[2]
---operation mode is output
-
-ledRgb[2] = OUTPUT(GND);
-
-
---teste[0] is teste[0]
---operation mode is output
-
-teste[0] = OUTPUT(GND);
-
-
---teste[1] is teste[1]
---operation mode is output
-
-teste[1] = OUTPUT(GND);
-
-
---teste[2] is teste[2]
---operation mode is output
-
-teste[2] = OUTPUT(GND);
-
-
---teste[3] is teste[3]
---operation mode is output
-
-teste[3] = OUTPUT(GND);
-
-
---teste[4] is teste[4]
---operation mode is output
-
-teste[4] = OUTPUT(GND);
-
-
---teste[5] is teste[5]
---operation mode is output
-
-teste[5] = OUTPUT(GND);
-
-
---teste[6] is teste[6]
---operation mode is output
-
-teste[6] = OUTPUT(GND);
-
-
---teste[7] is teste[7]
---operation mode is output
-
-teste[7] = OUTPUT(GND);
-
-
---teste[8] is teste[8]
---operation mode is output
-
-teste[8] = OUTPUT(GND);
-
-
---teste[9] is teste[9]
---operation mode is output
-
-teste[9] = OUTPUT(GND);
-
-
---teste[10] is teste[10]
---operation mode is output
-
-teste[10] = OUTPUT(GND);
-
-
---teste[11] is teste[11]
---operation mode is output
-
-teste[11] = OUTPUT(GND);
-
-
---teste[12] is teste[12]
---operation mode is output
-
-teste[12] = OUTPUT(GND);
-
-
---teste[13] is teste[13]
---operation mode is output
-
-teste[13] = OUTPUT(GND);
-
-
---teste[14] is teste[14]
---operation mode is output
-
-teste[14] = OUTPUT(GND);
-
-
---teste[15] is teste[15]
---operation mode is output
-
-teste[15] = OUTPUT(GND);
-
-
---teste[16] is teste[16]
---operation mode is output
-
-teste[16] = OUTPUT(GND);
-
-
---teste[17] is teste[17]
---operation mode is output
-
-teste[17] = OUTPUT(GND);
-
-
---teste[18] is teste[18]
---operation mode is output
-
-teste[18] = OUTPUT(GND);
-
-
---teste[19] is teste[19]
---operation mode is output
-
-teste[19] = OUTPUT(GND);
-
-
---teste[20] is teste[20]
---operation mode is output
-
-teste[20] = OUTPUT(GND);
-
-
---teste[21] is teste[21]
---operation mode is output
-
-teste[21] = OUTPUT(GND);
-
-
---teste[22] is teste[22]
---operation mode is output
-
-teste[22] = OUTPUT(GND);
-
-
---teste[23] is teste[23]
---operation mode is output
-
-teste[23] = OUTPUT(GND);
-
-
---teste[24] is teste[24]
---operation mode is output
-
-teste[24] = OUTPUT(GND);
-
-
---teste[25] is teste[25]
---operation mode is output
-
-teste[25] = OUTPUT(GND);
-
-
---teste[26] is teste[26]
---operation mode is output
-
-teste[26] = OUTPUT(GND);
-
-
---teste[27] is teste[27]
---operation mode is output
-
-teste[27] = OUTPUT(GND);
-
-
---teste[28] is teste[28]
---operation mode is output
-
-teste[28] = OUTPUT(GND);
-
-
---teste[29] is teste[29]
---operation mode is output
-
-teste[29] = OUTPUT(GND);
-
-
---teste[30] is teste[30]
---operation mode is output
-
-teste[30] = OUTPUT(GND);
-
-
---teste[31] is teste[31]
---operation mode is output
-
-teste[31] = OUTPUT(GND);
-
-
---teste[32] is teste[32]
---operation mode is output
-
-teste[32] = OUTPUT(GND);
-
-
---teste[33] is teste[33]
---operation mode is output
-
-teste[33] = OUTPUT(GND);
-
-
---teste[34] is teste[34]
---operation mode is output
-
-teste[34] = OUTPUT(GND);
-
-
---teste[35] is teste[35]
---operation mode is output
-
-teste[35] = OUTPUT(GND);
-
-
---teste[36] is teste[36]
---operation mode is output
-
-teste[36] = OUTPUT(GND);
-
-
---teste[37] is teste[37]
---operation mode is output
-
-teste[37] = OUTPUT(GND);
-
-
---teste[38] is teste[38]
---operation mode is output
-
-teste[38] = OUTPUT(GND);
-
-
---teste[39] is teste[39]
---operation mode is output
-
-teste[39] = OUTPUT(GND);
-
-
---teste[40] is teste[40]
---operation mode is output
-
-teste[40] = OUTPUT(GND);
-
-
---teste[41] is teste[41]
---operation mode is output
-
-teste[41] = OUTPUT(GND);
-
-
---teste[42] is teste[42]
---operation mode is output
-
-teste[42] = OUTPUT(GND);
-
-
---teste[43] is teste[43]
---operation mode is output
-
-teste[43] = OUTPUT(GND);
-
-
---teste[44] is teste[44]
---operation mode is output
-
-teste[44] = OUTPUT(GND);
-
-
---teste[45] is teste[45]
---operation mode is output
-
-teste[45] = OUTPUT(GND);
-
-
---teste[46] is teste[46]
---operation mode is output
-
-teste[46] = OUTPUT(GND);
-
-
---teste[47] is teste[47]
---operation mode is output
-
-teste[47] = OUTPUT(GND);
-
-
---teste[48] is teste[48]
---operation mode is output
-
-teste[48] = OUTPUT(GND);
-
-
---teste[49] is teste[49]
---operation mode is output
-
-teste[49] = OUTPUT(GND);
-
-
---teste[50] is teste[50]
---operation mode is output
-
-teste[50] = OUTPUT(GND);
-
-
---teste[51] is teste[51]
---operation mode is output
-
-teste[51] = OUTPUT(GND);
-
-
---teste[52] is teste[52]
---operation mode is output
-
-teste[52] = OUTPUT(GND);
-
-
---teste[53] is teste[53]
---operation mode is output
-
-teste[53] = OUTPUT(GND);
-
-
---teste[54] is teste[54]
---operation mode is output
-
-teste[54] = OUTPUT(GND);
-
-
---teste[55] is teste[55]
---operation mode is output
-
-teste[55] = OUTPUT(GND);
-
-
---teste[56] is teste[56]
---operation mode is output
-
-teste[56] = OUTPUT(GND);
-
-
---teste[57] is teste[57]
---operation mode is output
-
-teste[57] = OUTPUT(GND);
-
-
---teste[58] is teste[58]
---operation mode is output
-
-teste[58] = OUTPUT(GND);
-
-
---teste[59] is teste[59]
---operation mode is output
-
-teste[59] = OUTPUT(GND);
-
-
---teste[60] is teste[60]
---operation mode is output
-
-teste[60] = OUTPUT(GND);
-
-
---teste[61] is teste[61]
---operation mode is output
-
-teste[61] = OUTPUT(GND);
-
-
---teste[62] is teste[62]
---operation mode is output
-
-teste[62] = OUTPUT(GND);
-
-
---teste[63] is teste[63]
---operation mode is output
-
-teste[63] = OUTPUT(GND);
-
-
---teste[64] is teste[64]
---operation mode is output
-
-teste[64] = OUTPUT(GND);
-
-
---teste[65] is teste[65]
---operation mode is output
-
-teste[65] = OUTPUT(GND);
-
-
---teste[66] is teste[66]
---operation mode is output
-
-teste[66] = OUTPUT(GND);
-
-
---teste[67] is teste[67]
---operation mode is output
-
-teste[67] = OUTPUT(GND);
-
-
---teste[68] is teste[68]
---operation mode is output
-
-teste[68] = OUTPUT(GND);
-
-
---teste[69] is teste[69]
---operation mode is output
-
-teste[69] = OUTPUT(GND);
-
-
---teste[70] is teste[70]
---operation mode is output
-
-teste[70] = OUTPUT(GND);
-
-
---teste[71] is teste[71]
---operation mode is output
-
-teste[71] = OUTPUT(GND);
-
-
---teste[72] is teste[72]
---operation mode is output
-
-teste[72] = OUTPUT(GND);
-
-
---teste[73] is teste[73]
---operation mode is output
-
-teste[73] = OUTPUT(GND);
-
-
---teste[74] is teste[74]
---operation mode is output
-
-teste[74] = OUTPUT(GND);
-
-
---teste[75] is teste[75]
---operation mode is output
-
-teste[75] = OUTPUT(GND);
-
-
---teste[76] is teste[76]
---operation mode is output
-
-teste[76] = OUTPUT(GND);
-
-
---teste[77] is teste[77]
---operation mode is output
-
-teste[77] = OUTPUT(GND);
-
-
---teste[78] is teste[78]
---operation mode is output
-
-teste[78] = OUTPUT(GND);
-
-
---teste[79] is teste[79]
---operation mode is output
-
-teste[79] = OUTPUT(GND);
-
-
---teste[80] is teste[80]
---operation mode is output
-
-teste[80] = OUTPUT(GND);
-
-
---teste[81] is teste[81]
---operation mode is output
-
-teste[81] = OUTPUT(GND);
-
-
---teste[82] is teste[82]
---operation mode is output
-
-teste[82] = OUTPUT(GND);
-
-
---teste[83] is teste[83]
---operation mode is output
-
-teste[83] = OUTPUT(GND);
-
-
---teste[84] is teste[84]
---operation mode is output
-
-teste[84] = OUTPUT(GND);
-
-
---teste[85] is teste[85]
---operation mode is output
-
-teste[85] = OUTPUT(GND);
-
-
---teste[86] is teste[86]
---operation mode is output
-
-teste[86] = OUTPUT(GND);
-
-
---teste[87] is teste[87]
---operation mode is output
-
-teste[87] = OUTPUT(GND);
-
-
---teste[88] is teste[88]
---operation mode is output
-
-teste[88] = OUTPUT(GND);
-
-
---teste[89] is teste[89]
---operation mode is output
-
-teste[89] = OUTPUT(GND);
-
-
---teste[90] is teste[90]
---operation mode is output
-
-teste[90] = OUTPUT(GND);
-
-
---teste[91] is teste[91]
---operation mode is output
-
-teste[91] = OUTPUT(GND);
-
-
---teste[92] is teste[92]
---operation mode is output
-
-teste[92] = OUTPUT(GND);
-
-
---teste[93] is teste[93]
---operation mode is output
-
-teste[93] = OUTPUT(GND);
-
-
---teste[94] is teste[94]
---operation mode is output
-
-teste[94] = OUTPUT(GND);
-
-
---teste[95] is teste[95]
---operation mode is output
-
-teste[95] = OUTPUT(GND);
-
-
---teste[96] is teste[96]
---operation mode is output
-
-teste[96] = OUTPUT(GND);
-
-
---teste[97] is teste[97]
---operation mode is output
-
-teste[97] = OUTPUT(GND);
-
-
---teste[98] is teste[98]
---operation mode is output
-
-teste[98] = OUTPUT(GND);
-
-
---teste[99] is teste[99]
---operation mode is output
-
-teste[99] = OUTPUT(GND);
-
-
---teste[100] is teste[100]
---operation mode is output
-
-teste[100] = OUTPUT(GND);
-
-
---game_state_code[0] is game_state_code[0]
---operation mode is input
-
-game_state_code[0] = INPUT();
-
-
---game_state_code[1] is game_state_code[1]
---operation mode is input
-
-game_state_code[1] = INPUT();
-
-
---G1L2 is game_state_decoder:game_state_decoder_1|or0~0
---operation mode is normal
-
-G1L2 = (!game_state_code[0] & (!game_state_code[1]));
-
-
---R11_out is counter3bit:counterMapCode|t_flipflop:t_flipflop_2|out
---operation mode is normal
-
-R11_out_lut_out = (!R11_out);
-R11_out = DFFEAS(R11_out_lut_out, !R10_out, !G1L2, , , , , , );
-
-
---R9_out is counter3bit:counterMapCode|t_flipflop:t_flipflop_0|out
---operation mode is normal
-
-R9_out_lut_out = (!R9_out);
-R9_out = DFFEAS(R9_out_lut_out, D1_and0, !G1L2, , , , , , );
-
-
---R10_out is counter3bit:counterMapCode|t_flipflop:t_flipflop_1|out
---operation mode is normal
-
-R10_out_lut_out = (!R10_out);
-R10_out = DFFEAS(R10_out_lut_out, !R9_out, !G1L2, , , , , , );
-
-
---T1L1 is imageSelect:imageSelect_1|mux2x1:muxMaps[0]|or0~0
---operation mode is normal
-
-T1L1 = (R11_out) # ((R9_out) # ((R10_out) # (!game_state_code[0])));
-
-
---T8L1 is imageSelect:imageSelect_1|mux2x1:muxMaps[7]|or0~0
---operation mode is normal
-
-T8L1 = (R9_out) # ((R10_out) # ((!R11_out) # (!game_state_code[0])));
-
-
---R17_out is displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out
---operation mode is normal
-
-R17_out_lut_out = (!R17_out);
-R17_out = DFFEAS(R17_out_lut_out, !R3_out, !K1_andLoopResetEnable, , , , , , );
+ledRgb[1] = OUTPUT(B1L2);
 
 
 --R19_out is displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out
@@ -875,22 +169,11 @@ R19_out_lut_out = (!R19_out);
 R19_out = DFFEAS(R19_out_lut_out, !R18_out, !K1_andLoopResetEnable, , , , , , );
 
 
---M16L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~2
+--R17_out is displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out
 --operation mode is normal
 
-M16L1 = (R17_out & (((T8L1 & !R19_out)))) # (!R17_out & (T1L1));
-
-
---M16L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~3
---operation mode is normal
-
-M16L2 = (((game_state_code[1] & !game_state_code[0])) # (!R9_out)) # (!R11_out);
-
-
---M16L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~4
---operation mode is normal
-
-M16L3 = (R17_out & (((R10_out) # (M16L2)))) # (!R17_out & (T8L1));
+R17_out_lut_out = (!R17_out);
+R17_out = DFFEAS(R17_out_lut_out, !R3_out, !K1_andLoopResetEnable, , , , , , );
 
 
 --R18_out is displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out
@@ -900,222 +183,83 @@ R18_out_lut_out = (!R18_out);
 R18_out = DFFEAS(R18_out_lut_out, !R17_out, !K1_andLoopResetEnable, , , , , , );
 
 
---M16L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~5
+--C2L1 is displayer:matriz_displayer|counter3bit:counter3bit_1|andLoopStart_1~0
 --operation mode is normal
 
-M16L4 = (R18_out & (((M16L3 & !R19_out)))) # (!R18_out & (M16L1));
+C2L1 = ((!R19_out & (!R17_out & !R18_out)));
 
 
---M20L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~0
+--R9_out is counter3bit:counterMapCode|t_flipflop:t_flipflop_0|out
 --operation mode is normal
 
-M20L1 = (R19_out & (((!R18_out & !R17_out))));
+R9_out_lut_out = (!R9_out);
+R9_out = DFFEAS(R9_out_lut_out, D1_and0, !G1L2, , , , , , );
 
 
---G1L1 is game_state_decoder:game_state_decoder_1|and1~0
+--N9L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~0
 --operation mode is normal
 
-G1L1 = (game_state_code[0]) # (((!game_state_code[1])));
+N9L1 = (R17_out & (((!R19_out)))) # (!R17_out & ((R18_out & ((!R19_out))) # (!R18_out & (R9_out))));
 
 
---M17L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|or1~0
+--game_state_code[0] is game_state_code[0]
+--operation mode is input
+
+game_state_code[0] = INPUT();
+
+
+--N9L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~1
 --operation mode is normal
 
-M17L1 = (M20L1 & ((R9_out) # ((R10_out) # (!G1L1))));
+N9L2 = (G1_and1 & (C2L1)) # (!G1_and1 & (((N9L1 & game_state_code[0]))));
 
 
---P33L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|or1~0
+--N10L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|or1~2
 --operation mode is normal
 
-P33L1 = (R17_out & ((R9_out & (R10_out)) # (!R9_out & ((!R11_out))))) # (!R17_out & (((!R11_out) # (!R9_out))));
+N10L1 = (game_state_code[0] & (((!G1_and1))));
 
 
---T9L1 is imageSelect:imageSelect_1|mux2x1:muxMaps[8]|or0~0
+--N10L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|or1~3
 --operation mode is normal
 
-T9L1 = ((R9_out & ((R10_out) # (R11_out))) # (!R9_out & ((!R11_out)))) # (!game_state_code[0]);
+N10L2 = (R17_out & (!R9_out & ((!R19_out)))) # (!R17_out & ((R18_out & ((!R19_out))) # (!R18_out & (R9_out))));
 
 
---P33L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|or1~1
+--N11L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~2
 --operation mode is normal
 
-P33L2 = ((R17_out & (T9L1)) # (!R17_out & ((T1L1))));
+N11L1 = (R19_out & (!R18_out & ((!R17_out)))) # (!R19_out & ((R9_out & ((!R17_out))) # (!R9_out & (R18_out))));
 
 
---P33L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|or1~2
+--C2L2 is displayer:matriz_displayer|counter3bit:counter3bit_1|andLoopStart_1~1
 --operation mode is normal
 
-P33L3 = (R18_out & ((P33L1) # ((!G1L1)))) # (!R18_out & (((P33L2))));
+C2L2 = (((!R17_out & !R18_out)));
 
 
---M17L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|or1~1
+--N12L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~0
 --operation mode is normal
 
-M17L2 = (!G1L2 & ((M17L1) # ((P33L3 & !R19_out))));
+N12L1 = (N10L1 & ((C2L2 & ((R9_out) # (R19_out))) # (!C2L2 & ((!R19_out)))));
 
 
---M18L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~0
+--N13L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~0
 --operation mode is normal
 
-M18L1 = (M20L1 & (((!R10_out) # (!R11_out)) # (!game_state_code[0])));
+N13L1 = (N10L1 & ((C2L2 & ((!R9_out))) # (!C2L2 & (!R19_out))));
 
 
---M18L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~1
+--N14L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~0
 --operation mode is normal
 
-M18L2 = (game_state_code[1] & (((R18_out & !R9_out)) # (!game_state_code[0]))) # (!game_state_code[1] & (R18_out & ((!R9_out))));
+N14L1 = (N10L1 & ((R9_out & (C2L2)) # (!R9_out & ((!R19_out)))));
 
 
---T17L1 is imageSelect:imageSelect_1|mux2x1:muxMaps[16]|or0~0
+--N15L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~2
 --operation mode is normal
 
-T17L1 = (((!R10_out) # (!R11_out)) # (!game_state_code[0]));
-
-
---M18L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~2
---operation mode is normal
-
-M18L3 = (R17_out & (M18L2)) # (!R17_out & (((R18_out & T17L1))));
-
-
---M18L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~3
---operation mode is normal
-
-M18L4 = (R11_out & ((R9_out $ (R17_out)) # (!R10_out))) # (!R11_out & ((R10_out) # ((R9_out & !R17_out))));
-
-
---M18L5 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~4
---operation mode is normal
-
-M18L5 = (M18L3) # ((!R18_out & ((M18L4) # (!G1L1))));
-
-
---M18L6 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~5
---operation mode is normal
-
-M18L6 = (!G1L2 & ((M18L1) # ((M18L5 & !R19_out))));
-
-
---M19L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~0
---operation mode is normal
-
-M19L1 = (R10_out & ((R9_out & ((R11_out) # (!R19_out))) # (!R9_out & (!R11_out)))) # (!R10_out & ((R19_out) # (R9_out $ (R11_out))));
-
-
---M19L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~1
---operation mode is normal
-
-M19L2 = (!R18_out & (!R17_out & ((M19L1) # (!G1L1))));
-
-
---M19L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~2
---operation mode is normal
-
-M19L3 = (!G1L2 & ((M19L2) # ((M19L5 & !R19_out))));
-
-
---M20L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~1
---operation mode is normal
-
-M20L2 = (R11_out & ((R9_out) # ((!R10_out)))) # (!R11_out & (!R9_out));
-
-
---M20L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~2
---operation mode is normal
-
-M20L3 = (M20L1 & ((game_state_code[0] & (M20L2)) # (!game_state_code[0] & ((game_state_code[1])))));
-
-
---M20L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~3
---operation mode is normal
-
-M20L4 = ((R9_out $ (R10_out)) # (!G1L1)) # (!R11_out);
-
-
---M20L5 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~4
---operation mode is normal
-
-M20L5 = ((R10_out & ((R11_out) # (!R9_out))) # (!R10_out & (!R11_out))) # (!G1L1);
-
-
---M20L6 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~5
---operation mode is normal
-
-M20L6 = (R18_out & (((R17_out)))) # (!R18_out & ((R17_out & (M20L5)) # (!R17_out & ((T9L1)))));
-
-
---M20L7 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~6
---operation mode is normal
-
-M20L7 = (R18_out & ((M20L6 & ((T8L1))) # (!M20L6 & (M20L4)))) # (!R18_out & (((M20L6))));
-
-
---M20L8 is displayer:matriz_displayer|mux8x1:mux8x1_1[4]|or1~7
---operation mode is normal
-
-M20L8 = (M20L3) # ((!G1L2 & (M20L7 & !R19_out)));
-
-
---M21L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~4
---operation mode is normal
-
-M21L1 = (R17_out & (R10_out & ((R11_out) # (R18_out)))) # (!R17_out & (((R18_out))));
-
-
---M21L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~5
---operation mode is normal
-
-M21L2 = (R10_out & (R17_out $ (((!R18_out) # (!R11_out))))) # (!R10_out & (R11_out & ((!R17_out) # (!R18_out))));
-
-
---M21L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~6
---operation mode is normal
-
-M21L3 = (R9_out & (((!M21L2)))) # (!R9_out & ((R17_out & ((M21L1))) # (!R17_out & (M21L2 & !M21L1))));
-
-
---M21L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~7
---operation mode is normal
-
-M21L4 = (!G1L2 & ((R19_out & (!M21L5 & !M21L6)) # (!R19_out & ((!M21L6) # (!M21L5)))));
-
-
---M22L1 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~2
---operation mode is normal
-
-M22L1 = (R11_out & ((R10_out & ((!R9_out))) # (!R10_out & (R19_out)))) # (!R11_out & (R19_out & (R9_out $ (R10_out))));
-
-
---M22L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~3
---operation mode is normal
-
-M22L2 = (R17_out & (((!R18_out)) # (!T1L1))) # (!R17_out & (((M22L4))));
-
-
---M22L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~4
---operation mode is normal
-
-M22L3 = (!G1L2 & ((R19_out & (!R18_out & !M22L2)) # (!R19_out & ((!M22L2) # (!R18_out)))));
-
-
---R21_out is displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out
---operation mode is normal
-
-R21_out_lut_out = (!R21_out);
-R21_out = DFFEAS(R21_out_lut_out, !R20_out, !K2_andLoopResetEnable, , , , , , );
-
-
---R20_out is displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out
---operation mode is normal
-
-R20_out_lut_out = (!R20_out);
-R20_out = DFFEAS(R20_out_lut_out, !R3_out, !K2_andLoopResetEnable, , , , , , );
-
-
---P45L1 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~0
---operation mode is normal
-
-P45L1 = (game_state_code[1] & ((R20_out) # ((!R21_out))));
+N15L1 = (R9_out & (((!R17_out & !R18_out)) # (!R19_out))) # (!R9_out & (!R19_out & ((!R18_out) # (!R17_out))));
 
 
 --R22_out is displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_2|out
@@ -1125,46 +269,282 @@ R22_out_lut_out = (!R22_out);
 R22_out = DFFEAS(R22_out_lut_out, !R21_out, !K2_andLoopResetEnable, , , , , , );
 
 
---P45L2 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~1
+--Q43L1 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~0
 --operation mode is normal
 
-P45L2 = (!R22_out & (((game_state_code[0] & !R21_out)) # (!P45L1)));
+Q43L1 = ((!R22_out & ((G1_and1) # (game_state_code[0]))));
 
 
---P47L1 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~0
+--R21_out is displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out
 --operation mode is normal
 
-P47L1 = (game_state_code[0] & (((!R20_out) # (!R21_out)))) # (!game_state_code[0] & (((R21_out & !R20_out)) # (!game_state_code[1])));
+R21_out_lut_out = (!R21_out);
+R21_out = DFFEAS(R21_out_lut_out, !R20_out, !K2_andLoopResetEnable, , , , , , );
 
 
---P47L2 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~1
+--game_state_code[1] is game_state_code[1]
+--operation mode is input
+
+game_state_code[1] = INPUT();
+
+
+--Q31L1 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~0
 --operation mode is normal
 
-P47L2 = (P47L1 & (((!R22_out))));
+Q31L1 = (R21_out & ((game_state_code[0] & ((!game_state_code[1]))) # (!game_state_code[0] & (!G1_and1))));
 
 
---P49L1 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|andEnable~0
+--R20_out is displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out
 --operation mode is normal
 
-P49L1 = (!R22_out & ((P47L1) # ((game_state_code[0] & game_state_code[1]))));
+R20_out_lut_out = (!R20_out);
+R20_out = DFFEAS(R20_out_lut_out, !R3_out, !K2_andLoopResetEnable, , , , , , );
 
 
---P53L1 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|andEnable~0
+--x_coord_code[0] is x_coord_code[0]
+--operation mode is input
+
+x_coord_code[0] = INPUT();
+
+
+--x_coord_code[2] is x_coord_code[2]
+--operation mode is input
+
+x_coord_code[2] = INPUT();
+
+
+--x_coord_code[1] is x_coord_code[1]
+--operation mode is input
+
+x_coord_code[1] = INPUT();
+
+
+--Q31L2 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~1
 --operation mode is normal
 
-P53L1 = (!R22_out & ((G1L1) # ((R21_out & !R20_out))));
+Q31L2 = (R20_out & (!x_coord_code[1] & (x_coord_code[0] $ (x_coord_code[2]))));
 
 
---P57L1 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~0
+--Q31L3 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~2
 --operation mode is normal
 
-P57L1 = (!R22_out & (((G1L1 & !R21_out)) # (!P45L1)));
+Q31L3 = (Q31L1) # ((!R21_out & ((Q31L2) # (!G1_and1))));
+
+
+--y_coord_code[0] is y_coord_code[0]
+--operation mode is input
+
+y_coord_code[0] = INPUT();
+
+
+--y_coord_code[2] is y_coord_code[2]
+--operation mode is input
+
+y_coord_code[2] = INPUT();
+
+
+--y_coord_code[1] is y_coord_code[1]
+--operation mode is input
+
+y_coord_code[1] = INPUT();
+
+
+--Q31L4 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~3
+--operation mode is normal
+
+Q31L4 = (R21_out) # ((!y_coord_code[1] & (y_coord_code[0] $ (y_coord_code[2]))));
+
+
+--Q31L5 is displayer:segment_display|mux8x1:mux8x1_1[0]|mux4x1:mux4x1_1|andEnable~4
+--operation mode is normal
+
+Q31L5 = (Q43L1 & ((Q31L3) # ((Q31L4 & !R20_out))));
+
+
+--Q33L1 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~0
+--operation mode is normal
+
+Q33L1 = (R20_out & (x_coord_code[2] & (x_coord_code[0] $ (x_coord_code[1]))));
+
+
+--Q33L2 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~1
+--operation mode is normal
+
+Q33L2 = ((!R21_out & ((Q33L1) # (!G1_and1))));
+
+
+--Q33L3 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~2
+--operation mode is normal
+
+Q33L3 = (R21_out) # ((y_coord_code[2] & (y_coord_code[1] $ (y_coord_code[0]))));
+
+
+--Q33L4 is displayer:segment_display|mux8x1:mux8x1_1[1]|mux4x1:mux4x1_1|andEnable~3
+--operation mode is normal
+
+Q33L4 = (Q43L1 & ((Q33L2) # ((Q33L3 & !R20_out))));
+
+
+--Q35L2 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|or1~0
+--operation mode is normal
+
+Q35L2 = (((R21_out & game_state_code[1])) # (!G1_and1));
+
+
+--Q35L3 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|or1~1
+--operation mode is normal
+
+Q35L3 = (x_coord_code[1] & (((!x_coord_code[2]))));
+
+
+--Q35L4 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|or1~2
+--operation mode is normal
+
+Q35L4 = ((R20_out & (Q35L3 & !x_coord_code[0]))) # (!G1_and1);
+
+
+--Q35L5 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|or1~3
+--operation mode is normal
+
+Q35L5 = (Q35L2 & (((Q35L4 & !R21_out)) # (!game_state_code[0]))) # (!Q35L2 & (Q35L4 & ((!R21_out))));
+
+
+--Q35L6 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|or1~4
+--operation mode is normal
+
+Q35L6 = (R21_out) # ((y_coord_code[1] & (!y_coord_code[0] & !y_coord_code[2])));
+
+
+--Q35L1 is displayer:segment_display|mux8x1:mux8x1_1[2]|mux4x1:mux4x1_1|andEnable~0
+--operation mode is normal
+
+Q35L1 = (Q43L1 & ((Q35L5) # ((Q35L6 & !R20_out))));
+
+
+--Q37L1 is displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1|andEnable~0
+--operation mode is normal
+
+Q37L1 = (R20_out & ((x_coord_code[0] & (x_coord_code[2] $ (!x_coord_code[1]))) # (!x_coord_code[0] & (x_coord_code[2] & !x_coord_code[1]))));
+
+
+--Q37L2 is displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1|andEnable~1
+--operation mode is normal
+
+Q37L2 = (Q31L1) # ((!R21_out & ((Q37L1) # (!G1_and1))));
+
+
+--Q37L3 is displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1|andEnable~2
+--operation mode is normal
+
+Q37L3 = (R21_out) # ((y_coord_code[0] & (y_coord_code[2] $ (!y_coord_code[1]))) # (!y_coord_code[0] & (y_coord_code[2] & !y_coord_code[1])));
+
+
+--Q37L4 is displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1|andEnable~3
+--operation mode is normal
+
+Q37L4 = (Q43L1 & ((Q37L2) # ((Q37L3 & !R20_out))));
+
+
+--Q39L2 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|or1~0
+--operation mode is normal
+
+Q39L2 = (((game_state_code[0] & R21_out)) # (!G1_and1));
+
+
+--Q39L3 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|or1~1
+--operation mode is normal
+
+Q39L3 = (y_coord_code[2] & (((!y_coord_code[1]))));
+
+
+--Q39L4 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|or1~2
+--operation mode is normal
+
+Q39L4 = (!R20_out & ((R21_out) # ((y_coord_code[0]) # (Q39L3))));
+
+
+--Q37L5 is displayer:segment_display|mux8x1:mux8x1_1[3]|mux4x1:mux4x1_1|andEnable~4
+--operation mode is normal
+
+Q37L5 = (x_coord_code[2] & (((!x_coord_code[1]))));
+
+
+--Q39L5 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|or1~3
+--operation mode is normal
+
+Q39L5 = (R20_out & (!R21_out & ((x_coord_code[0]) # (Q37L5))));
+
+
+--Q39L1 is displayer:segment_display|mux8x1:mux8x1_1[4]|mux4x1:mux4x1_1|andEnable~0
+--operation mode is normal
+
+Q39L1 = (Q43L1 & ((Q39L2) # ((Q39L4) # (Q39L5))));
+
+
+--Q41L1 is displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1|andEnable~0
+--operation mode is normal
+
+Q41L1 = (game_state_code[0]) # ((game_state_code[1]));
+
+
+--Q41L2 is displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1|andEnable~1
+--operation mode is normal
+
+Q41L2 = (R20_out & ((x_coord_code[0] & ((x_coord_code[1]) # (!x_coord_code[2]))) # (!x_coord_code[0] & (x_coord_code[1] & !x_coord_code[2]))));
+
+
+--Q41L3 is displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1|andEnable~2
+--operation mode is normal
+
+Q41L3 = (R21_out & (Q41L1)) # (!R21_out & (((Q41L2) # (!G1_and1))));
+
+
+--Q41L4 is displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1|andEnable~3
+--operation mode is normal
+
+Q41L4 = (R21_out) # ((y_coord_code[1] & ((y_coord_code[0]) # (!y_coord_code[2]))) # (!y_coord_code[1] & (y_coord_code[0] & !y_coord_code[2])));
+
+
+--Q41L5 is displayer:segment_display|mux8x1:mux8x1_1[5]|mux4x1:mux4x1_1|andEnable~4
+--operation mode is normal
+
+Q41L5 = (Q43L1 & ((Q41L3) # ((Q41L4 & !R20_out))));
+
+
+--Q43L2 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~1
+--operation mode is normal
+
+Q43L2 = (R21_out) # ((y_coord_code[1] & (y_coord_code[0] & y_coord_code[2])) # (!y_coord_code[1] & ((!y_coord_code[2]))));
+
+
+--Q43L3 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~2
+--operation mode is normal
+
+Q43L3 = (Q43L2 & (((R21_out & !game_state_code[1])) # (!R20_out))) # (!Q43L2 & (R21_out & ((!game_state_code[1]))));
+
+
+--Q43L4 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~3
+--operation mode is normal
+
+Q43L4 = (x_coord_code[2] & (x_coord_code[0] & (x_coord_code[1]))) # (!x_coord_code[2] & (((!x_coord_code[1]))));
+
+
+--Q43L5 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~4
+--operation mode is normal
+
+Q43L5 = (((R20_out & Q43L4)) # (!G1_and1));
+
+
+--Q43L6 is displayer:segment_display|mux8x1:mux8x1_1[6]|mux4x1:mux4x1_1|andEnable~5
+--operation mode is normal
+
+Q43L6 = (Q43L1 & ((Q43L3) # ((Q43L5 & !R21_out))));
 
 
 --L71_out is displayer:matriz_displayer|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_0|out
 --operation mode is normal
 
-L71_out_lut_out = ((!R18_out & (!R17_out & !R19_out)));
+L71_out_lut_out = (C2L1);
 L71_out = DFFEAS(L71_out_lut_out, R3_out, !G1L2, , , , , , );
 
 
@@ -1199,7 +579,7 @@ L75_out = DFFEAS(L75_out_lut_out, R3_out, !G1L2, , , , , , );
 --L79_out is displayer:segment_display|register8bitSIPO:register8bitSIPO_1|d_flipflop:d_flipflop_0|out
 --operation mode is normal
 
-L79_out_lut_out = ((!R22_out & (!R21_out & !R20_out)));
+L79_out_lut_out = ((!R22_out & (!R20_out & !R21_out)));
 L79_out = DFFEAS(L79_out_lut_out, R3_out, !G1L2, , , , , , );
 
 
@@ -1245,12 +625,6 @@ R13_out_lut_out = (!R13_out);
 R13_out = DFFEAS(R13_out_lut_out, !R12_out, !confirmAttack, , , , , , );
 
 
---D2L2 is debouncer:debouncerConfirmAttack|and0~0
---operation mode is normal
-
-D2L2 = (R12_out & (R13_out));
-
-
 --R14_out is debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_3|out
 --operation mode is normal
 
@@ -1265,10 +639,151 @@ R15_out_lut_out = (!R15_out);
 R15_out = DFFEAS(R15_out_lut_out, !R14_out, !confirmAttack, , , , , , );
 
 
---D2_and0 is debouncer:debouncerConfirmAttack|and0
+--D2L1 is debouncer:debouncerConfirmAttack|and0~0
 --operation mode is normal
 
-D2_and0 = (R16_out & (D2L2 & (R14_out & R15_out)));
+D2L1 = (R12_out & (R13_out & (R14_out & R15_out)));
+
+
+--L33_out is attack_round:attack_round_1|d_flipflop:selected_map_register[32]|out
+--operation mode is normal
+
+L33_out_lut_out = (!R9_out);
+L33_out = DFFEAS(L33_out_lut_out, G1_and1, !G1L2, , , , , , );
+
+
+--N8L1 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~0
+--operation mode is normal
+
+N8L1 = (y_coord_code[2] & ((y_coord_code[0]) # ((!y_coord_code[1])))) # (!y_coord_code[2] & ((y_coord_code[1] & ((x_coord_code[0]))) # (!y_coord_code[1] & (y_coord_code[0]))));
+
+
+--L35_out is attack_round:attack_round_1|d_flipflop:selected_map_register[34]|out
+--operation mode is normal
+
+L35_out_lut_out = (R9_out);
+L35_out = DFFEAS(L35_out_lut_out, G1_and1, !G1L2, , , , , , );
+
+
+--L32_out is attack_round:attack_round_1|d_flipflop:selected_map_register[31]|out
+--operation mode is normal
+
+L32_out_lut_out = VCC;
+L32_out = DFFEAS(L32_out_lut_out, G1_and1, !G1L2, , , , , , );
+
+
+--N8L2 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~1
+--operation mode is normal
+
+N8L2 = (y_coord_code[1] & (((!y_coord_code[0] & y_coord_code[2])) # (!x_coord_code[0])));
+
+
+--N8L3 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~2
+--operation mode is normal
+
+N8L3 = (N8L1 & ((N8L2 & (L35_out)) # (!N8L2 & ((L32_out))))) # (!N8L1 & (((N8L2))));
+
+
+--N8L4 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~3
+--operation mode is normal
+
+N8L4 = (Q35L3 & (N8L3 & ((L33_out) # (N8L1))));
+
+
+--N8L5 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~4
+--operation mode is normal
+
+N8L5 = (x_coord_code[0] & (L35_out & (!x_coord_code[1])));
+
+
+--N8L6 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~5
+--operation mode is normal
+
+N8L6 = (y_coord_code[0] & (y_coord_code[2] $ (((!y_coord_code[1]) # (!x_coord_code[2]))))) # (!y_coord_code[0] & (y_coord_code[2] & (x_coord_code[2])));
+
+
+--N8L7 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~6
+--operation mode is normal
+
+N8L7 = (N8L5 & ((y_coord_code[1] & ((L32_out) # (!N8L6))) # (!y_coord_code[1] & ((N8L6)))));
+
+
+--N8L8 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~7
+--operation mode is normal
+
+N8L8 = (Q37L5 & (L33_out & (!y_coord_code[0] & !x_coord_code[0])));
+
+
+--N8L9 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~8
+--operation mode is normal
+
+N8L9 = (y_coord_code[0] & (x_coord_code[0] & (!y_coord_code[2] & !x_coord_code[2])));
+
+
+--N8L10 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~9
+--operation mode is normal
+
+N8L10 = (y_coord_code[1] & ((N8L8) # ((L32_out & N8L9))));
+
+
+--N8L11 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~10
+--operation mode is normal
+
+N8L11 = (L32_out & (((!y_coord_code[0] & !x_coord_code[2]))));
+
+
+--N8L12 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~11
+--operation mode is normal
+
+N8L12 = (y_coord_code[0] & (L33_out & ((!x_coord_code[1]))));
+
+
+--N8L13 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~12
+--operation mode is normal
+
+N8L13 = (x_coord_code[0] & (Q39L3 & ((N8L11) # (N8L12))));
+
+
+--N8L14 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~13
+--operation mode is normal
+
+N8L14 = (y_coord_code[1] & (y_coord_code[2] & ((y_coord_code[0]) # (x_coord_code[0])))) # (!y_coord_code[1] & (!x_coord_code[0] & ((y_coord_code[2]) # (y_coord_code[0]))));
+
+
+--N8L15 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~14
+--operation mode is normal
+
+N8L15 = (N8L13) # ((Q37L5 & (L32_out & N8L14)));
+
+
+--N8L16 is attack_round:attack_round_1|mux8x1:yCoordMuxSelectedMap|or1~15
+--operation mode is normal
+
+N8L16 = (N8L4) # ((N8L7) # ((N8L10) # (N8L15)));
+
+
+--B1L1 is attack_round:attack_round_1|andGreen~0
+--operation mode is normal
+
+B1L1 = (R16_out & (D2L1 & ((!N8L16) # (!G1_and1))));
+
+
+--B1L2 is attack_round:attack_round_1|andRed~0
+--operation mode is normal
+
+B1L2 = (G1_and1 & (N8L16 & (R16_out & D2L1)));
+
+
+--G1L2 is game_state_decoder:game_state_decoder_1|or0~0
+--operation mode is normal
+
+G1L2 = (!G1_and1 & (!game_state_code[0]));
+
+
+--K1_andLoopResetEnable is displayer:matriz_displayer|andLoopResetEnable
+--operation mode is normal
+
+K1_andLoopResetEnable = (G1L2) # ((R19_out & (R17_out & !R18_out)));
 
 
 --R3_out is freq_div:freq_div_1|t_flipflop:t_flipflop_2|out
@@ -1278,10 +793,10 @@ R3_out_lut_out = (!R3_out);
 R3_out = DFFEAS(R3_out_lut_out, !R2_out, VCC, , , , , , );
 
 
---K1_andLoopResetEnable is displayer:matriz_displayer|andLoopResetEnable
+--G1_and1 is game_state_decoder:game_state_decoder_1|and1
 --operation mode is normal
 
-K1_andLoopResetEnable = (G1L2) # ((R17_out & (R19_out & !R18_out)));
+G1_and1 = LCELL((game_state_code[1] & (((!game_state_code[0])))));
 
 
 --K2_andLoopResetEnable is displayer:segment_display|andLoopResetEnable
@@ -1294,6 +809,13 @@ K2_andLoopResetEnable = (G1L2) # ((R22_out & (R20_out & !R21_out)));
 --operation mode is input
 
 confirmAttack = INPUT();
+
+
+--R2_out is freq_div:freq_div_1|t_flipflop:t_flipflop_1|out
+--operation mode is normal
+
+R2_out_lut_out = (!R2_out);
+R2_out = DFFEAS(R2_out_lut_out, !R1_out, VCC, , , , , , );
 
 
 --R8_out is debouncer:debouncerNextMap|t_flipflop:t_flipflop_5|out
@@ -1343,23 +865,10 @@ R7_out = DFFEAS(R7_out_lut_out, !R6_out, !nextMap, , , , , , );
 D1_and0 = LCELL((R8_out & (D1L2 & (R6_out & R7_out))));
 
 
---R2_out is freq_div:freq_div_1|t_flipflop:t_flipflop_1|out
---operation mode is normal
-
-R2_out_lut_out = (!R2_out);
-R2_out = DFFEAS(R2_out_lut_out, !R1_out, VCC, , , , , , );
-
-
 --D2_or0 is debouncer:debouncerConfirmAttack|or0
 --operation mode is normal
 
-D2_or0 = LCELL((!D2_and0 & (!R3_out & (!confirmAttack))));
-
-
---nextMap is nextMap
---operation mode is input
-
-nextMap = INPUT();
+D2_or0 = LCELL((!R3_out & (!confirmAttack & ((!D2L1) # (!R16_out)))));
 
 
 --R1_out is freq_div:freq_div_1|t_flipflop:t_flipflop_0|out
@@ -1369,10 +878,10 @@ R1_out_lut_out = (!R1_out);
 R1_out = DFFEAS(R1_out_lut_out, !cpld_clk, VCC, , , , , , );
 
 
---D1_or0 is debouncer:debouncerNextMap|or0
---operation mode is normal
+--nextMap is nextMap
+--operation mode is input
 
-D1_or0 = LCELL((!R3_out & (!D1_and0 & (!nextMap))));
+nextMap = INPUT();
 
 
 --cpld_clk is cpld_clk
@@ -1381,39 +890,27 @@ D1_or0 = LCELL((!R3_out & (!D1_and0 & (!nextMap))));
 cpld_clk = INPUT();
 
 
---M16L5 is displayer:matriz_displayer|mux8x1:mux8x1_1[0]|or1~6
+--D1_or0 is debouncer:debouncerNextMap|or0
 --operation mode is normal
 
-M16L5 = (M16L4 & ((game_state_code[0]) # ((game_state_code[1]))));
+D1_or0 = LCELL((!R3_out & (!D1_and0 & (!nextMap))));
 
 
---M21L5 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~8
+--N10L3 is displayer:matriz_displayer|mux8x1:mux8x1_1[1]|or1~4
 --operation mode is normal
 
-M21L5 = (((R18_out) # (R17_out)));
+N10L3 = (game_state_code[0] & (!G1_and1 & (N10L2)));
 
 
---M21L6 is displayer:matriz_displayer|mux8x1:mux8x1_1[5]|or1~9
+--N11L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[2]|or1~3
 --operation mode is normal
 
-M21L6 = (game_state_code[0] & ((M21L3 $ (!M21L5)))) # (!game_state_code[0] & (!game_state_code[1] & (M21L3 $ (!M21L5))));
+N11L2 = (game_state_code[0] & (!G1_and1 & (N11L1)));
 
 
---M22L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~5
+--N15L2 is displayer:matriz_displayer|mux8x1:mux8x1_1[6]|or1~3
 --operation mode is normal
 
-M22L4 = (game_state_code[0] & ((R19_out $ (M22L1)))) # (!game_state_code[0] & (!game_state_code[1] & (R19_out $ (M22L1))));
-
-
---M19L4 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~3
---operation mode is normal
-
-M19L4 = (R11_out & ((R17_out & ((R10_out))) # (!R17_out & (R18_out)))) # (!R11_out & ((R18_out & (!R10_out)) # (!R18_out & ((R17_out)))));
-
-
---M19L5 is displayer:matriz_displayer|mux8x1:mux8x1_1[3]|or1~4
---operation mode is normal
-
-M19L5 = (M19L4) # (((R18_out & !R9_out)) # (!G1L1));
+N15L2 = (game_state_code[0] & (!G1_and1 & (N15L1)));
 
 

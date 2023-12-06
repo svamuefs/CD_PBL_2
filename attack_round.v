@@ -6,7 +6,7 @@ module attack_round #(
 
     input [DATA_WIDTH-1:0] selected_map ,
     input [2:0] x_coord_code , y_coord_code ,
-    input enable , confirmAttack ,
+    input enable , enableAttack ,  confirmAttack ,
 
     output [DATA_WIDTH-1:0] matriz_data ,
     output [1:0] ledRgb
@@ -20,7 +20,7 @@ module attack_round #(
 
     d_flipflop selected_map_register [DATA_WIDTH-1:0] (
         .d     (selected_map) ,
-        .clk   (enable) ,//!!
+        .clk   (enableAttack) ,//!!
         .reset (enable) ,//!!
 
         .out   (selected_map_out)
@@ -40,27 +40,11 @@ module attack_round #(
 
     or orMatriz [34:0] (matriz_data , selected_map_out , notHitsMapOut);
 
-    mux8x1 xCoordMuxHitsMap [COLUNE_SIZE-1:0] (
-        .in_a   (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_b   (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_c   (hits_map_clk[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
-        .in_d   (hits_map_clk[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
-        .in_e   (hits_map_clk[(COLUNE_SIZE*2)-1:COLUNE_SIZE*1]) ,
-        .in_f   (hits_map_clk[COLUNE_SIZE-1:0]) ,
-        .in_g   (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_h   (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) , 
-        .select (x_coord_code) ,
-        .enable (enable) ,// !!
-
-        .out    (hits_map_clk_colune)
-    );
-
     demux1x8 yCoordDemuxHitsMap (
         .in     (confirmAttack_w) , 
         .select (y_coord_code) ,
-        .enable (enable) ,// !!
-        
-        .out_a  (hits_map_clk_colune[0]) ,
+        .enable (enableAttack) ,// !!
+
         .out_b  (hits_map_clk_colune[0]) ,
         .out_c  (hits_map_clk_colune[1]) ,
         .out_d  (hits_map_clk_colune[2]) ,
@@ -70,25 +54,34 @@ module attack_round #(
         .out_h  (hits_map_clk_colune[6]) 
     );
 
+    demux1x8 xCoordDemuxHitsMap [COLUNE_SIZE-1:0] (
+        .in     (hits_map_clk_colune) , 
+        .select (y_coord_code) ,
+        .enable (enableAttack) ,// !!
+        
+        .out_b  (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
+        .out_c  (hits_map_clk[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
+        .out_d  (hits_map_clk[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
+        .out_e  (hits_map_clk[(COLUNE_SIZE*2)-1:COLUNE_SIZE*1]) ,
+        .out_f  (hits_map_clk[COLUNE_SIZE-1:0])
+    );
+
+
     //Indicar acerto ou erro atraves do led rgb
 
     mux8x1 xCoordMuxSelectedMap [COLUNE_SIZE-1:0] (
-        .in_a   (selected_map_out[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
         .in_b   (selected_map_out[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
         .in_c   (selected_map_out[(COLUNE_SIZE*4)-1:COLUNE_SIZE*3]) ,
         .in_d   (selected_map_out[(COLUNE_SIZE*3)-1:COLUNE_SIZE*2]) ,
         .in_e   (selected_map_out[(COLUNE_SIZE*2)-1:COLUNE_SIZE*1]) ,
         .in_f   (selected_map_out[COLUNE_SIZE-1:0]) ,
-        .in_g   (selected_map_out[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,
-        .in_h   (selected_map_out[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) , 
         .select (x_coord_code) ,
-        .enable (enable) ,// !!
+        .enable (enableAttack) ,// !!
 
         .out    (selected_map_out_colune)
     );
 
     mux8x1 yCoordMuxSelectedMap (
-        .in_a   (selected_map_out_colune[0]) ,
         .in_b   (selected_map_out_colune[0]) ,
         .in_c   (selected_map_out_colune[1]) ,
         .in_d   (selected_map_out_colune[2]) ,
@@ -97,7 +90,7 @@ module attack_round #(
         .in_g   (selected_map_out_colune[5]) ,
         .in_h   (selected_map_out_colune[6]) , 
         .select (y_coord_code) ,
-        .enable (enable) ,// !!
+        .enable (enableAttack) ,// !!
 
         .out    (ledRgbRed)
     );

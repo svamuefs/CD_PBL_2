@@ -51,13 +51,18 @@ module mux8x1
 
     not not1 (notSelect2 , select[2]);
 
+    //enable
+
+    and andEnable1 (enable1 , notSelect2 , enable);
+    and andEnable2 (enable2 , select[2] , enable);
+
     mux4x1 mux4x1_1 (
         .in_a   (in_a) ,
         .in_b   (in_b) ,
         .in_c   (in_c) ,
         .in_d   (in_d) ,
         .select (select[1:0]) ,
-        .enable (notSelect2) ,
+        .enable (enable1) ,
 
         .out    (mux1_w)
     );
@@ -68,7 +73,7 @@ module mux8x1
         .in_c   (in_g) ,
         .in_d   (in_h) ,
         .select (select[1:0]) ,
-        .enable (select[2]) ,
+        .enable (enable2) ,
 
         .out    (mux2_w)
     );

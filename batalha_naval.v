@@ -11,23 +11,19 @@ module batalha_naval #(
 )
 (
 
-    input [2:0] x_coord_code , y_coord_code , 
+    input [2:0] x_coord_code , y_coord_code ,
     input [1:0] game_state_code ,
     input nextMap , confirmAttack , cpld_clk ,
 
     output [6:0] matriz_colune_data , display_colune_data ,
 	output [4:0] matriz_colune_activator ,
     output [3:0] display_colune_activator ,
-    output [2:0] ledRgb ,
-
-
-    output [100:0] teste 
+    output [1:0] ledRgb
 
  );
 
-    wire [M_DATA_WIDTH-1:0] selectedMap , mapAttack , matriz_data;
+    wire [M_DATA_WIDTH-1:0] selectedMap , matriz_data;
     wire [D_DATA_WIDTH-1:0] display_data;
-	 wire [2:0] map_code;
 
     // assign map = 35'b00000010000010000010000010000010000;
     // assign display_data = 28'b0000001000001000001000001000;
@@ -67,7 +63,7 @@ module batalha_naval #(
 
     map_decoder map_decoder_1 (
         .map_code (map_code) ,
-        .enable   (enable) , //mudar
+        .enable   (1) , //mudar
 
         .mapOut   (selectedMap)
     ); //ativado tanto na preparação e no attack
@@ -83,7 +79,8 @@ module batalha_naval #(
         .selected_map  (selectedMap) ,
         .x_coord_code  (x_coord_code) ,
         .y_coord_code  (y_coord_code) ,
-        .enable        (enableAttack) ,
+        .enable        (enable) ,
+        .enableAttack  (enableAttack) ,
         .confirmAttack (debouncedConfirmAttack) ,
 
         .matriz_data   (mapAttack) ,

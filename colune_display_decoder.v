@@ -43,9 +43,9 @@ or orEnable [6:0] (digitOut , digitOut_w , notEnable);
 
 //segment C
 
-//~bcd
+//~bc~d
 
-    and and20 (digitOut_w[2] , not_binary_code[2] , binary_code[1] , binary_code[0] );
+    and and20 (digitOut_w[2] , not_binary_code[2] , binary_code[1] , not_binary_code[0] );
 
 //segment D
 
