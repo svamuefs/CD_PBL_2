@@ -20,25 +20,26 @@ module attack_round #(
 
     d_flipflop selected_map_register [DATA_WIDTH-1:0] (
         .d     (selected_map) ,
-        .clk   (enableAttack) ,//!!
+        .clk   (hits_map_clk) ,//!!
         .reset (enable) ,//!!
+					.initial_value (1'b1) ,
 
-        .out   (selected_map_out)
+        .out   (matriz_data)
     );
 
-    d_flipflop hits_map_register [DATA_WIDTH-1:0] (
-        .d     (1'b1) , //!!
-        .clk   (hits_map_clk) ,
-        .reset (enable) , //!!
+    //d_flipflop hits_map_register [DATA_WIDTH-1:0] (
+    //    .d     (1'b1) , //!!
+    //    .clk   (hits_map_clk) ,
+    //    .reset (enable) , //!!
 
-        .out   (hits_map_out)
-    );
+    //    .out   (hits_map_out)
+    //);
 
     //salva a coordena do ataque na matriz de tiros
 
-    not notMatriz [34:0] (notHitsMapOut , hits_map_out);
+    //not notMatriz [34:0] (notHitsMapOut , hits_map_out);
 
-    or orMatriz [34:0] (matriz_data , selected_map_out , notHitsMapOut);
+    //or orMatriz [34:0] (matriz_data , selected_map_out , notHitsMapOut);
 
     demux1x8 yCoordDemuxHitsMap (
         .in     (confirmAttack_w) , 
