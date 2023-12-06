@@ -1,4 +1,1 @@
 set tool_name "Questa Intel FPGA (Verilog)"
-set corner_file_list {
-    {{"Slow Model"} {batalha_naval.vo batalha_naval_v.sdo}}
-}

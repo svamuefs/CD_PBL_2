@@ -26,19 +26,22 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec  5 22:19:24 2023
+    Info: Processing started: Wed Dec  6 11:16:12 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off batalha_naval -c batalha_naval --vector_source=C:/CD/CD_PBL_2/Waveform4.vwf --testbench_file=C:/CD/CD_PBL_2/simulation/qsim/Waveform4.vwf.vt
+Info (119006): Selected device EPM240T100C5 for design "batalha_naval"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-files
+5): Ignoring output pin "teste[2]" in vector source file when writing test bench files
+
+cted_map_out[10]" in vector source file when writing test bench files
 
 Completed successfully. 
 
 Completed successfully. 
 
-**** Generating the timing simulation netlist ****
+**** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/CD/CD_PBL_2/simulation/qsim/" batalha_naval -c batalha_naval
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/CD/CD_PBL_2/simulation/qsim/" batalha_naval -c batalha_naval
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -57,13 +60,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec  5 22:19:26 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/CD/CD_PBL_2/simulation/qsim/ batalha_naval -c batalha_naval
+    Info: Processing started: Wed Dec  6 11:16:13 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/CD/CD_PBL_2/simulation/qsim/ batalha_naval -c batalha_naval
+Info (119006): Selected device EPM240T100C5 for design "batalha_naval"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204018): Generated files "batalha_naval.vo" and "batalha_naval_v.sdo" in directory "C:/CD/CD_PBL_2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file batalha_naval.vo in folder "C:/CD/CD_PBL_2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Tue Dec  5 22:19:28 2023
+    Info: Processing ended: Wed Dec  6 11:16:15 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -91,7 +95,8 @@ Reading pref.tcl
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 22:19:30 on Dec 05,2023
+# Start time: 11:16:16 on Dec 06,2023
+
 # vlog -work work batalha_naval.vo 
 
 # -- Compiling module batalha_naval
@@ -101,51 +106,42 @@ Reading pref.tcl
 # Top level modules:
 # 	batalha_naval
 
-# End time: 22:19:30 on Dec 05,2023, Elapsed time: 0:00:00
+# End time: 11:16:17 on Dec 06,2023, Elapsed time: 0:00:01
 
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
-# Start time: 22:19:30 on Dec 05,2023
-
+# Start time: 11:16:17 on Dec 06,2023
 # vlog -work work Waveform4.vwf.vt 
 
 # -- Compiling module batalha_naval_vlg_vec_tst
 
 # 
-
 # Top level modules:
+
 # 	batalha_naval_vlg_vec_tst
 
-# End time: 22:19:30 on Dec 05,2023, Elapsed time: 0:00:00
+# End time: 11:16:17 on Dec 06,2023, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.batalha_naval_vlg_vec_tst 
-# Start time: 22:19:31 on Dec 05,2023
+# Start time: 11:16:17 on Dec 06,2023
 # Loading work.batalha_naval_vlg_vec_tst
 # Loading work.batalha_naval
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
-# SDF 2020.1 Compiler 2020.02 Feb 28 2020
-# 
-# Loading instances from batalha_naval_v.sdo
-# Loading timing data from batalha_naval_v.sdo
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst File: Waveform4.vwf.vt
 
 # after#25
 
-# ** Error: $setup( datain:1485 ps, posedge clk &&& nosload:1785 ps, 333 ps );
-#    Time: 1785 ps  Iteration: 0  Process: /batalha_naval_vlg_vec_tst/i1/\freq_div_1|t_flipflop_2|out /lereg/#Setuphold# File: $MODEL_TECH/../altera/verilog/src/maxii_atoms.v Line: 906
 # ** Note: $finish    : Waveform4.vwf.vt(63)
 #    Time: 3 us  Iteration: 0  Instance: /batalha_naval_vlg_vec_tst
 
-# End time: 22:19:32 on Dec 05,2023, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
+# End time: 11:16:18 on Dec 06,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
@@ -157,9 +153,225 @@ Reading C:/CD/CD_PBL_2/simulation/qsim/batalha_naval.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: ledRgb[2] - signal not found in VCD.
+Warning: teste[0] - signal not found in VCD.
 
-Writing the resulting VWF to C:/CD/CD_PBL_2/simulation/qsim/batalha_naval_20231205221932.sim.vwf
+Warning: teste[1] - signal not found in VCD.
+
+Warning: teste[2] - signal not found in VCD.
+
+Warning: teste[3] - signal not found in VCD.
+
+Warning: matriz_data_out[34] - signal not found in VCD.
+
+Warning: matriz_data_out[33] - signal not found in VCD.
+
+Warning: matriz_data_out[32] - signal not found in VCD.
+
+Warning: matriz_data_out[31] - signal not found in VCD.
+
+Warning: matriz_data_out[30] - signal not found in VCD.
+
+Warning: matriz_data_out[29] - signal not found in VCD.
+
+Warning: matriz_data_out[28] - signal not found in VCD.
+
+Warning: matriz_data_out[27] - signal not found in VCD.
+
+Warning: matriz_data_out[26] - signal not found in VCD.
+
+Warning: matriz_data_out[25] - signal not found in VCD.
+
+Warning: matriz_data_out[24] - signal not found in VCD.
+
+Warning: matriz_data_out[23] - signal not found in VCD.
+
+Warning: matriz_data_out[22] - signal not found in VCD.
+
+Warning: matriz_data_out[21] - signal not found in VCD.
+
+Warning: matriz_data_out[20] - signal not found in VCD.
+
+Warning: matriz_data_out[19] - signal not found in VCD.
+
+Warning: matriz_data_out[18] - signal not found in VCD.
+
+Warning: matriz_data_out[17] - signal not found in VCD.
+
+Warning: matriz_data_out[16] - signal not found in VCD.
+
+Warning: matriz_data_out[15] - signal not found in VCD.
+
+Warning: matriz_data_out[14] - signal not found in VCD.
+
+Warning: matriz_data_out[13] - signal not found in VCD.
+
+Warning: matriz_data_out[12] - signal not found in VCD.
+
+Warning: matriz_data_out[11] - signal not found in VCD.
+
+Warning: matriz_data_out[10] - signal not found in VCD.
+
+Warning: matriz_data_out[9] - signal not found in VCD.
+
+Warning: matriz_data_out[8] - signal not found in VCD.
+
+Warning: matriz_data_out[7] - signal not found in VCD.
+
+Warning: matriz_data_out[6] - signal not found in VCD.
+
+Warning: matriz_data_out[5] - signal not found in VCD.
+
+Warning: matriz_data_out[4] - signal not found in VCD.
+
+Warning: matriz_data_out[3] - signal not found in VCD.
+
+Warning: matriz_data_out[2] - signal not found in VCD.
+
+Warning: matriz_data_out[1] - signal not found in VCD.
+
+Warning: matriz_data_out[0] - signal not found in VCD.
+
+Warning: hits_map_out[34] - signal not found in VCD.
+
+Warning: hits_map_out[33] - signal not found in VCD.
+
+Warning: hits_map_out[32] - signal not found in VCD.
+
+Warning: hits_map_out[31] - signal not found in VCD.
+
+Warning: hits_map_out[30] - signal not found in VCD.
+
+Warning: hits_map_out[29] - signal not found in VCD.
+
+Warning: hits_map_out[28] - signal not found in VCD.
+
+Warning: hits_map_out[27] - signal not found in VCD.
+
+Warning: hits_map_out[26] - signal not found in VCD.
+
+Warning: hits_map_out[25] - signal not found in VCD.
+
+Warning: hits_map_out[24] - signal not found in VCD.
+
+Warning: hits_map_out[23] - signal not found in VCD.
+
+Warning: hits_map_out[22] - signal not found in VCD.
+
+Warning: hits_map_out[21] - signal not found in VCD.
+
+Warning: hits_map_out[20] - signal not found in VCD.
+
+Warning: hits_map_out[19] - signal not found in VCD.
+
+Warning: hits_map_out[18] - signal not found in VCD.
+
+Warning: hits_map_out[17] - signal not found in VCD.
+
+Warning: hits_map_out[16] - signal not found in VCD.
+
+Warning: hits_map_out[15] - signal not found in VCD.
+
+Warning: hits_map_out[14] - signal not found in VCD.
+
+Warning: hits_map_out[13] - signal not found in VCD.
+
+Warning: hits_map_out[12] - signal not found in VCD.
+
+Warning: hits_map_out[11] - signal not found in VCD.
+
+Warning: hits_map_out[10] - signal not found in VCD.
+
+Warning: hits_map_out[9] - signal not found in VCD.
+
+Warning: hits_map_out[8] - signal not found in VCD.
+
+Warning: hits_map_out[7] - signal not found in VCD.
+
+Warning: hits_map_out[6] - signal not found in VCD.
+
+Warning: hits_map_out[5] - signal not found in VCD.
+
+Warning: hits_map_out[4] - signal not found in VCD.
+
+Warning: hits_map_out[3] - signal not found in VCD.
+
+Warning: hits_map_out[2] - signal not found in VCD.
+
+Warning: hits_map_out[1] - signal not found in VCD.
+
+Warning: hits_map_out[0] - signal not found in VCD.
+
+Warning: selected_map_out[34] - signal not found in VCD.
+
+Warning: selected_map_out[33] - signal not found in VCD.
+
+Warning: selected_map_out[32] - signal not found in VCD.
+
+Warning: selected_map_out[31] - signal not found in VCD.
+
+Warning: selected_map_out[30] - signal not found in VCD.
+
+Warning: selected_map_out[29] - signal not found in VCD.
+
+Warning: selected_map_out[28] - signal not found in VCD.
+
+Warning: selected_map_out[27] - signal not found in VCD.
+
+Warning: selected_map_out[26] - signal not found in VCD.
+
+Warning: selected_map_out[25] - signal not found in VCD.
+
+Warning: selected_map_out[24] - signal not found in VCD.
+
+Warning: selected_map_out[23] - signal not found in VCD.
+
+Warning: selected_map_out[22] - signal not found in VCD.
+
+Warning: selected_map_out[21] - signal not found in VCD.
+
+Warning: selected_map_out[20] - signal not found in VCD.
+
+Warning: selected_map_out[19] - signal not found in VCD.
+
+Warning: selected_map_out[18] - signal not found in VCD.
+
+Warning: selected_map_out[17] - signal not found in VCD.
+
+Warning: selected_map_out[16] - signal not found in VCD.
+
+Warning: selected_map_out[15] - signal not found in VCD.
+
+Warning: selected_map_out[14] - signal not found in VCD.
+
+Warning: selected_map_out[13] - signal not found in VCD.
+
+Warning: selected_map_out[12] - signal not found in VCD.
+
+Warning: selected_map_out[11] - signal not found in VCD.
+
+Warning: selected_map_out[10] - signal not found in VCD.
+
+Warning: selected_map_out[9] - signal not found in VCD.
+
+Warning: selected_map_out[8] - signal not found in VCD.
+
+Warning: selected_map_out[7] - signal not found in VCD.
+
+Warning: selected_map_out[6] - signal not found in VCD.
+
+Warning: selected_map_out[5] - signal not found in VCD.
+
+Warning: selected_map_out[4] - signal not found in VCD.
+
+Warning: selected_map_out[3] - signal not found in VCD.
+
+Warning: selected_map_out[2] - signal not found in VCD.
+
+Warning: selected_map_out[1] - signal not found in VCD.
+
+Warning: selected_map_out[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/CD/CD_PBL_2/simulation/qsim/batalha_naval_20231206111618.sim.vwf
 
 Finished VCD to VWF conversion.
 

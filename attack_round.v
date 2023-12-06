@@ -56,7 +56,7 @@ module attack_round #(
 
     demux1x8 xCoordDemuxHitsMap [COLUNE_SIZE-1:0] (
         .in     (hits_map_clk_colune) , 
-        .select (y_coord_code) ,
+        .select (x_coord_code) ,
         .enable (enableAttack) ,// !!
         
         .out_b  (hits_map_clk[(COLUNE_SIZE*5)-1:COLUNE_SIZE*4]) ,

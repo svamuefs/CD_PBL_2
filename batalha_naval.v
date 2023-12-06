@@ -18,11 +18,11 @@ module batalha_naval #(
     output [6:0] matriz_colune_data , display_colune_data ,
 	output [4:0] matriz_colune_activator ,
     output [3:0] display_colune_activator ,
-    output [1:0] ledRgb
+    output [1:0] ledRgb 
 
  );
 
-    wire [M_DATA_WIDTH-1:0] selectedMap , matriz_data;
+    wire [M_DATA_WIDTH-1:0] selectedMap , matriz_data , mapAttack;
     wire [D_DATA_WIDTH-1:0] display_data;
 
     // assign map = 35'b00000010000010000010000010000010000;
@@ -63,7 +63,7 @@ module batalha_naval #(
 
     map_decoder map_decoder_1 (
         .map_code (map_code) ,
-        .enable   (1) , //mudar
+        .enable   (enable) , //mudar
 
         .mapOut   (selectedMap)
     ); //ativado tanto na preparação e no attack
@@ -84,17 +84,17 @@ module batalha_naval #(
         .confirmAttack (debouncedConfirmAttack) ,
 
         .matriz_data   (mapAttack) ,
-        .ledRgb        (ledRgb)
-    );//ativado no ataque
+        .ledRgb        (ledRgb) ,
+    );//ativado no 
 
+    mux4x1 imageSelect [M_DATA_WIDTH-1:0](
+        .in_b   (selectedMap) ,
+        .in_c   (mapAttack) ,
+        .in_d   (selectedMap) ,
+        .select (game_state_code) ,
+        .enable (enable) ,
 
-    imageSelect imageSelect_1 (
-        .selectedMap  (selectedMap) ,
-        .mapAttack    (mapAttack) ,
-        .enable       (enable) ,
-        .enableAttack (enableAttack),
-
-        .matriz_data  (matriz_data)
+        .out    (matriz_data)
     );
 
     displayer matriz_displayer (

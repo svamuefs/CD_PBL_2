@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/05/2023 22:19:25"
+// Generated on "12/06/2023 11:16:13"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          batalha_naval
 // 
@@ -70,6 +70,12 @@ begin
 	cpld_clk = #5000 1'b1;
 	#5000;
 end 
+
+// nextMap
+initial
+begin
+	nextMap = 1'b1;
+end 
 // game_state_code[ 1 ]
 initial
 begin
@@ -79,9 +85,7 @@ end
 initial
 begin
 	game_state_code[0] = 1'b1;
-	game_state_code[0] = #800000 1'b0;
-	game_state_code[0] = #800000 1'b1;
-	game_state_code[0] = #800000 1'b0;
+	game_state_code[0] = #1500000 1'b0;
 end 
 // x_coord_code[ 2 ]
 initial
@@ -117,19 +121,9 @@ end
 // confirmAttack
 initial
 begin
-	repeat(3)
-	begin
-		confirmAttack = 1'b0;
-		confirmAttack = #450000 1'b1;
-		# 450000;
-	end
 	confirmAttack = 1'b0;
-end 
-
-// nextMap
-initial
-begin
-	nextMap = 1'b1;
+	confirmAttack = #1000000 1'b1;
+	confirmAttack = #1000000 1'b0;
 end 
 endmodule
 
