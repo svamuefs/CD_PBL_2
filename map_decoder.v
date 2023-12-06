@@ -6,8 +6,8 @@ module map_decoder #(
 
 ) (
 
-    input [2:0] map_code ,
-    input enable ,
+    input [2:0] codeInput ,
+    input enable , enableAttack ,
 
     output [DATA_WIDTH-1:0] mapOut
 
@@ -26,6 +26,17 @@ or orEnable [34:0] (mapOut , map , notEnable);
 //1 -
 //2 -
 // .... 
+
+//code save
+
+d_flipflop saveCodeRegister [2:0] (
+		.d (codeInput) ,
+		.clk (enableAttack) ,
+		.reset (enable) ,
+		.out (saveCodeOut)
+);
+
+
 
 //pixel a1 , e1 , a2 , d7
 
