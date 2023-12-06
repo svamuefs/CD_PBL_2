@@ -1,5 +1,5 @@
 EDA Netlist Writer report for batalha_naval
-Tue Dec  5 22:19:28 2023
+Tue Dec  5 23:27:02 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Dec  5 22:19:28 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Dec  5 23:27:02 2023 ;
 ; Revision Name             ; batalha_naval                         ;
 ; Top-level Entity Name     ; batalha_naval                         ;
 ; Family                    ; MAX II                                ;
@@ -45,26 +45,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                             ;
-+---------------------------------------------------------------------------------------------------+-----------------------------+
-; Option                                                                                            ; Setting                     ;
-+---------------------------------------------------------------------------------------------------+-----------------------------+
-; Tool Name                                                                                         ; Questa Intel FPGA (Verilog) ;
-; Generate functional simulation netlist                                                            ; Off                         ;
-; Time scale                                                                                        ; 1 ps                        ;
-; Truncate long hierarchy paths                                                                     ; Off                         ;
-; Map illegal HDL characters                                                                        ; Off                         ;
-; Flatten buses into individual nodes                                                               ; Off                         ;
-; Maintain hierarchy                                                                                ; Off                         ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                         ;
-; Enable glitch filtering                                                                           ; Off                         ;
-; Do not write top level VHDL entity                                                                ; Off                         ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                         ;
-; Architecture name in VHDL output netlist                                                          ; structure                   ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                         ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                         ;
-+---------------------------------------------------------------------------------------------------+-----------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                    ;
++---------------------------------------------------------------------------------------------------+--------------------+
+; Option                                                                                            ; Setting            ;
++---------------------------------------------------------------------------------------------------+--------------------+
+; Tool Name                                                                                         ; ModelSim (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                 ;
+; Truncate long hierarchy paths                                                                     ; Off                ;
+; Map illegal HDL characters                                                                        ; Off                ;
+; Flatten buses into individual nodes                                                               ; Off                ;
+; Maintain hierarchy                                                                                ; Off                ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                ;
+; Enable glitch filtering                                                                           ; Off                ;
+; Do not write top level VHDL entity                                                                ; Off                ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                ;
+; Architecture name in VHDL output netlist                                                          ; structure          ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                ;
++---------------------------------------------------------------------------------------------------+--------------------+
 
 
 +-----------------------------------------------------+
@@ -72,8 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------+
 ; Generated Files                                     ;
 +-----------------------------------------------------+
-; C:/CD/CD_PBL_2/simulation/qsim//batalha_naval.vo    ;
-; C:/CD/CD_PBL_2/simulation/qsim//batalha_naval_v.sdo ;
+; C:/CD/CD_PBL_2/simulation/modelsim/batalha_naval.vo ;
 +-----------------------------------------------------+
 
 
@@ -83,28 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Copyright (C) 2023  Intel Corporation. All rights reserved.
-    Info: Your use of Intel Corporation's design tools, logic functions 
-    Info: and other software and tools, and any partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Intel Program License 
-    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel FPGA IP License Agreement, or other applicable license
-    Info: agreement, including, without limitation, that your use is for
-    Info: the sole purpose of programming logic devices manufactured by
-    Info: Intel and sold by Intel or its authorized distributors.  Please
-    Info: refer to the applicable agreement for further details, at
-    Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Dec  5 22:19:26 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/CD/CD_PBL_2/simulation/qsim/ batalha_naval -c batalha_naval
+    Info: Processing started: Tue Dec  5 23:27:02 2023
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off batalha_naval -c batalha_naval
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204018): Generated files "batalha_naval.vo" and "batalha_naval_v.sdo" in directory "C:/CD/CD_PBL_2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file batalha_naval.vo in folder "C:/CD/CD_PBL_2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Tue Dec  5 22:19:28 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4628 megabytes
+    Info: Processing ended: Tue Dec  5 23:27:02 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

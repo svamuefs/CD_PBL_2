@@ -2,25 +2,25 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
-Slack : -2.354
-TNS   : -2.354
-
 Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
-Slack : -2.215
-TNS   : -3.409
+Slack : -3.175
+TNS   : -4.388
 
-Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
-Slack : -1.594
-TNS   : -1.594
+Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
+Slack : -1.907
+TNS   : -1.907
 
 Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
-Slack : -1.223
-TNS   : -1.223
+Slack : -1.573
+TNS   : -1.573
 
 Type  : Setup 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : -1.222
-TNS   : -1.222
+Slack : -1.232
+TNS   : -1.232
+
+Type  : Setup 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
+Slack : -1.215
+TNS   : -1.215
 
 Type  : Setup 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
 Slack : -1.215
@@ -31,15 +31,23 @@ Slack : -1.194
 TNS   : -1.194
 
 Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : -0.957
-TNS   : -7.760
+Slack : -0.976
+TNS   : -7.266
 
 Type  : Setup 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.443
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Setup 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : 0.456
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Setup 'game_state_code[0]'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Setup 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_3|out'
+Slack : 0.465
 TNS   : 0.000
 
 Type  : Setup 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_1|out'
@@ -47,175 +55,167 @@ Slack : 0.466
 TNS   : 0.000
 
 Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_3|out'
-Slack : 0.470
+Slack : 0.843
 TNS   : 0.000
 
 Type  : Setup 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_2|out'
-Slack : 0.589
-TNS   : 0.000
-
-Type  : Setup 'game_state_code[0]'
-Slack : 0.592
+Slack : 0.844
 TNS   : 0.000
 
 Type  : Setup 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : 1.404
+Slack : 0.845
 TNS   : 0.000
 
 Type  : Setup 'cpld_clk'
-Slack : 2.643
+Slack : 1.729
 TNS   : 0.000
 
 Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
-Slack : -4.130
-TNS   : -4.715
-
-Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
-Slack : -3.509
-TNS   : -3.509
+Slack : -6.106
+TNS   : -7.293
 
 Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
-Slack : -3.370
-TNS   : -3.891
+Slack : -5.414
+TNS   : -6.572
+
+Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
+Slack : -4.146
+TNS   : -4.146
 
 Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : -3.229
-TNS   : -10.807
-
-Type  : Hold 'cpld_clk'
-Slack : -2.697
-TNS   : -2.697
-
-Type  : Hold 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_4|out'
-Slack : -2.610
-TNS   : -2.610
+Slack : -3.511
+TNS   : -11.579
 
 Type  : Hold 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_2|out'
-Slack : -2.487
-TNS   : -3.130
+Slack : -3.070
+TNS   : -3.968
+
+Type  : Hold 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_4|out'
+Slack : -2.861
+TNS   : -2.861
 
 Type  : Hold 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_3|out'
-Slack : -2.444
-TNS   : -2.968
-
-Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
-Slack : -1.458
-TNS   : -1.458
+Slack : -2.330
+TNS   : -2.849
 
 Type  : Hold 'game_state_code[0]'
-Slack : -1.409
-TNS   : -2.686
+Slack : -2.050
+TNS   : -3.985
 
-Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
-Slack : -0.525
-TNS   : -0.525
+Type  : Hold 'cpld_clk'
+Slack : -1.783
+TNS   : -1.783
+
+Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_0|out'
+Slack : -0.899
+TNS   : -0.899
 
 Type  : Hold 'freq_div:freq_div_1|t_flipflop:t_flipflop_1|out'
-Slack : -0.521
-TNS   : -0.521
+Slack : -0.897
+TNS   : -0.897
 
 Type  : Hold 'debouncer:debouncerConfirmAttack|t_flipflop:t_flipflop_1|out'
 Slack : -0.520
 TNS   : -0.520
 
 Type  : Hold 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : -0.510
-TNS   : -0.510
+Slack : -0.283
+TNS   : -0.283
+
+Type  : Hold 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
+Slack : -0.258
+TNS   : -0.258
 
 Type  : Hold 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : -0.497
-TNS   : -0.497
+Slack : -0.235
+TNS   : -0.235
 
 Type  : Hold 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
 Slack : 1.661
 TNS   : 0.000
 
 Type  : Hold 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : 1.668
+Slack : 1.678
 TNS   : 0.000
 
 Type  : Recovery 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : -7.416
-TNS   : -7.416
-
-Type  : Recovery 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : -7.276
-TNS   : -7.276
-
-Type  : Recovery 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : -7.271
-TNS   : -7.271
+Slack : -6.950
+TNS   : -6.950
 
 Type  : Recovery 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : -6.763
-TNS   : -6.763
+Slack : -6.939
+TNS   : -6.939
 
-Type  : Recovery 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : -5.532
-TNS   : -52.262
+Type  : Recovery 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : -6.370
+TNS   : -6.370
 
-Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
-Slack : -4.484
-TNS   : -4.484
+Type  : Recovery 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
+Slack : -6.311
+TNS   : -6.311
 
 Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
-Slack : -4.345
-TNS   : -4.345
+Slack : -5.099
+TNS   : -5.099
 
-Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
-Slack : -3.724
-TNS   : -3.724
+Type  : Recovery 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
+Slack : -5.086
+TNS   : -54.156
+
+Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
+Slack : -3.831
+TNS   : -3.831
 
 Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
-Slack : -3.353
-TNS   : -3.353
+Slack : -3.497
+TNS   : -3.497
+
+Type  : Recovery 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
+Slack : -3.139
+TNS   : -3.139
 
 Type  : Recovery 'game_state_code[0]'
-Slack : -1.403
-TNS   : -4.209
+Slack : -1.386
+TNS   : -4.158
 
 Type  : Removal 'freq_div:freq_div_1|t_flipflop:t_flipflop_2|out'
-Slack : -0.737
-TNS   : -0.939
+Slack : -0.327
+TNS   : -0.621
 
-Type  : Removal 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : 1.029
+Type  : Removal 'game_state_code[0]'
+Slack : 1.292
 TNS   : 0.000
 
 Type  : Removal 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : 1.135
+Slack : 1.488
 TNS   : 0.000
 
-Type  : Removal 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
-Slack : 1.140
-TNS   : 0.000
-
-Type  : Removal 'game_state_code[0]'
-Slack : 1.149
+Type  : Removal 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : 1.526
 TNS   : 0.000
 
 Type  : Removal 'displayer:segment_display|counter3bit:counter3bit_1|t_flipflop:t_flipflop_0|out'
-Slack : 1.682
+Slack : 1.537
 TNS   : 0.000
 
-Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
-Slack : 3.099
+Type  : Removal 'displayer:matriz_displayer|counter3bit:counter3bit_1|t_flipflop:t_flipflop_1|out'
+Slack : 1.547
 TNS   : 0.000
 
 Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_2|out'
-Slack : 3.470
+Slack : 3.045
 TNS   : 0.000
 
-Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
-Slack : 4.091
+Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_1|out'
+Slack : 3.403
 TNS   : 0.000
 
 Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_3|out'
-Slack : 4.230
+Slack : 3.737
+TNS   : 0.000
+
+Type  : Removal 'debouncer:debouncerNextMap|t_flipflop:t_flipflop_4|out'
+Slack : 5.005
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'cpld_clk'
