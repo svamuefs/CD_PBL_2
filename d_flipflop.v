@@ -3,9 +3,9 @@ module d_flipflop (
     output reg out
 );
 
-		initial begin
-				if (initial_value)
-						out <= 1;
+	initial begin
+		if (initial_value)
+			out <= 1;
 end
 
     always @(posedge clk or negedge reset) begin
