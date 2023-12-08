@@ -1,5 +1,5 @@
 module mux2x1 (
-    input in_a , in_b , select , enable
+    input in_a , in_b , select , enable ,
 
     output out
 );
